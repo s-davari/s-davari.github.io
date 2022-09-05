@@ -16,6 +16,7 @@ Essentially the usable index.html file produced by Python (setup.py) gets frozen
 Methods and variables are transferred from python to html listed below.
 
 > Methods
+```python
 def get_base():
     .
     .
@@ -23,15 +24,16 @@ def get_base():
     return flask.render_template_string(f"""TA DA""")
 
 app.jinja_env.filters['get_base'] = get_base
-
+```
 > Variables
+```python
 @app.route('/index.html')
 def index():
     .
     .
     .
     return render_template_string(get_file(page),mimetype="text/html",variable_one="variable_one")
-
+```
 There are a few cavietes that need to be handled:
 1. Redirects cannot be handled using regular flask methods since the dynamic page gets translated to a static webpage. However a static html that redirects is a working redirect that I use. The code is listed below.
 ```html
