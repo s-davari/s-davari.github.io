@@ -17,6 +17,11 @@
 			"label": "sign_on",
 			"type": "shell",
 			"command": "git config --global user.email \"$(whodis)@docker\" && git config --global user.name \"Miles Frantz\""
+		},
+		{
+			"label": "freeze",
+			"type": "shell",
+			"command": "python3 ${workspaceFolder}/setup.py freeze"
 		}
 	]
 }
