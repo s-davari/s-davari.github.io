@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{dyct['name']}}</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" media="print" onload="this.media='all'"/>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap"/>
+    </noscript>
+    <link href="css/font-awesome/css/all.min.css?ver=1.2.1" rel="stylesheet">
+    <link href="css/mdb.min.css?ver=1.2.1" rel="stylesheet">
+    <link href="css/aos.css?ver=1.2.1" rel="stylesheet">
+    <link href="/css/main.css?ver=1.2.1" rel="stylesheet">
+    <noscript>
+      <style type="text/css">
+        [data-aos] {
+            opacity: 1 !important;
+            transform: translate(0) scale(1) !important;
+        }
+      </style>
+    </noscript>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+      }
+      
+      #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: #39c0ed;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+        opacity: 0.45;
+      }
+      
+      #myBtn:hover {
+        background-color: #555;
+      }
+      </style>
+  </head>
+  {#
+    https://analytics.google.com/analytics/web/#/p330218338/reports/reportinghub?params=_u..nav%3Dmaui
+  #}
+    <!-- Google tag (gtag.js) (https://analytics.google.com)-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F7R0M67LLC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+  
+      gtag('config', 'G-F7R0M67LLC');
+    </script>
+  <body class="bg-light" id="top">
+    <button onclick="goto('/#top')" id="myBtn" title="Go to top">Top</button>
+    <header class="d-print-none">
+      <div class="container text-center text-lg-left">
+        <div class="pt-4 clearfix">
+          <h1 class="site-title mb-0"><a href="/index.html" >{{dyct['name']}}</a> <br>
+            {{ "Research"|get_main_url("Info")|safe }} {{ "Industry"|get_main_url("Info")|safe }} {{ "Full"|get_main_url("Info")|safe }}
+          </h1>
+          <div class="site-nav"> 
+            <nav role="navigation">
+              <ul class="nav justify-content-center">
+                <li class="nav-item"><a class="nav-link" href="#about" title="About"><span class="menu-title">About</span></a></li>
+                {% if dyct['show_edu'] -%}
+                <li class="nav-item"><a class="nav-link" href="#education" title="Education"><span class="menu-title">Education</span></a></li>
+                {%- endif%}
+                {% if dyct['show_sub'] -%}
+                <li class="nav-item"><a class="nav-link" href="#submissions" title="Submissions"><span class="menu-title">Submissions</span></a></li>
+                {%- endif%}
+                {% if dyct['show_talks'] -%}
+                <li class="nav-item"><a class="nav-link" href="#talks" title="Talks"><span class="menu-title">Talks</span></a></li>
+                {%- endif%}
+                {% if dyct['show_proj'] -%}
+                <li class="nav-item"><a class="nav-link" href="#projects" title="Projects"><span class="menu-title">Projects</span></a></li>
+                {%- endif%}
+                {% if dyct['show_skills'] -%}
+                <li class="nav-item"><a class="nav-link" href="#skills" title="Skills"><span class="menu-title">Skills</span></a></li>
+                {%- endif%}
+                {% if dyct['show_docker'] -%}
+                <li class="nav-item"><a class="nav-link" href="#my_dock" title="MyDocker"><span class="menu-title">My Docker</span></a></li>
+                {%- endif%}
+                {% if dyct['show_exp'] -%}
+                <li class="nav-item"><a class="nav-link" href="#experience" title="Work Experience"><span class="menu-title">Work Experience</span></a></li>
+                {%- endif%}
+                {% if dyct['show_grps'] -%}
+                <li class="nav-item"><a class="nav-link" href="#groups" title="Groups"><span class="menu-title">Groups</span></a></li>
+                {%- endif%}
+                {% if dyct['show_ment'] -%}
+                <li class="nav-item"><a class="nav-link" href="#mentees" title="Mentees"><span class="menu-title">Mentees</span></a></li>
+                {%- endif%}
+                {% if dyct['show_consult'] -%}
+                <li class="nav-item"><a class="nav-link" href="#consultations" title="Consultations"><span class="menu-title">Consultations</span></a></li>
+                {%- endif%}
+                <li class="nav-item"><a class="nav-link" href="#contact" title="Contact"><span class="menu-title">Contact</span></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="page-content">
+      <div class="container">
+<div class="resume-container">
+  <div class="shadow-1-strong bg-white my-5" id="intro">
+    <div class="bg-info text-white">
+      <div class="cover bg-image"><img src="images/header-background.jpg"/>
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.7);backdrop-filter: blur(2px);">
+          <div class="text-center p-5">
+            <div class="avatar p-1"><img class="img-thumbnail shadow-2-strong" src="images/avatar.jpg" width="160" height="160"/></div>
+            <div class="header-bio mt-3">
+              <div data-aos="zoom-in" data-aos-delay="0">
+                <h2 class="h1">{{dyct['name']}}</h2>
+                <p>{{dyct['title']}}</p>
+              </div>
+              <div class="header-social mb-3 d-print-none" data-aos="zoom-in" data-aos-delay="200">
+                <nav role="navigation">
+                  <ul class="nav justify-content-center">
+                <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/{{dyct['GITHUB']}}" title="Github">
+                    <i class="fab fa-github"></i>
+                    <span style="padding:10px;" class="menu-title sr-only">Github</span>
+                  </a>
+                </li>
+                <li>
+              {% if 'DOCKER' in dyct  %}
+              <li>
+                  <a class="nav-link" href="https://hub.docker.com/u/{{ dyct['DOCKER'] }}" title="Docker">
+                      <i style="padding:10px;" class="fab fa-docker" title="Docker link"></i>
+                  </a>
+              </li>
+              {% endif  %}
+              {% if 'LINKEDIN_USERNAME' in dyct  %}
+              <li>
+                      <a class="nav-link" href="https://www.linkedin.com/in/{{ dyct['LINKEDIN_USERNAME']|escape }}" title="Linkedin">
+                      <i style="padding:10px;" class="fab fa-linkedin" title="Linkedin link"></i>
+                  </a>
+              </li>
+              {% endif  %}
+               {% if 'SCHOLAR_USERNAME' in dyct  %}
+              <li>
+                    <a class="nav-link" href="https://scholar.google.com/citations?user={{ dyct['SCHOLAR_USERNAME'] }}" title="Linkedin">
+                      <i style="padding:10px;" class="ai ai-google-scholar-square" title="Google Scholar"></i>
+                  </a>
+              </li>
+              {% endif  %}
+              {% if 'MENDELEY_USERNAME' in dyct  %}
+              <li>
+                    <a class="nav-link" href="https://www.mendeley.com/profiles/{{ dyct['MENDELEY_USERNAME'] }}" title="Docker">
+                      <i style="padding:10px;" class="ai ai-mendeley" title="Mendeley Account"></i>
+                  </a>
+              </li>
+              {% endif  %}
+              {% if 'IEEE' in dyct  %}
+              <li>
+                    <a class="nav-link" href="https://ieee-collabratec.ieee.org/app/p/{{ dyct['IEEE'] }}" title="Docker">
+                     <i style="padding:10px;" class="ai ai-ieee" title="IEEE Account"></i>
+                  </a>
+              </li>
+              {% endif  %}
+              {% if 'MEDIUM' in dyct  %}
+              <li>
+                    <a class="nav-link" href="https://medium.com/@{{ dyct['MEDIUM'] }}" title="Docker">
+                      <i style="padding:10px;" class="fab fa-medium" title="Medium Account"></i>
+                  </a>
+              </li>
+              {% endif  %}
+              {% if 'ORCID' in dyct  %}
+              <li>
+                    <a class="nav-link" href="https://orcid.org/{{ dyct['ORCID'] }}" title="Docker">
+                      <i style="padding:10px;" class="fab fa-orcid" title="Orcid Account"></i>
+                  </a>
+              </li>
+              {% endif  %}
+              {% if False and 'ZENODO' in dyct  %}
+              <li>
+                    <a class="nav-link" href="https://zenodo.org/search?page=1&size=20&q=owners:{{ dyct['ZENODO'] }}" title="Docker">
+                      <img class="custom-icon" style="padding-top:30%;" src="https://about.zenodo.org/static/img/logos/zenodo-white.svg" width="80%"/>
+                  </a>
+              </li>
+              {% endif  %}
+               <li>
+                    <a class="nav-link" href="https://oca.opensource.oracle.com/?ojr=contrib-list" title="Docker">
+                      <i style="padding:10px;" class="fab fa-java" title="Java Oracle Contributor Agreement"></i>
+                  </a>
+              </li>
+              <li>
+                    <a class="nav-link" href="/rss.html" title="RSS">
+                      <i style="padding:10px;" class="fa fa-rss" title="RSS Feed"></i>
+                  </a>
+              </li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="d-print-none">
+                <a class="btn btn-outline-light btn-lg shadow-sm mt-1 me-3" href="/cv.html" data-aos="fade-right" data-aos-delay="700">Download CV</a>
+                <a class="btn btn-outline-light btn-lg shadow-sm mt-1 me-3" href="/resume.html" data-aos="fade-left" data-aos-delay="700">Download Resume</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="shadow-1-strong bg-white my-5 p-5" id="about">
+    <div class="about-section">
+      <div class="row">
+        <div class="col-md-6">
+          <h2 class="h2 fw-light mb-4">About Me</h2>
+          My Ph.D. research focuses on creating code analysis tools to assist developers by identifying cryptographic misuse in software repositories.
+	My tools save developers time by using on-demand static code analysis to specifically scan for the cryptographic rules that may be broken.
+	My tools also show higher precision than existing tools to ensure developers pay attention to the results.
+	I also utilize several formats for my results to fit into many different DevOps tools and fit nicely into the development lifecycle.
+	<br>
+	<br>
+    Focusing on the source of the vulnerabilities will provide better long-term solutions as opposed to continuing patching the issues.
+    My application-focused research allows me to provide direct impact to current and upcoming vulnerabilities.
+	{#
+        I am a 3rd-year Ph.D. Computer Science student and am currently working on exciting projects.
+        Currently, I am working with <a href="http://people.cs.vt.edu/danfeng/">Dr. Danfeng Yao</a>.
+        <br>
+        Previously I have worked in <a href="https://worldpay.com/">Worldpay from FIS</a> for several Internships (or Co-Ops) and have learned a lot through my various teams.
+        <br>
+	#}
+        <br>
+        <br>
+        I enjoy working on side projects to learn new skills and techniques.
+        </div>
+        <div class="col-md-5 offset-lg-1">
+          <div class="row mt-2">
+            <h2 class="h2 fw-light mb-4">Bio</h2>
+            {#
+            <!--
+            <div class="col-sm-5">
+              <div class="pb-2 fw-bolder"><i class="far fa-calendar-alt pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Age</div>
+            </div>
+            <div class="col-sm-7">
+              <div class="pb-2">28</div>
+            </div>
+            -->
+            #}
+            <div class="col-sm-5">
+              <div class="pb-2 fw-bolder"><i class="far fa-envelope pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Email</div>
+            </div>
+            <div class="col-sm-7">
+              <div class="pb-2"><a href="mailto:{{dyct['EMAIL']}}">{{dyct['EMAIL']}}</a></div>
+            </div>
+            {#
+            <!--
+            <div class="col-sm-5">
+              <div class="pb-2 fw-bolder"><i class="fab fa-skype pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Skype</div>
+            </div>
+            <div class="col-sm-7">
+              <div class="pb-2">username@skype.com</div>
+            </div>
+            <div class="col-sm-5">
+              <div class="pb-2 fw-bolder"><i class="fas fa-phone pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Phone</div>
+            </div>
+            <div class="col-sm-7">
+              <div class="pb-2">+0718-111-0011</div>
+            </div>
+            <div class="col-sm-5">
+              <div class="pb-2 fw-bolder"><i class="fas fa-map-marker-alt pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Address</div>
+            </div>
+            -->
+            #}
+            <div class="col-sm-7">
+              <div class="pb-2">VA, U.S.A</div>
+            </div>
+
+            <br>
+            <div class="col-sm-5">
+              <div class="pb-2 fw-bolder">Areas of Interest</div>
+            </div><br>
+            <div class="col-sm-7">
+              <div class="pb-2"><ul>
+                <li>Static Code Analysis</li>
+                <li>Dynamic Code Analysis</li>
+                <li>Malware/Virus Analysis</li>
+                <li>Machine Learning</li>
+                <li>Privacy Analysis</li>
+                <li>Quantum Computing</li>
+              </ul></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% if False %}
+  <div class="shadow-1-strong bg-white my-5 p-5" id="education">
+    <div class="education-section">
+      <h2 class="h2 fw-light mb-4">Education</h2>
+    </div>
+  </div>
+  {% endif%}
+  {% if dyct['show_edu'] -%}
+  <div class="shadow-1-strong bg-white my-5 p-5" id="education">
+    <div class="education-section">
+      <h2 class="h2 fw-light mb-4">Education</h2>
+      <div class="timeline">
+        {{
+          "Ph.D. Computer Science"|get_base(
+          "<a href='https://vt.edu/'>Virginia Polytechnic Institute and State University</a>",
+          "May 2020",
+          "Present (Expected - 2023)",
+          "I have been working under Dr. Danfeng Yao on Cryptoguard related projects and other static analysis projects. I have also been joining various groups (located at the bottom) as well as taking more security-oriented courses and enjoying the mountains.",
+          False)|safe
+       }}
+       {{
+          "M.S. Computer Science"|get_base(
+          "<a href='https://vt.edu/'>Virginia Polytechnic Institute and State University</a>",
+          "August 2018",
+          "May 2020",
+          "I have been working under Dr. Danfeng Yao on Cryptoguard related projects and other static analysis projects. I have also been joining various groups (located at the bottom) as well as taking more security-oriented courses and enjoying the mountains.",
+          False)|safe
+       }}
+       {{
+          "B.S. Computer Engineering"|get_base(
+          "<a href='https://www.uc.edu/'>University of Cincinnati</a>",
+          "August 2013",
+          "April 2018",
+          "During my Undergraduate Program, I learned a lot throughout the classes I took and the Co-Ops I was a part of. The Co-Ops was the best part of the degree, as it gave me real-world experience and a chance for practical application.",
+          False)|safe
+       }}
+        
+      </div>
+    </div>
+  </div>
+  {%- endif %}
+  {% if dyct['show_sub'] -%}
+  <div class="shadow-1-strong bg-white my-5 p-5" id="submissions">
+    <div class="submissions-section">
+      <h2 class="h2 fw-light mb-4">Submissions</h2>
+      <div class="timeline">
+        {{
+          "<a href='https://esorics2021.athene-center.de/tutorial-09-08.php' >Principles and Practices of Secure Cryptographic Coding in Java</a>"|get_base(
+          "<a href='https://esorics2021.athene-center.de/tutorial-09-08.php'>Esorics</a>",
+          "September 2021",
+          "",
+          "<blockquote cite='https://esorics2021.athene-center.de/tutorial-09-08.php'><q>Various software libraries and frameworks provide a variety of APIs to support secure coding. However, misusing these APIs can cost developers tremendous time and effort, introduce security vulnerabilities to software, and cause serious consequences like data leakage or Denial of Service (DoS) on servers. Our tutorial aims to educate people on the best practice of secure coding, the pitfalls that should be avoided, and the detection tools and fixing suggestions of insecure code.</q></blockquote>",color="yellow")|safe
+       }}
+       {{
+          "<a href='https://secdev.ieee.org/2020/accepted/' >Tutorial: Principles and Practices of Secure Cryptographic Coding in Java</a>"|get_base(
+          "<a href='https://secdev.ieee.org/2020/accepted/'>SecDev20</a>",
+          "September 2020",
+          "",
+          "",color="yellow")|safe
+       }}
+       {{
+          "<a href='https://dl.acm.org/doi/pdf/10.1145/3319535.3345659' >CryptoGuard: High Precision Detection of Cryptographic Vulnerabilities in Massive-sized Java Projects</a>"|get_base(
+          "<a href='https://sigsac.org/ccs/CCS2019/'>ACM CCS</a>",
+          "November 2019",
+          "",
+          "<blockquote cite='https://dl.acm.org/doi/pdf/10.1145/3319535.3345659'><q>Cryptographic API misuses, such as exposed secrets, predictable
+            random numbers, and vulnerable certificate verification, seriously
+            threaten software security. The vision of automatically screening
+            cryptographic API calls in massive-sized (e.g., millions of LoC) pro-
+            grams is not new. However, hindered by the practical difficulty
+            of reducing false positives without compromising analysis qual-
+            ity, this goal has not been accomplished. CryptoGuard is a set
+            of detection algorithms that refine program slices by identifying
+            language-specific irrelevant elements. The refinements reduce false
+            alerts by 76% to 80% in our experiments. Running our tool, Cryp-
+            toGuard, on 46 high-impact large-scale Apache projects and 6,181
+            Android apps generated many security insights. Our findings helped
+            multiple popular Apache projects to harden their code, including
+            Spark, Ranger, and Ofbiz. We also have made progress towards the
+            science of analysis in this space, including manually analyzing 1,295
+            Apache alerts, confirming 1,277 true positives (98.61% precision),
+            and in-depth comparison with leading solutions including CrySL,
+            SpotBugs, and Coverity.</q></blockquote>",color="yellow")|safe
+       }}
+       {{
+          "<a href='https://arxiv.org/pdf/2201.07651' >Enhancing CryptoGuard’s Deployability for Continuous Software Security Scanning</a>"|get_base(
+          "<a href='https://vtechworks.lib.vt.edu/handle/10919/5534'>VT ETDs</a>",
+          "May 2020",
+          "",
+          "<blockquote cite='https://arxiv.org/pdf/2201.07651'><q>The increasing development speed via Agile[1] may introduce overlooked security steps in
+            the process, with an example being the Iowa Caucus application[2]. Verifying the protection
+            of confidential information such as social security numbers requires security at all levels,
+            providing protection through any connected applications. CryptoGuard[3]1 is a static code
+            analyzer for Java. This program verifies that developers do not leave vulnerabilities in their
+            application. The program aids the developer by identifying cryptographic misuses such as
+            hard-coded keys, weak program hashes, and using insecure protocols. In my Master thesis
+            work, I made several important contributions to improving the deployability, accessibility,
+            and usability of CryptoGuard. I extended CryptoGuard to scan source and compiled code,
+            created live documentation, and supported a dual cloud and local tool-suite. I also created
+            build tool plugins and a program aid for CryptoGuard. In addition, I also analyzed several
+            Java-related surveys encompassing more than 50,000 developers and reported interesting
+            current practices of real-world software developers.</q></blockquote>",color="yellow")|safe
+       }}
+       {{
+          "<a href='https://dl.acm.org/doi/pdf/10.1145/3319535.3363252' >Deployment-quality and Accessible Solutions for Cryptography Code Development</a>"|get_base(
+          "<a href='https://sigsac.org/ccs.html'>ACM SIGSAC</a>",
+          "November 2019",
+          "",
+          "<blockquote cite='https://dl.acm.org/doi/pdf/10.1145/3319535.3363252'><q>Cryptographic API misuses seriously threaten software security.
+            Automatic screening of cryptographic misuse vulnerabilities has
+            been a popular and important line of research over the years. How-
+            ever, the vision of producing a scalable detection tool that devel-
+            opers can routinely use to screen millions of line of code has not
+            been achieved yet.
+            Our main technical goal is to attain a high precision and high
+            throughput approach based on specialized program analysis. Specifi-
+            cally, we design inter-procedural program slicing on top of a new on-
+            demand flow-, context- and field- sensitive data flow analysis. Our
+            current prototype named CryptoGuard can detect a wide range of
+            Java cryptographic API misuses with a precision of 98.61%, when
+            evaluated on 46 complex Apache Software Foundation projects
+            (including, Spark, Ranger, and Ofbiz). Our evaluation on 6,181 An-
+            droid apps also generated many security insights. We created a
+            comprehensive benchmark named CryptoApi-Bench with 40-unit
+            basic cases and 131-unit advanced cases for in-depth comparison
+            with leading solutions (e.g., SpotBugs, CrySL, Coverity). To make
+            CryptoGuard widely accessible, we are in the process of inte-
+            grating CryptoGuard with the Software Assurance Marketplace
+            (SWAMP). SWAMP is a popular no-cost service for continuous soft-
+            ware assurance and static code analysis.</q></blockquote>",color="yellow")|safe
+       }}
+       
+      </div>
+    </div>
+  </div>
+  {%- endif %}
+  {% if dyct['show_talks'] -%}
+  <div class="shadow-1-strong bg-white my-5 p-5" id="talks">
+    <div class="talks-section">
+      <h2 class="h2 fw-light mb-4">Talks</h2>
+      <div class="timeline">
+        {{
+          "<a href='https://esorics2021.athene-center.de/tutorial-09-08.php' >Esorics 2021 Demo</a>"|get_base(
+          "<a href='https://mybinder.org/v2/gh/franceme/Esorics_Conference/HEAD'>Jupyter Notebook</a>",
+          "September 2021",
+          "",
+          "<blockquote cite='https://esorics2021.athene-center.de/tutorial-09-08.php'><q>Various software libraries and frameworks provide a variety of APIs to support secure coding. However, misusing these APIs can cost developers tremendous time and effort, introduce security vulnerabilities to software, and cause serious consequences like data leakage or Denial of Service (DoS) on servers. Our tutorial aims to educate people on the best practice of secure coding, the pitfalls that should be avoided, and the detection tools and fixing suggestions of insecure code.</q></blockquote>",color="red")|safe
+       }}
+       {{
+          "TA: Course SQL Injection Demo"|get_base(
+          "<a href='https://www.youtube.com/watch?v=rLY2skQTeJE'>YouTube</a>",
+          "November 2020",
+          "",
+          "",color="red")|safe
+       }}
+       {{
+          "TA: Course Project Demo"|get_base(
+            "<a href='https://www.youtube.com/watch?v=wU5VFDHc11s'>YouTube</a>",
+          "November 2019",
+          "",
+          "",color="red")|safe
+       }}
+       {{
+          "<a href='https://www.youtube.com/watch?v=42Qw06OrjwM' >SecDev 2020 Tutorial</a>"|get_base(
+          "<a href='https://mybinder.org/v2/gh/franceme/cryptoguard/2020_SecDev_Tutorial?filepath=SecDev_Tutorial.ipynb'>Jupyter Notebook</a>",
+          "September 2020",
+          "",
+          "",color="red")|safe
+       }}
+       
+      </div>
+    </div>
+  </div>
+  {%- endif %}
+  {% if dyct['show_proj'] -%}
+  <div class="shadow-1-strong bg-white my-5 p-5" id="projects">
+    <div class="projects-section">
+      <h2 class="h2 fw-light mb-4">Projects</h2>
+      <div class="timeline">
+        {{
+          "Scripts | funbelts"|get_base(
+          "<a href='https://github.com/franceme/Scripts'>GitHub Repo</a>",
+          "2022",
+          "Present",
+          "This repository originally started off as a internal collection of various Python utilities I would use with testing capabilities. Not just limited to Python scripting, it also includes links to <a href='https://github.com/franceme/Scripts/blob/master/dockerPush.py'>dockerPush.py</a> which simply aides my use of Docker. I also packaged the python utilities under the PyPi name <a href='https://pypi.org/project/funbelts/'>funbelts</a>. While I originally thought I would be the only user of the package, I have heard it make some waves. Fortunately it seems there have been <a href='https://pypistats.org/packages/funbelts'>thousands of downloads</a>, so hopefully others find this package helpful. <br><br> Topics: Docker, Docker-Compose, GitHub Actions, Python, Python3, Portable Environment, Cross-Platform",color="blue")|safe
+       }}
+       {#
+        {{
+          "franceme.github.io"|get_base(
+          "<a href='https://github.com/franceme/franceme.github.io'>GitHub Repo</a>",
+          "2019",
+          "Present",
+          "This is my ‘now and again’ public website. I’ve used the same framework to generate the static website, and I have migrated the build to GitHub actions to ensure public transparency. I only made it public after hiding some of the web content since the build for the website is activated AFTER the Resume repo is complete. This was a neat trick that allows the Website to automatically download and host the most recent documents, as well as load the most recent web content (since this website used yml files that were created from the Resume Repo).",color="blue")|safe
+       }}
+       #}
+       {{
+          "<a href='https://franceme.github.io/WaveNetExploration/'>WaveNetExploration</a>"|get_base(
+          "<a href='https://github.com/franceme/WaveNetExploration'>GitHub Repo</a>",
+          "2019",
+          "2019",
+          "This was a class project created for an Advanced Machine Learning class. The purpose of this project was to replicate an existing papers work and to add onto it. For this, my group chose to replicate the paper <a href='https://arxiv.org/pdf/1609.03499.pdf'>WaveNet</a> and to enhance the results by running it on music samples. Unfortunately, we were unable to create any sound samples that mimic actual music, however from the website, there is a clear improvement in the music generation from the models. <br><br> Topics: ML, Machine Learning, GAN, Music Generation, Python, Live, Online",color="blue")|safe
+       }}
+       {{
+          "GradleGuard"|get_base(
+          "<a href='https://github.com/franceme/gradleguard'>GitHub Repo</a>",
+          "2019",
+          "2020",
+          "This is the Gradle plugin for my thesis project Cryptoguard. This was created to help ease the access and use for developers to be able to use Cryptoguard. <br><br> Topics: Gradle, Java, Build System, Build Tool, Code Analysis",color="blue")|safe
+       }}
+       {{
+          "MavenGuard"|get_base(
+          "<a href='https://github.com/franceme/mavenguard'>GitHub Repo</a>",
+          "2019",
+          "2020",
+          "This is the Maven plugin for my thesis project Cryptoguard. This was created to help ease the access and use for developers to be able to use Cryptoguard. <br><br> Topics: Maven, Java, Build System, Build Tool, Code Analysis",color="blue")|safe
+       }}
+       {{
+          "CryptoGuard"|get_base(
+          "<a href='https://github.com/franceme/cryptoguard'>GitHub Repo</a>",
+          "2019",
+          "2020",
+          "This is a static and compiled code analyzer, serving as my current thesis project. This project will scan cryptographic misuse in Java Projects (Maven/Gradle based) and Android Projects. Recent works with this project have included making an enhanced interface for this to work with other programs and tools. <br><br> Topics: Java, Build System, Build Tool, Code Analysis, Cryptography, Analysis",color="blue")|safe
+       }}
+      </div>
+    </div>
+  </div>
+  {%- endif %}
+  {% if dyct['show_skills'] -%}
+  <div class="shadow-1-strong bg-white my-5 p-5" id="skills">
+    <div class="skills-section">
+      <h2 class="h2 fw-light mb-4">Technical Skills</h2>
+      <div class="row">
+        <div class="col-md-6">
+          {{'Python3'|get_skill(100)|safe}}
+          {{'Bash Scripts'|get_skill(50)|safe}}
+          {{'C#'|get_skill(25)|safe}}
+          {{'SQL'|get_skill(65)|safe}}
+          {{'GO'|get_skill(40)|safe}}
+          {{'C++'|get_skill(1)|safe}}
+
+          {{'Maven'|get_skill(85)|safe}}
+          {{'Gradle'|get_skill(65)|safe}}
+          {{'Flask'|get_skill(25)|safe}}
+          {{'Mako'|get_skill(40)|safe}}
+
+          {{'Rest Webservices'|get_skill(65)|safe}}
+
+          {{'Docker'|get_skill(85)|safe}}
+          {{'Cuckoo'|get_skill(25)|safe}}
+          {{'VirtualBox'|get_skill(65)|safe}}
+        </div>
+        <div class="col-md-6">
+          {{'Java EE'|get_skill(90,False)|safe}}
+          {{'Rust'|get_skill(40,False)|safe}}
+          {{'Tasktop Integrations'|get_skill(85,False)|safe}}
+          {{'HTML'|get_skill(50,False)|safe}}
+          {{'.NET'|get_skill(25,False)|safe}}
+          {{'Scala'|get_skill(65,False)|safe}}
+          {{'JavaScript'|get_skill(15,False)|safe}}
+
+          {{'Spring'|get_skill(50,False)|safe}}
+          {{'Jenkins'|get_skill(50,False)|safe}}
+          {{'Tensorflow'|get_skill(30,False)|safe}}
+
+          {{'Soap Webservices'|get_skill(75,False)|safe}}
+          {{'Machine Learning'|get_skill(40,False)|safe}}
+
+          {{'Kubernetes'|get_skill(45,False)|safe}}
+        </div>
+      </div>
+    </div>
+  </div>
+  {%- endif %}
+  {% if dyct['show_docker'] -%}
+  <div class="shadow-1-strong bg-white my-5 p-5" id="my_dock">
+    <div class="my_dock">
+      <h2 class="h2 fw-light mb-4">My Docker Setup</h2>
+      <a href="https://rebrand.ly/my_dock"><img src="https://rebrand.ly/my_dock" style="width:100%;height:100%;"/></a>
+      Since I use a various set of tools for different development and research environments, I needed to be able to easily switch my toolsets. Due to hard-drive space limitations, I started to leverage Docker. I used my familiarity with GitHub actions to create a chain creation of several Docker Images. The Scripts and PyScripts are both Python script repositories creating inbuilt scripts. BaseDocker is the first Docker Image that builds, and each subsequent Docker image builds off of it. For example, JavaDev is built off of BaseDocker using a script from PyScript to automatically download and include several packages.
+      <br><br>
+      Why did I do this? Simply to create an inheritence based environment tool chain. If I need a common utility between two docker images, I just include it in BaseDocker and the changes will trickle down. Many of these are private simply due to various custom builds processes I use.
+    </div>
+  </div>
+  {% endif%}
+  {% if dyct['show_exp'] -%}
+  <div class="shadow-1-strong bg-white my-5 p-5" id="experience">
+    <div class="work-experience-section">
+      <h2 class="h2 fw-light mb-4">Work Experience</h2>
+      <div class="timeline">
+        {{
+          "Graduate Research Assistant"|get_base(
+          "<a href='https://vt.edu/'>Virginia Polytechnic Institute and State University</a>",
+          "08/01/2021",
+          "Present",
+          "Currently researching malware, source code, and their identification.<br><br>Skills: Static Analysis, Mitosheet, Cuckoo, Attack Surface Evaluation, Red Team")|safe
+       }}
+       {{
+        "Intern"|get_base(
+        "<a href='https://www.peraton.com/'>Peraton</a>",
+        "06/01/2022",
+        "08/14/2022",
+        "As an intern within an Internal Research and Development team, I was able to create a brand new framework to assist the team meet their security promises. It was not just limited to security but also paved the way for various intergrations, such as compliance, policies, metrics, and many more. I was also the point of contact between the team and several independent security companies.<br><br>Skills: Static Analysis, Dynamic Analysis, Software Composition Analysis, Attack Surface Evaluation, Red Team")|safe
+     }}
+        {{
+          "Graduate Teaching Assistant"|get_base(
+          "<a href='https://vt.edu/'>Virginia Polytechnic Institute and State University</a>",
+          "08/01/2021",
+          "05/01/2022",
+          "Assisting students with their problems. Enhancing the autograding capabilities via Python scripting.<br><br>Skills: Static Analysis, Canvas Scripting, Mitosheet, VirtualBox, Attack Surface Evaluation, Red Team")|safe
+       }}
+       {{
+          "Graduate Research Assistant"|get_base(
+          "<a href='https://vt.edu/'>Virginia Polytechnic Institute and State University</a>",
+          "01/19/2021",
+          "08/01/2021",
+          "Researching Static Code Analysis for my future project. Creating and examining dynamic test bench. Creating reproducible testing for future additional tests.<br><br>Skills: Static Code Analysis, Reproducible testing, Dynamic Languages")|safe
+       }}
+       {{
+          "Graduate Teaching Assistant"|get_base(
+          "<a href='https://vt.edu/'>Virginia Polytechnic Institute and State University</a>",
+          "08/05/2020",
+          "12/20/2020",
+          "Helped record videos for the lab lectures.<br><br>Skills: Managing Students, Handling Lectures, Detailing and Recording Labs")|safe
+       }}
+       {{
+          "Intern"|get_base(
+          "<a href='https://www.oracle.com/'>Oracle</a>",
+          "01/19/2021",
+          "01/19/2021",
+          "Due to Covid the internship was not started.")|safe
+       }}
+       {{
+          "Graduate Research Asssistant"|get_base(
+          "<a href='https://vt.edu/'>Virginia Polytechnic Institute and State University</a>",
+          "07/31/2019",
+          "07/31/2020",
+          "Created a live Jupyter notebook for extended documentation on Cryptoguard use. Worked on the open-source project Cryptoguard. Exploring various avenues to make Cryptoguard more easily available. Created both Gradle and Maven plugin supporting Cryptoguard within the build process (IDE independent). Creating a live Java Jupyter notebook through MyBinder for live and public demonstrations.<br><br>Skills: Cryptoguard, Jupyter Notebook, IJava Jupyter Notebook, Gradle Plugin, Maven Plugin, Dockerfile")|safe
+       }}
+       {{
+          "Internship"|get_base(
+          "<a href='https://worldpay.fisglobal.com/'>Worldpay from FIS</a>",
+          "05/03/2019",
+          "07/31/2019",
+          "Enhanced multiple Tasktop integrations by making custom JavaScript logic. Improved Terraform scripts to dynamically build Virtual Machines. Enabled the Open Source Project Hygieia for system and tool monitoring. Implemented a Python3 script to track Hygieia usage and automatically start and stop the project. Enabled users to work with various tools owned and managed by the team.<br><br>Skills: Hygieia, Tasktop, Github Enterprise, Splunk, Nexus, Jenkins, Terraform, Ansible, Teamforge, Rally, TFS, Checkmarx, DataPower, XLDeploy, XLRelease, DevOps, DexVMs, DevSecOps, Bash")|safe
+       }}
+       {{
+          "Graduate Research Assistant"|get_base(
+          "<a href='https://vt.edu/'>Virginia Polytechnic Institute and State University</a>",
+          "10/01/2018",
+          "05/03/2019",
+          "Worked with an external consumer to create a specific output adapter for their service. Designed a system to create any of three different outputs dependent on the user. Worked on the open-source project Cryptoguard. Used a design akin to common flat data-base designs.<br><br>Skills: Cryptoguard, Research Skills, Soot, Modularization Design, Adapter Design, Abstract Factory")|safe
+       }}
+       {{
+          "Graduate Teaching Assistant"|get_base(
+          "<a href='https://vt.edu/'>Virginia Polytechnic Institute and State University</a>",
+          "07/01/2018",
+          "12/19/2018",
+          "Helped split the students into anonymized groups for a research study. Helped the students out with their inquiries. Graded various student assignments including the finals.<br><br>Skills: Managing Students, Grading Reports, Creating Groups")|safe
+       }}
+       {{
+          "Co-Op"|get_base(
+          "<a href='https://worldpay.fisglobal.com/'>Worldpay from FIS</a>",
+          "01/09/2017",
+          "08/12/2017",
+          "Fundamentally enhanced a highly utilized SOAP API with an overall average response time &lt; 100 ms. Mentored two Computer Science Students. Enhanced and rectified various incidents on existing Java/Webmethods Webservices. Designed several SOAP Webservices. Created an API that supports both SOAP and REST as a POC. Combined Reflection and Aspect-oriented programming to dynamically filter Java SOAP API output. Worked closely with a DevOps team to support and showcase both XL Deploy and XL Release using internal APIs. Trained two other interns on the team and led several KT sessions.<br><br>Skills: Java EE, JUnit 4, Mockito, Leadership, IBM Websphere, Software AG, Webmethods, SOAP, Splunk, DataPower, XebiaLabs, XLDeploy, XLRelease, REST, DevOps, SoapUI, SQL, AQT, Postman")|safe
+       }}
+       {{
+          "Co-Op"|get_base(
+          "<a href='https://worldpay.fisglobal.com/'>Worldpay from FIS</a>",
+          "05/2016",
+          "08/2016",
+          "Led an Agile team to design and create a Caching Web Application through Dynamic Server Pages. The Caching Web Application compared values cached in a server to live data-base values. Enhanced and rectified various incidents on existing Java/Webmethods Webservices.<br><br>Skills: Java EE, IBM Websphere, Leadership, Webmethods, SOAP, SoapUI, Server Cache Web App, DSP, SQL, AQT")|safe
+       }}
+       {{
+          "Co-Op"|get_base(
+          "<a href='https://worldpay.fisglobal.com/'>Worldpay from FIS</a>",
+          "08/2015",
+          "01/2016",
+          "Created an API Operation to store tiff images for internal client issue management. Setup a deletion API Operation to clear issues for multiple internal clients. Enhanced and rectified various incidents on existing Java/Webmethods Webservices.<br><br>Skills: Software AG, Webmethods, SOAP, SoapUI, SQL, AQT, Bash")|safe
+       }}
+       {{
+          "Co-Op"|get_base(
+          "<a href='https://worldpay.fisglobal.com/'>Worldpay from FIS</a>",
+          "01/2015",
+          "04/2015",
+          "Implemented several Bash scripts to track API usage. Created a lightweight Java program to translate a phone-digit-text based input to alphabet characters.<br><br>Skills: Software AG, Bash, Static")|safe
+       }}
+       
+      </div>
+      </div>
+    </div>
+  </div>
+  {%- endif %}
+  {% if dyct['show_grp'] -%}
+  <div class="shadow-1-strong bg-white my-5 p-5" id="groups">
+    <div class="groups-section">
+      <h2 class="h2 fw-light mb-4">Groups</h2>
+      <div class="timeline">
+        {{
+          "Advisor"|get_base(
+          "<a href='https://rebrand.ly/csgc'>Graduate Student Council</a>",
+          "2022",
+          "Present",
+          "This group represents the interests of the graduate student body at Virginia Tech and assists within any meetings for the department. It also creates events to help enhance the graduate student climate such as fun activities and welcome back meetings.",color="orange")|safe
+       }}
+       {{
+          "President"|get_base(
+          "<a href='https://rebrand.ly/csgc'>Graduate Student Council</a>",
+          "2021",
+          "2022",
+          "This group represents the interests of the graduate student body at Virginia Tech and assists within any meetings for the department. It also creates events to help enhance the graduate student climate such as fun activities and welcome back meetings.",color="orange")|safe
+       }}
+       {{
+          "Slack Admin"|get_base(
+          "<a href='https://sites.google.com/vt.edu/imentor/home'>iMentor</a>",
+          "2020",
+          "2020",
+          "From the <a href='https://sites.google.com/vt.edu/imentor/home'>homepage</a>. iMentor focuses squarely on attracting, mentoring, and career advising early-stage graduate students from underrepresented communities who want to pursue a career in computer security. Being virtually co-located with the ACM Conference on Computer and Communications Security (ACM CCS) 2020, the workshop provides an opportunity for attendees to also participate in the main conference and benefit from it. ACM CCS is a top-tier venue for the quick and wide dissemination of cutting-edge research results in computer and communications security.",color="orange")|safe
+       }}
+       {{
+          "Vice President"|get_base(
+          "<a href='https://rebrand.ly/csgc'>Graduate Student Council</a>",
+          "2020",
+          "2021",
+          "This group represents the interests of the graduate student body at Virginia Tech and assists within any meetings for the department. It also creates events to help enhance the graduate student climate such as fun activities and welcome back meetings. I have set up the GitHub Organization and the website to auto-build using GitHub Actions.",color="orange")|safe
+       }}
+       {{
+          "Member"|get_base(
+          "<a href='https://order-of-the-engineer.org/'>Order of The Engineer</a>",
+          "2018",
+          "Present",
+          "Upholding Devotion to the Standards and Dignity of the Engineering Profession. This group is a ceremonious group acknowledging members' commitments to uphold high qualities and their duty as an engineer.",color="orange")|safe
+       }}
+      </div>
+    </div>
+  </div>
+  {%- endif %}
+  {% if dyct['show_ment'] -%}
+  <div class="shadow-1-strong bg-white my-5 p-5" id="mentees">
+    <div class="mentees-section">
+      <h2 class="h2 fw-light mb-4">Mentees</h2>
+      <div class="timeline">
+        {{
+          "UNLISTED"|get_base(
+          "UNLISTED",
+          "08/29/2020",
+          "01/01/2021",
+          "Instructed about assistance on the CryptoGuard Project. Helping instruct them on creating an IDE plugin.",color="purple")|safe
+       }}
+       {{
+          "Bachelor in Computer Science"|get_base(
+          "Jason",
+          "06/08/2020",
+          "08/22/2020",
+          "Instructed about assistance on the CryptoGuard Project. Read the proper review <a href='https://docs.google.com/document/d/18Xa6M5ymDyZ-zvPFqN5tAlQuIPqd27nWBdp2pevpytU/edit?usp=sharing'>here</a>.",color="purple")|safe
+       }}
+       {{
+          "UNLISTED"|get_base(
+          "UNLISTED",
+          "01/22/2020",
+          "05/30/2020",
+          "Help lead them on the Cryptoguard project. Help to instruct them on current Java research.",color="purple")|safe
+       }}
+       {{
+          "UNLISTED"|get_base(
+          "UNLISTED",
+          "01/09/2017",
+          "08/12/2017",
+          "Instructed them on current project workflows. Helped them to build up them Java API skills.",color="purple")|safe
+       }}
+       {{
+          "UNLISTED"|get_base(
+          "UNLISTED",
+          "01/09/2017",
+          "08/12/2017",
+          "Instructed them on current project workflows. Helped to teach them about the projects within the teams.",color="purple")|safe
+       }}
+       
+      </div>
+    </div>
+  </div>
+  {%- endif %}
+  {% if dyct['show_consult'] -%}
+  <div class="shadow-1-strong bg-white my-5 p-5" id="consultations">
+    <div class="mentees-section">
+      <h2 class="h2 fw-light mb-4">Consultations</h2>
+      <div class="timeline">
+        {{
+          "Demo User"|get_base(
+          "<a href='https://www.pipedreams.org/'>PipeDreams</a>",
+          "08/30/2022",
+          "Current",
+          "I was recently introduced to the project and have taken to it well. I have attempted to use Zapier before but found it too constricting. I have already made <a href='https://github.com/PipedreamHQ/pipedream/issues/created_by/franceme'>several suggestions for additional app integrations</a> that I would be interested and look forward to using it.",color="pink")|safe
+       }}
+       {{
+          "User"|get_base(
+          "<a href='https://www.orchest.io/'>Orchest</a>",
+          "08/01/2021",
+          "Current",
+          "I have been currently using this for several of my data cleaning pipelines. Since I have had to do various processes this helps me visually organize the code flow. When I talked with the CTO many my changes were already being addressed. However with the extra addition of Webhooks, I also needed to create a enhanced transfer library. Shown <a href='https://github.com/franceme/messenger_python'>here</a> is the result of my work, as Orchest currently natively allows only one output to be transferred to other steps. This library allows me to transfer more data between steps.",color="pink")|safe
+       }}
+       {{
+          "An Original Member"|get_base(
+          "<a href='https://www.trymito.io/'>Mito</a>",
+          "01/22/2020",
+          "Current",
+          "I believe I was one of the early users of the project and had various meetings with the owners. Many of my contributions made it into the current project. My main idea contributed to the project is the idea of <a href='https://docs.trymito.io/how-to/using-the-generated-code'>code generation</a>. Since I truely believe in reproducible code, I saw the code generation as a necessity to transfer the steps to other people. This also enables the developers to quickly template dataframe changes using Mito and then copy paste the snippet to a seperate python script.",color="pink")|safe
+       }}
+      </div>
+    </div>
+  </div>
+  {%- endif %}
+  {#
+  <!--
+  <div class="shadow-1-strong bg-white my-5 p-5 d-print-none" id="portfolio">
+    <div class="portfolio-section">
+      <h2 class="h2 fw-light mb-4">Portfolio</h2>
+      <div class="row g-0">
+        <div class="col-md-6"><a href="https://dribbble.com/" target="_blank"><img class="img-fluid" src="images/project-1.jpg" width="800" height="500"/></a></div>
+        <div class="col-md-6 d-flex align-items-center" data-aos="fade-left" data-aos-delay="100">
+          <div class="m-4 mt-md-2">
+            <p class="text-teal text-small">Frontend / HTML / CSS / JavaScript</p>
+            <h3>Photo Agency Website</h3>
+            <p class="text-muted">Built highly performant website front end for a Photography agency. Delivered codebase in HTML, CSS and modern JavaScript.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row g-0 portfolio-reverse">
+        <div class="col-md-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
+          <div class="m-4 mt-md-2 text-end">
+            <p class="text-teal text-small">Graphic Design / Photoshop / Sketch</p>
+            <h3>Restaurant Website Design</h3>
+            <p class="text-muted">Web design for popular resturant chain involving complex layouts done in both Photoshop and Sketch. Collaborated with back-end and front-end team for finished product.</p>
+          </div>
+        </div>
+        <div class="col-md-6"><a href="https://www.behance.net/" target="_blank"><img class="img-fluid" src="images/project-2.jpg" width="800" height="500"/></a></div>
+      </div>
+      <div class="row g-0">
+        <div class="col-md-6"><a href="https://dribbble.com/" target="_blank"><img class="img-fluid" src="images/project-3.jpg" width="800" height="500"/></a></div>
+        <div class="col-md-6 d-flex align-items-center" data-aos="fade-left" data-aos-delay="100">
+          <div class="m-4 mt-md-2">
+            <p class="text-teal text-small">Frontend / HTML / CSS / JavaScript</p>
+            <h3>E-Commerce Website</h3>
+            <p class="text-muted">Built highly performant website for an E-commerce Portal. Worked with back-end team to timely deliver codebase in HTML, CSS and modern JavaScript.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  -->
+  
+  <!--
+    <div class="shadow-1-strong bg-white my-5 p-5" id="references">
+    <div class="reference-section">
+      <h2 class="h2 fw-light mb-4">References</h2>
+      <div class="row"> 
+        <div class="col-md-6">
+          {{"Aiyana"|get_ref("CEO","DESC HERE")|safe}}
+        </div>
+        <div class="col-md-6">
+          {{"Aiyana"|get_ref("CEO","DESC HERE")|safe}}
+        </div>
+      </div>
+    </div>
+  </div>
+-->
+#}
+  <div class="shadow-1-strong bg-white my-5 p-5" id="contact">
+    <div class="contant-section">
+      <h2 class="h2 fw-light text mb-4">Contact</h2>
+      <div class="row mb-4">
+        <div class="col-md-5" data-aos="fade-left" data-aos-delay="200">
+          <div class="mt-1">
+            <div class="h6"><i class="far fa-envelope pe-2 text-muted" style="width:24px;opacity:0.85;"></i>
+              <a href="mailto:{{dyct['EMAIL']}}">{{dyct['EMAIL']}}</a>
+              <br>
+              <br>
+              <img src="images/VCard.svg"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></div>
+    </div>
+    <footer class="pt-4 pb-4 text-muted text-center d-print-none">
+      <div class="container">
+        <div class="my-3">
+          <div class="h4">{{dyct['name']}}</div>
+          <div class="footer-nav">
+            <nav role="navigation">
+              <ul class="nav justify-content-center">
+                <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/{{dyct['GITHUB']}}" title="Github">
+                    <i class="fab fa-github"></i>
+                    <span style="padding:10px;" class="menu-title sr-only">Github</span>
+                  </a>
+                </li>
+                <li>
+
+              {% if 'DOCKER' in dyct  %}
+              <li>
+                  <a class="nav-link" href="https://hub.docker.com/u/{{ dyct['DOCKER'] }}" title="Docker">
+                      <i style="padding:10px;" class="fab fa-docker" title="Docker link"></i>
+                  </a>
+              </li>
+              {% endif  %}
+              {% if 'LINKEDIN_USERNAME' in dyct  %}
+              <li>
+                      <a class="nav-link" href="https://www.linkedin.com/in/{{ dyct['LINKEDIN_USERNAME']|escape }}" title="Linkedin">
+                      <i style="padding:10px;" class="fab fa-linkedin" title="Linkedin link"></i>
+                  </a>
+              </li>
+              {% endif  %}
+               {% if 'SCHOLAR_USERNAME' in dyct  %}
+              <li>
+                    <a class="nav-link" href="https://scholar.google.com/citations?user={{ dyct['SCHOLAR_USERNAME'] }}" title="Linkedin">
+                      <i style="padding:10px;" class="ai ai-google-scholar-square" title="Google Scholar"></i>
+                  </a>
+              </li>
+              {% endif  %}
+              {% if 'MENDELEY_USERNAME' in dyct  %}
+              <li>
+                    <a class="nav-link" href="https://www.mendeley.com/profiles/{{ dyct['MENDELEY_USERNAME'] }}" title="Docker">
+                      <i style="padding:10px;" class="ai ai-mendeley" title="Mendeley Account"></i>
+                  </a>
+              </li>
+              {% endif  %}
+              {% if 'IEEE' in dyct  %}
+              <li>
+                    <a class="nav-link" href="https://ieee-collabratec.ieee.org/app/p/{{ dyct['IEEE'] }}" title="Docker">
+                     <i style="padding:10px;" class="ai ai-ieee" title="IEEE Account"></i>
+                  </a>
+              </li>
+              {% endif  %}
+              {% if 'MEDIUM' in dyct  %}
+              <li>
+                    <a class="nav-link" href="https://medium.com/@{{ dyct['MEDIUM'] }}" title="Docker">
+                      <i style="padding:10px;" class="fab fa-medium" title="Medium Account"></i>
+                  </a>
+              </li>
+              {% endif  %}
+              {% if 'ORCID' in dyct  %}
+              <li>
+                    <a class="nav-link" href="https://orcid.org/{{ dyct['ORCID'] }}" title="Docker">
+                      <i style="padding:10px;" class="fab fa-orcid" title="Orcid Account"></i>
+                  </a>
+              </li>
+              {% endif  %}
+              {% if False and 'ZENODO' in dyct  %}
+              <li>
+                    <a class="nav-link" href="https://zenodo.org/search?page=1&size=20&q=owners:{{ dyct['ZENODO'] }}" title="Docker">
+                      <img class="custom-icon" style="padding-top:30%;" src="https://about.zenodo.org/static/img/logos/zenodo-white.svg" width="80%"/>
+                  </a>
+              </li>
+              {% endif  %}
+               <li>
+                    <a class="nav-link" href="https://oca.opensource.oracle.com/?ojr=contrib-list" title="Docker">
+                      <i style="padding:10px;" class="fab fa-java" title="Java Oracle Contributor Agreement"></i>
+                  </a>
+              </li>
+              <li>
+                    <a class="nav-link" href="/rss.html" title="RSS">
+                      <i style="padding:10px;" class="fa fa-rss" title="RSS Feed"></i>
+                  </a>
+              </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="text-small">
+          <div class="mb-1">&copy; <a href="https://templateflip.com/templates/material-resume/">Material Resume</a>. All rights reserved.</div>
+          <div>Design - <a href="https://templateflip.com/" target="_blank">TemplateFlip</a></div>
+        </div>
+      </div>
+    </footer>
+    <script src="scripts/mdb.min.js?ver=1.2.1"></script>
+    <script src="scripts/aos.js?ver=1.2.1"></script>
+    <script src="scripts/main.js?ver=1.2.1"></script>
+    <script>
+      //Taken From https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_scroll_to_top
+      //Get the button
+      var mybutton = document.getElementById("myBtn");
+      
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+      
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+      
+      // When the user clicks on the button, scroll to the top of the document
+      function goto(location) {
+        //window.location.href = location;
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+name: Compile Website
+
+on:
+  push:
+  workflow_dispatch:
+  repository_dispatch:
+    types: [event-build]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checking out the latest branch
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: Install Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+
+      - name: Installing Bundle Packages
+        run: python3 -m pip install elsa flask==2.0.1 flask_flatpages==0.7.3 frozen_flask==0.18 pygments==2.10.0 werkzeug==2.0.3
+
+      - name: Compiling the Website
+        run: python3 setup.py freeze
+
+      - name: Moving the built files
+        run: mv _build docs
+      
+      - name: Delete Older Releases #https://github.com/marketplace/actions/delete-older-releases
+        uses: dev-drprasad/delete-older-releases@v0.2.0
+        with:
+          keep_latest: 1
+          repo: franceme/franceme.github.io
+          delete_tags: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+      
+      - name: Delete workflow runs #https://github.com/marketplace/actions/delete-workflow-runs
+        uses: Mattraks/delete-workflow-runs@v2.0.3
+        with:
+          # The token used to authenticate.
+          token: ${{ secrets.TOKEN }}
+          # The name of the repository.
+          repository: franceme/franceme.github.io
+          # The number of days.
+          retain_days: 0
+          # The minimum runs to keep for each workflow.
+          keep_minimum_runs: 1
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./

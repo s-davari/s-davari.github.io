@@ -1,0 +1,12 @@
+build/
+coder.json
+machineid
+CachedExtensions/
+CachedExtensionVSIXs/
+User/
+Machine/
+extensions/
+logs/
+coder.json
+machineid
+.DS_Store
