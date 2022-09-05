@@ -54,7 +54,8 @@ base_info = {
     "show_talks":True,
     "show_skills":True,
     "show_docker":True,
-    "show_consult":True
+    "show_consult":True,
+    "show_path":True
 }
 
 #https://stackoverflow.com/questions/20646822/how-to-serve-static-files-in-flask
@@ -222,24 +223,27 @@ def get_skill(name,amount, isLeft=True):
 
 app.jinja_env.filters['get_skill'] = get_skill
 
-def get_base(title,co_name, _from,_to,desc, is_info=True,color=None):
-
+def get_base(title, co_name, _from, _to, desc, is_info=True, color=None, html_id=None):
     base_color = "timeline-card-info" if is_info else "timeline-card-success"
 
     if color is not None:
-        color = "timeline-card-" + color
+        color = f"timeline-card-{color}"
 
-    date_string = ""
-    if _from is not None:
-        date_string = _from
-    
-    elif _to is not None:
+    date_string = _from if _from is not None else ""
+
+    if _to is not None:
         date_string = date_string + " - " + _to
 
+    if co_name is not None and co_name.strip() != "":
+        co_name = f" at {co_name}"
+
+    if html_id is not None:
+        html_id = f"id='{html_id}'"
+
     return render_template_string(f"""
-<div class="timeline-card {color or base_color}" data-aos="fade-in" data-aos-delay="0" {color}>
+<div class="timeline-card {color or base_color}" data-aos="fade-in" data-aos-delay="0" {color} {html_id}>
     <div class="timeline-head px-4 pt-3">
-    <div class="h5">{title} <span class="text-muted h6">at {co_name}</span></div>
+    <div class="h5">{title} <span class="text-muted h6">{co_name}</span></div>
     </div>
     <div class="timeline-body px-4 pb-4">
     <div class="text-muted text-small mb-3">{date_string}</div>

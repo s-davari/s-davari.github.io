@@ -98,6 +98,9 @@
                 {% if dyct['show_exp'] -%}
                 <li class="nav-item"><a class="nav-link" href="#experience" title="Work Experience"><span class="menu-title">Work Experience</span></a></li>
                 {%- endif%}
+                {% if dyct['show_path'] -%}
+                <li class="nav-item"><a class="nav-link" href="#path" title="Path"><span class="menu-title">Career Path</span></a></li>
+                {%- endif%}
                 {% if dyct['show_grps'] -%}
                 <li class="nav-item"><a class="nav-link" href="#groups" title="Groups"><span class="menu-title">Groups</span></a></li>
                 {%- endif%}
@@ -126,7 +129,7 @@
             <div class="header-bio mt-3">
               <div data-aos="zoom-in" data-aos-delay="0">
                 <h2 class="h1">{{dyct['name']}}</h2>
-                <p>{{dyct['title']}}</p>
+                <p>{{dyct['title']}}: Interested in Security Research Positions</p>
               </div>
               <div class="header-social mb-3 d-print-none" data-aos="zoom-in" data-aos-delay="200">
                 <nav role="navigation">
@@ -208,8 +211,8 @@
                 </nav>
               </div>
               <div class="d-print-none">
-                <a class="btn btn-outline-light btn-lg shadow-sm mt-1 me-3" href="/cv.html" data-aos="fade-right" data-aos-delay="700">Download CV</a>
-                <a class="btn btn-outline-light btn-lg shadow-sm mt-1 me-3" href="/resume.html" data-aos="fade-left" data-aos-delay="700">Download Resume</a>
+                <a class="btn btn-outline-light btn-lg shadow-sm mt-1 me-3" href="/cv.html" data-aos="fade-right" data-aos-delay="700">CV</a>
+                <a class="btn btn-outline-light btn-lg shadow-sm mt-1 me-3" href="/resume.html" data-aos="fade-left" data-aos-delay="700">Resume</a>
               </div>
             </div>
           </div>
@@ -329,7 +332,7 @@
           "August 2018",
           "May 2020",
           "I have been working under Dr. Danfeng Yao on Cryptoguard related projects and other static analysis projects. I have also been joining various groups (located at the bottom) as well as taking more security-oriented courses and enjoying the mountains.",
-          False)|safe
+          False,html_id="Grad_MSDegree")|safe
        }}
        {{
           "B.S. Computer Engineering"|get_base(
@@ -604,7 +607,7 @@
         "<a href='https://www.peraton.com/'>Peraton</a>",
         "06/01/2022",
         "08/14/2022",
-        "As an intern within an Internal Research and Development team, I was able to create a brand new framework to assist the team meet their security promises. It was not just limited to security but also paved the way for various intergrations, such as compliance, policies, metrics, and many more. I was also the point of contact between the team and several independent security companies.<br><br>Skills: Static Analysis, Dynamic Analysis, Software Composition Analysis, Attack Surface Evaluation, Red Team")|safe
+        "As an intern within an Internal Research and Development team, I was able to create a brand new framework to assist the team meet their security promises. It was not just limited to security but also paved the way for various intergrations, such as compliance, policies, metrics, and many more. I was also the point of contact between the team and several independent security companies.<br><br>Skills: Static Analysis, Dynamic Analysis, Software Composition Analysis, Attack Surface Evaluation, Red Team",html_id="Grad_DevOps_Peraton")|safe
      }}
         {{
           "Graduate Teaching Assistant"|get_base(
@@ -646,7 +649,7 @@
           "<a href='https://worldpay.fisglobal.com/'>Worldpay from FIS</a>",
           "05/03/2019",
           "07/31/2019",
-          "Enhanced multiple Tasktop integrations by making custom JavaScript logic. Improved Terraform scripts to dynamically build Virtual Machines. Enabled the Open Source Project Hygieia for system and tool monitoring. Implemented a Python3 script to track Hygieia usage and automatically start and stop the project. Enabled users to work with various tools owned and managed by the team.<br><br>Skills: Hygieia, Tasktop, Github Enterprise, Splunk, Nexus, Jenkins, Terraform, Ansible, Teamforge, Rally, TFS, Checkmarx, DataPower, XLDeploy, XLRelease, DevOps, DexVMs, DevSecOps, Bash")|safe
+          "Enhanced multiple Tasktop integrations by making custom JavaScript logic. Improved Terraform scripts to dynamically build Virtual Machines. Enabled the Open Source Project Hygieia for system and tool monitoring. Implemented a Python3 script to track Hygieia usage and automatically start and stop the project. Enabled users to work with various tools owned and managed by the team.<br><br>Skills: Hygieia, Tasktop, Github Enterprise, Splunk, Nexus, Jenkins, Terraform, Ansible, Teamforge, Rally, TFS, Checkmarx, DataPower, XLDeploy, XLRelease, DevOps, DexVMs, DevSecOps, Bash",html_id="UnderGrad_DevOps")|safe
        }}
        {{
           "Graduate Research Assistant"|get_base(
@@ -688,13 +691,40 @@
           "<a href='https://worldpay.fisglobal.com/'>Worldpay from FIS</a>",
           "01/2015",
           "04/2015",
-          "Implemented several Bash scripts to track API usage. Created a lightweight Java program to translate a phone-digit-text based input to alphabet characters.<br><br>Skills: Software AG, Bash, Static")|safe
+          "Implemented several Bash scripts to track API usage. Created a lightweight Java program to translate a phone-digit-text based input to alphabet characters.<br><br>Skills: Software AG, Bash, Static",html_id="UnderGrad_Internship_Start")|safe
        }}
        
       </div>
       </div>
     </div>
   </div>
+  {%- endif %}
+  {% if dyct['show_path'] -%}
+  <div class="shadow-1-strong bg-white my-5 p-5" id="path">
+    <div class="current-career-path-section">
+      <h2 class="h2 fw-light mb-4">Career Path</h2>
+      <div class="timeline">
+        {{
+          "Security Researcher"|get_base("",
+          "2018",
+          "Present",
+          "From the start of my <a href='/#Grad_MSDegree'>Graduate Degree</a> I started investigating security cryptographic misuse in Java Projects. Helping to identify cryptographic issues using the latest code slicing techniques is very exciting. The quickest way to fix a vulnerability is at the source code before it makes it past the developer, and I aim to create the fastest and most efficient ways to do that.",color="indigo")|safe
+       }}
+        {{
+          "DevOps Engineer"|get_base("",
+          "2019",
+          "2022",
+          "I have had several internships with work concentrating on DevOps; both from my Graduate degree at <a href='/#UnderGrad_DevOps'>WorldPay From FIS</a> and also at <a href='/#Grad_DevOps_Peraton'>Peraton</a>. I learned how to directly help developers using several tools I picked up throughout my internships as well as various tools throughout my schooling. While I lightly used several different technologies, I utilized Docker the most. I leveraged the Docker framework throughout my personal work to create a <a href='/#my_dock'>self-building and inheritence-based structure, creating different images for my different tasks</a>.",color="indigo")|safe
+       }}
+        {{
+          "Software Engineer"|get_base("",
+          "2015",
+          "Present",
+          "The internships I had throughout my Undergraduate Degree starting from <a href='/#UnderGrad_Internship_Start'>2015</a> solidifed the Software Engineering skills I still use today. My two mentors taught me both how to create working code using proper etiqutte. They also helped me to manage less than optimal projects and adapt them to our modern development practices.",color="indigo")|safe
+       }}
+      </div>
+      </div>
+    </div>
   {%- endif %}
   {% if dyct['show_grp'] -%}
   <div class="shadow-1-strong bg-white my-5 p-5" id="groups">
@@ -878,6 +908,9 @@
           <div class="mt-1">
             <div class="h6"><i class="far fa-envelope pe-2 text-muted" style="width:24px;opacity:0.85;"></i>
               <a href="mailto:{{dyct['EMAIL']}}">{{dyct['EMAIL']}}</a>
+              <br>
+              <br>
+              <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="frantzme" data-color="#fbfffc" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#FFDD00" ></script>
               <br>
               <br>
               <img src="images/VCard.svg"/>
