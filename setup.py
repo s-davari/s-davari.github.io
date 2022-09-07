@@ -229,10 +229,18 @@ def get_base(title, co_name, _from, _to, desc, is_info=True, color=None, html_id
     if color is not None:
         color = f"timeline-card-{color}"
 
-    date_string = _from if _from is not None else ""
+    stripi = lambda x:None if x.strip() == '' else x.strip()
+    _from = stripi(_from)
+    _to = stripi(_to)
 
-    if _to is not None:
-        date_string = date_string + " - " + _to
+    if _from is not None and _to is not None:
+        date_string = _from + " - " + _to
+    elif _from is None and _to is not None:
+        date_string = _to
+    elif _from is not None and _to is None:
+        date_string = _from
+    else:
+        date_string = ""
 
     if co_name is not None and co_name.strip() != "":
         co_name = f" at {co_name}"
