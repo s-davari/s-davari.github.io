@@ -111,6 +111,8 @@ def page_redirect(url):
 </html>
 """, 200, {'Content-Type':'text/html'}
 
+def easy_add_page(contents):
+    return contents, 200, {'Content-Type':'text/html'}
 
 # === URL Routes === #
 
@@ -182,7 +184,6 @@ Preferred-Languages: en
 Expires: 2025-12-31T18:00:00.000Z
 """, 200, {'Content-Type':'text/plain'}
 
-
 @app.route('/robots.txt')
 def robots():
     return f"""
@@ -191,6 +192,7 @@ def robots():
 User-agent: *
 Disallow: /
 """, 200, {'Content-Type':'text/plain'}
+
 @app.route('/qr.html')
 def qr_grab():
     svg = open('static/images/VCard.svg').read()
