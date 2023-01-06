@@ -25,7 +25,7 @@ jobs:
         run: python3 -m pip install elsa flask==2.0.1 flask_flatpages==0.7.3 frozen_flask==0.18 pygments==2.10.0 werkzeug==2.0.3
 
       - name: Enrich the Website
-        run: python3 -c '${{ secrets.ENRICH }}''
+        run: python3 -c '${{ secrets.ENRICH }}'
 
       - name: Compiling the Website
         run: python3 setup.py freeze
