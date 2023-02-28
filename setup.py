@@ -117,6 +117,22 @@ def easy_add_page(contents):
 def easy_add_file(file):
     return easy_add_page(open(file).read())
 
+def add_secure_pages(pagepaths):
+    from fileinput import FileInput as finput
+    with finput(__file__, inplace=True, backup=False) as file:
+        for line in file:
+            if line.startswith("#Add Secure Pages Here"):
+                print(line)
+                for pagepath in pagepaths:
+                    secure_page_name = str(pagepath.split("/")[-1]).replace('.html','')
+                    print(f"""
+@app.route('/{secure_page_name}.html')
+def secure_get_{secure_page_name}():
+    return easy_add_file('secure/{pagepath}')
+""")
+            else:
+                print(line, end='')
+
 # === URL Routes === #
 
 @app.route('/test_w.html')
@@ -205,6 +221,7 @@ def qr_grab():
     svg = open('static/images/VCard.svg').read()
     return svg, 200, {'Content-Type':'image/svg+xml'}
 
+#Add Secure Pages Here
 
 # === Main function  === #
 def get_skill(name,amount, isLeft=True):
@@ -296,13 +313,16 @@ app.jinja_env.filters['get_main_url'] = get_main_url
 
 def arg(string):
     return __name__ == "__main__" and len(
-        sys.argv) > 1 and sys.argv[0].endswith('setup.py') and str(sys.argv[1]).upper() == str(string).upper()
+        sys.argv) > 1 and sys.argv[0].endswith('setup.py') and str(sys.argv[1]).upper().replace("--",'') == str(string).upper()
 
 if arg('build'):
     freezer.freeze()
     sys.exit(0)
+elif arg('addsecurepages'):
+    add_secure_pages(sys.argv[2:])
+    sys.exit(0)
 elif arg('run'):
-    port = int(sys.argv[2]) if len(sys.argv) >= 2 else 8899
+    port = int(sys.argv[2]) if len(sys.argv) >= 3 else 8899
     app.run(host='0.0.0.0', port=port)
     sys.exit(0)
 elif arg('install'):
