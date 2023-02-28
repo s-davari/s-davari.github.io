@@ -4,7 +4,7 @@ on:
   push:
   workflow_dispatch:
   repository_dispatch:
-    types: [event-build]
+    types: [secure_pages]
 
 jobs:
   build:

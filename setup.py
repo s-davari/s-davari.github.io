@@ -126,7 +126,7 @@ def add_secure_pages(pagepaths):
                 for pagepath in pagepaths:
                     secure_page_name = str(pagepath.split("/")[-1]).replace('.html','')
                     print(f"""
-@app.route('/{secure_page_name}.html')
+@app.route('/secure_{secure_page_name}.html')
 def secure_get_{secure_page_name}():
     return easy_add_file('{pagepath}')
 """)
@@ -134,10 +134,6 @@ def secure_get_{secure_page_name}():
                 print(line, end='')
 
 # === URL Routes === #
-
-@app.route('/test_w.html')
-def route_test():
-    return easy_add_file('static/prototype/test_w.html')
 
 @app.route('/')
 @app.route('/index.html')
@@ -176,7 +172,6 @@ def full():
         if x.startswith('show_'):
             base_info[x] = True
     return rendre('index.html')
-
 
 @app.route('/diagrams.html')
 def diagrams():
