@@ -10,3 +10,4 @@ logs/
 coder.json
 machineid
 .DS_Store
+build/
