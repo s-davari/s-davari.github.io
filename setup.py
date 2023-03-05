@@ -111,8 +111,9 @@ def page_redirect(url):
 </html>
 """, 200, {'Content-Type':'text/html'}
 
-def easy_add_page(contents):
-    return contents, 200, {'Content-Type':'text/html'}
+#https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types
+def easy_add_page(contents, contenttype='text/html'):
+    return contents, 200, {'Content-Type':contenttype}
 
 def easy_add_file(file):
     return easy_add_page(open(file).read())
@@ -124,11 +125,26 @@ def add_secure_pages(pagepaths):
             if line.startswith("#Add Secure Pages Here"):
                 print(line)
                 for pagepath in pagepaths:
-                    secure_page_name = str(pagepath.split("/")[-1]).replace('.html','')
-                    print(f"""
+                    if pathpath.endswith('.html') or pathpath.endswith('.htm'):
+                        secure_page_name = str(pagepath.split("/")[-1]).replace('.html','')
+                        print(f"""
 @app.route('/secure_{secure_page_name}.html')
 def secure_get_{secure_page_name}():
     return easy_add_file('{pagepath}')
+""")
+                    elif pathpath.endswith('.css'):
+                        secure_page_name = str(pagepath.split("/")[-1]).replace('.css','')
+                        print(f"""
+@app.route('/secure_{secure_page_name}.css')
+def secure_get_{secure_page_name}():
+    return easy_add_file('{pagepath}','text/css')
+""")
+                    elif pathpath.endswith('.json'):
+                        secure_page_name = str(pagepath.split("/")[-1]).replace('.json','')
+                        print(f"""
+@app.route('/secure_{secure_page_name}.json')
+def secure_get_{secure_page_name}():
+    return easy_add_file('{pagepath}','text/json')
 """)
             else:
                 print(line, end='')
