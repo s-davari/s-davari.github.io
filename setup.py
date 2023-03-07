@@ -150,7 +150,7 @@ def secure_get_{secure_page_name}():
                             'py','java','rs','csv','json','xml',
                         ]])
                         print(f"""
-@app.route('/secure_{secure_page_name}')
+@app.route('/secure_{secure_page_name.split('.')[0]}.html')
 def secure_get_{secure_page_name.split('.')[0]}():
     return easy_add_page('{pagepath}','text/plain',pullcontent={pull_content})
 """)
