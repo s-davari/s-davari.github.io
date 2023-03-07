@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
-
 from setuptools import find_packages, setup
 import sys,os, base64
 
 try:
-    from flask import Flask, render_template_string
+    from flask import Flask, render_template_string, make_response
     from flask_frozen import Freezer
     from flask_flatpages import (
         FlatPages, pygmented_markdown)
@@ -18,7 +17,7 @@ except:
             'elsa==0.1.6'
         ]:
         os.system(str(sys.executable) + " -m pip install " + str(x))
-    from flask import Flask, render_template_string
+    from flask import Flask, render_template_string, make_response
     from flask_frozen import Freezer
     from flask_flatpages import (
         FlatPages, pygmented_markdown)
@@ -115,9 +114,17 @@ def page_redirect(url):
 def easy_add_page(contents, contenttype='text/html',pullcontent=False):
     if not pullcontent or not os.path.exists(contents):
         return contents, 200, {'Content-Type':contenttype}
+
     raw_contents = None
     with open(contents,'r') as reader:
         raw_contents = reader.readlines()
+
+    if contents.endswith(".csv"): #Hard Test
+        output = make_response(raw_contents)
+        output.headers["Content-Disposition"] = "attachment; filename=export.csv"
+        output.headers["Content-type"] = "text/csv"
+        return output
+
     return '\n'.join(raw_contents), 200, {'Content-Type':contenttype}
 
 def easy_add_file(file):
