@@ -35,7 +35,7 @@ jobs:
         run: 7z x data.zip
 
       - name: Add the secure pages to the setup.py
-        run: python3 setup.py addsecurepages secure/*.html
+        run: python3 setup.py addsecurepages secure/*.*
 
       - name: Show the contents
         run: ls -altr .
