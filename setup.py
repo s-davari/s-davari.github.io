@@ -117,7 +117,7 @@ def easy_add_page(contents, contenttype='text/html',pullcontent=False):
         return contents, 200, {'Content-Type':contenttype}
     raw_contents = None
     with open(contents,'r') as reader:
-        raw_contents = reader.readlines():
+        raw_contents = reader.readlines()
     return '\n'.join(raw_contents), 200, {'Content-Type':contenttype}
 
 def easy_add_file(file):
