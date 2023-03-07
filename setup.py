@@ -137,7 +137,7 @@ def secure_get_{secure_page_name}():
                         print(f"""
 @app.route('/secure_{secure_page_name}')
 def secure_get_{secure_page_name.split('.')[0]}():
-    return easy_add_file('{pagepath}','text/plain')
+    return easy_add_page('{pagepath}','text/plain')
 """)
             else:
                 print(line, end='')
