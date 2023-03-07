@@ -139,9 +139,9 @@ def secure_get_{secure_page_name}():
 """)
                     else:
                         secure_page_name = str(pagepath.split("/")[-1])#.split('.')[0]
-                        pull_content=any([secure_page_name.endswith("."+str(x)) for x in 
+                        pull_content=any([secure_page_name.endswith("."+str(x)) for x in [
                             'py','java','rs','csv','json','xml',
-                        ])
+                        ]])
                         print(f"""
 @app.route('/secure_{secure_page_name}')
 def secure_get_{secure_page_name.split('.')[0]}():
