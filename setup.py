@@ -132,19 +132,12 @@ def add_secure_pages(pagepaths):
 def secure_get_{secure_page_name}():
     return easy_add_file('{pagepath}')
 """)
-                    elif pagepath.endswith('.css'):
-                        secure_page_name = str(pagepath.split("/")[-1]).replace('.css','')
+                    else:
+                        secure_page_name = str(pagepath.split("/")[-1]).split('.')[0]
                         print(f"""
-@app.route('/secure_{secure_page_name}.css')
+@app.route('/secure_{secure_page_name}.html')
 def secure_get_{secure_page_name}():
-    return easy_add_file('{pagepath}','text/css')
-""")
-                    elif pagepath.endswith('.json'):
-                        secure_page_name = str(pagepath.split("/")[-1]).replace('.json','')
-                        print(f"""
-@app.route('/secure_{secure_page_name}.json')
-def secure_get_{secure_page_name}():
-    return easy_add_file('{pagepath}','text/json')
+    return easy_add_file('{pagepath}','text/plain')
 """)
             else:
                 print(line, end='')
