@@ -112,8 +112,13 @@ def page_redirect(url):
 """, 200, {'Content-Type':'text/html'}
 
 #https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types
-def easy_add_page(contents, contenttype='text/html'):
-    return contents, 200, {'Content-Type':contenttype}
+def easy_add_page(contents, contenttype='text/html',pullcontent=False):
+    if not pullcontent or not os.path.exists(contents):
+        return contents, 200, {'Content-Type':contenttype}
+    raw_contents = None
+    with open(contents,'r') as reader:
+        raw_contents = reader.readlines():
+    return '\n'.join(raw_contents), 200, {'Content-Type':contenttype}
 
 def easy_add_file(file):
     return easy_add_page(open(file).read())
