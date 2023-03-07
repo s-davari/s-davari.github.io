@@ -125,7 +125,7 @@ def add_secure_pages(pagepaths):
             if line.startswith("#Add Secure Pages Here"):
                 print(line)
                 for pagepath in pagepaths:
-                    if pagepath.endswith('.html') or pathpath.endswith('.htm'):
+                    if pagepath.endswith('.html') or pagepath.endswith('.htm'):
                         secure_page_name = str(pagepath.split("/")[-1]).replace('.html','')
                         print(f"""
 @app.route('/secure_{secure_page_name}.html')
