@@ -159,7 +159,7 @@ function scanCode() {{
     
 
     var currentLocation = window.location.href;
-    document.getElementById("sharecodelink").setAttribute("href", currentLocation.split("?")[0] + "?code=" + content_to_share.join("\\n"));
+    document.getElementById("sharecodelink").setAttribute("href", currentLocation.split("?")[0] + "?code=" + content_to_share.join("%0A"));
 
     if (autorun) {{
         viewResults()
