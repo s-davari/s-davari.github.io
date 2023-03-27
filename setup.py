@@ -190,6 +190,10 @@ def industry():
         base_info[x] = False
     return rendre('index.html')
 
+@app.route('/frac.html')
+def fracpage():
+    return rendre('frac.html')
+
 @app.route('/full.html')
 def full():
     for x in base_info.keys():
