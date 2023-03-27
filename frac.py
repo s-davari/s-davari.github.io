@@ -110,7 +110,7 @@ async function main(){{
     loaded = true;
     console.log("done");
     document.getElementById("scansubmission").innerHTML = `{get_submissionbutton(name="Scan the code.", disabledstring="false",onclick="scanCode")}`;
-    if (autorun) {{}
+    if (autorun) {{
         scanCode()
     }}
 }}
@@ -154,7 +154,7 @@ function scanCode() {{
     console.log("Completed");
     document.getElementById("scansubmission").innerHTML = `{get_submissionbutton(name="Scanned", disabledstring="true")}`;
     document.getElementById("viewresults").innerHTML = `{get_viewresultsbutton(name="View the results", disabledstring="false", onclick="viewResults")}`;
-    if (autorun) {{}
+    if (autorun) {{
         viewResults()
     }}
 }}
