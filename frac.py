@@ -14,22 +14,23 @@ with footer.add_footercategory("Tech Used for Website") as category:
     category.add_footerlink("Ace Code Editor","https://ace.c9.io/")
 
 page = pv.Page("FRAC", navbar=None,footer=footer)
+page.href = lambda name,url: f"""<a href="{url}" target="_blank"><strong>{name}</strong></a>"""
+page.add_script = lambda content: page.add(html(f"""<script type="text/javascript">{content}</script>"""))
 
-href = lambda name,url: f"""<a href="{url}" target="_blank"><strong>{name}</strong></a>"""
-
+page.add_script("var autorun = false;")
 
 with page.add_card() as card:
     card.add_header("Welcome to FRAC (Frantz's Rule Analysis Checker)!")
-    card.add_text("by " + href("Miles Frantz", "https://rebrand.ly/frantzme"))
+    card.add_text("by " + page.href("Miles Frantz", "https://rebrand.ly/frantzme"))
     card.add_text("""This is a very rudimentary Python Playground that allows you to analyse your code for common security issues.""")
     card.add_text("""Why did I do this?
 Simply because I am a Ph.D. Security Researcher interested in both Static Code Analysis and I want security tools to be more accessible!""")
 
     card.add_text("The following Python Security Tools have been included within this playground:")
     card.add_text(f"""
-{href("Cryptolation", "https://github.com/franceme/cryptolation")} - A state-of-the-art Python security analysis tool I wrote, --currently-- being integrated.
-{href("Bandit", "https://github.com/PyCQA/bandit")} - A Python security tool designed and created by the fine team PyCQA.
-{href("DLint", "https://github.com/dlint-py/dlint")} - A security-based Python linter that extends flake8.
+{page.href("Cryptolation", "https://github.com/franceme/cryptolation")} - A state-of-the-art Python security analysis tool I wrote, --currently-- being integrated.
+{page.href("Bandit", "https://github.com/PyCQA/bandit")} - A Python security tool designed and created by the fine team PyCQA.
+{page.href("DLint", "https://github.com/dlint-py/dlint")} - A security-based Python linter that extends flake8.
 """)
 
     card.add_text("How do you use this?")
@@ -50,6 +51,7 @@ page.add_html("""
 <link rel="stylesheet" href="https://bossanova.uk/jspreadsheet/v4/jexcel.css" />
 <script src="https://jsuites.net/v4/jsuites.js"></script>
 <script src="https://bossanova.uk/jspreadsheet/v4/jexcel.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/ajaxorg/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
 """)
 
 def base_button(id, name, disabledstring, onclick):
@@ -108,6 +110,9 @@ async function main(){{
     loaded = true;
     console.log("done");
     document.getElementById("scansubmission").innerHTML = `{get_submissionbutton(name="Scan the code.", disabledstring="false",onclick="scanCode")}`;
+    if (autorun) {{}
+        scanCode()
+    }}
 }}
 
 function scanCode() {{
@@ -149,6 +154,9 @@ function scanCode() {{
     console.log("Completed");
     document.getElementById("scansubmission").innerHTML = `{get_submissionbutton(name="Scanned", disabledstring="true")}`;
     document.getElementById("viewresults").innerHTML = `{get_viewresultsbutton(name="View the results", disabledstring="false", onclick="viewResults")}`;
+    if (autorun) {{}
+        viewResults()
+    }}
 }}
 
 function viewResults() {{
@@ -312,21 +320,21 @@ with page.add_card(classes = """ " style="visibility:hidden;" id="dlintresults_c
     card.add_header("DLint Results")
     card.add(html(""" <div id="dlint_demo" style="width: 100%;"></div> """))
 
-page.add_html("""
-<script type="text/javascript">
+page.add_script("""
 let url = new URL(window.location.href);
 let params = new URLSearchParams(url.search);
 
 let current_code = params.get('code');
 document.getElementById("editor").innerHTML = current_code;
-</script>
+if (current_code) {
+    autorun = true;
+}
+""")
 
-<script src="https://cdn.jsdelivr.net/gh/ajaxorg/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
-<script>
-    var editor = ace.edit("editor");
-    editor.setTheme("ace/theme/monokai");
-    editor.session.setMode("ace/mode/python");
-</script>
+page.add_script("""
+var editor = ace.edit("editor");
+editor.setTheme("ace/theme/monokai");
+editor.session.setMode("ace/mode/python");
 """)
 
 with open(__file__.replace('.py','.html'),"w+") as writer:
