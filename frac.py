@@ -17,7 +17,10 @@ page = pv.Page("FRAC", navbar=None,footer=footer)
 page.href = lambda name,url: f"""<a href="{url}" target="_blank"><strong>{name}</strong></a>"""
 page.add_script = lambda content: page.add(html(f"""<script type="text/javascript">{content}</script>"""))
 
-page.add_script("var autorun = false;")
+page.add_script("""
+var autorun = false;
+var content_to_share = [];
+""")
 
 with page.add_card() as card:
     card.add_header("Welcome to FRAC (Frantz's Rule Analysis Checker)!")
@@ -52,6 +55,7 @@ page.add_html("""
 <script src="https://jsuites.net/v4/jsuites.js"></script>
 <script src="https://bossanova.uk/jspreadsheet/v4/jexcel.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/ajaxorg/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.22.1/full/pyodide.js"></script>
 """)
 
 def base_button(id, name, disabledstring, onclick):
@@ -89,7 +93,6 @@ def get_resetbutton(name="Reset the page", disabledstring="false",onclick="reset
 def core_pyodide(extra_commands="", onstart=None):
     call = "main();" if onstart is None else onstart
     return f"""
-<script src="https://cdn.jsdelivr.net/pyodide/v0.22.1/full/pyodide.js"></script>
 <script defer type="text/javascript">
 
 var pyodide;
@@ -122,17 +125,16 @@ function scanCode() {{
     editor = document.getElementById("editor").innerText;
     var lines = document.getElementById("editor").innerText.split(/\\r?\\n/);
     var started = false;
-    var newlines = [];
     for (var i = 0; i < lines.length; i++) {{
         if (started || isNaN(lines[i])) {{
             started = true;
-            newlines.push(lines[i]);
+            content_to_share.push(lines[i]);
         }}
     }}
-    console.log(newlines.join("\\n"));
+    console.log(content_to_share.join("\\n"));
 
     var samplefile = "/sample.py";
-    pyodide.FS.writeFile(samplefile, newlines.join("\\n"), {{ encoding: "utf8" }});
+    pyodide.FS.writeFile(samplefile, content_to_share.join("\\n"), {{ encoding: "utf8" }});
 
     pyodide.runPython(`import os,sys,base64`);
     pyodide.runPython(`import pandas as pd`);
@@ -154,6 +156,11 @@ function scanCode() {{
     console.log("Completed");
     document.getElementById("scansubmission").innerHTML = `{get_submissionbutton(name="Scanned", disabledstring="true")}`;
     document.getElementById("viewresults").innerHTML = `{get_viewresultsbutton(name="View the results", disabledstring="false", onclick="viewResults")}`;
+    
+
+    var currentLocation = window.location.href;
+    document.getElementById("sharecodelink").setAttribute("href", currentLocation.split("?")[0] + "?code=" + content_to_share.join("\\n"));
+
     if (autorun) {{
         viewResults()
     }}
@@ -310,6 +317,7 @@ with page.add_card() as card:
         form.add(html(get_submissionbutton()))
         form.add(html(get_viewresultsbutton()))
         form.add(html(get_resetbutton()))
+    card.add_link(text="Copy the link here to share and auto-scan the code you entered", url=""" " id="sharecodelink""")
 
 
 with page.add_card(classes = """ " style="visibility:hidden;" id="banditresults_container""") as card:
