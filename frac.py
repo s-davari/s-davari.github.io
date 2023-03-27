@@ -11,6 +11,7 @@ with footer.add_footercategory("Tech Used for Website") as category:
     category.add_footerlink("PyVibe", "https://www.pyvibe.com/")
     category.add_footerlink("Pyodide", "https://pyodide.org")
     category.add_footerlink("JSpreadSheet", "https://bossanova.uk/jspreadsheet/v4")
+    category.add_footerlink("Ace Code Editor","https://ace.c9.io/")
 
 page = pv.Page("FRAC", navbar=None,footer=footer)
 
@@ -26,7 +27,7 @@ Simply because I am a Ph.D. Security Researcher interested in both Static Code A
 
     card.add_text("The following Python Security Tools have been included within this playground:")
     card.add_text(f"""
-{href("Cryptolation", "https://github.com/franceme/cryptolation")} - A self-developed state-of-the-art Python security tool, --currently-- being integrated.
+{href("Cryptolation", "https://github.com/franceme/cryptolation")} - A state-of-the-art Python security analysis tool I wrote, --currently-- being integrated.
 {href("Bandit", "https://github.com/PyCQA/bandit")} - A Python security tool designed and created by the fine team PyCQA.
 {href("DLint", "https://github.com/dlint-py/dlint")} - A security-based Python linter that extends flake8.
 """)
@@ -42,18 +43,6 @@ Simply because I am a Ph.D. Security Researcher interested in both Static Code A
 
 """
     await micropip.install("semgrep");
-
-https://bossanova.uk/jspreadsheet/v4/docs/quick-reference
-
-https://github.com/pycob/pyvibe/blob/master/docs/playground.html#L282
-
-https://github.com/pycob/pyvibe/blob/master/docs/playground.html#L282
-
-https://pyodide.org/en/stable/usage/api/js-api.html
-
-https://bossanova.uk/jspreadsheet/v3/
-
-https://stackoverflow.com/questions/25983603/how-to-submit-an-html-form-without-redirection
 """
 
 page.add_html("""
@@ -63,32 +52,37 @@ page.add_html("""
 <script src="https://bossanova.uk/jspreadsheet/v4/jexcel.js"></script>
 """)
 
-def get_submissionbutton(name="Loading...", disabledstring="true",onclick=None):
-    onclick = "" if onclick is None else """onclick="{0}()" """.format(onclick)
-    return """<button id="scansubmission" {0} {2} class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
+def base_button(id, name, disabledstring, onclick):
+    return f"""<button id="{id}" {disabledstring} {onclick} class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
             <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                {1}
+                {name}
             </span>
     </button>
-""".format(disabledstring, name,onclick)
+"""
+
+def get_submissionbutton(name="Loading...", disabledstring="true",onclick=None):
+    return base_button(
+        id="scansubmission",
+        name=name,
+        disabledstring=disabledstring,
+        onclick = "" if onclick is None else """onclick="{0}()" """.format(onclick)
+    )
 
 def get_viewresultsbutton(name="No Results...", disabledstring="true",onclick=None):
-    onclick = "" if onclick is None else """onclick="{0}()" """.format(onclick)
-    return """<button id="viewresults" {0} {2} class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
-            <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                {1}
-            </span>
-    </button>
-""".format(disabledstring, name,onclick)
+    return base_button(
+        id="viewresults",
+        name=name,
+        disabledstring=disabledstring,
+        onclick = "" if onclick is None else """onclick="{0}()" """.format(onclick)
+    )
 
 def get_resetbutton(name="Reset the page", disabledstring="false",onclick="resetResults"):
-    onclick = "" if onclick is None else """onclick="{0}()" """.format(onclick)
-    return """<button id="resetresults" {0} {2} class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
-            <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                {1}
-            </span>
-    </button>
-""".format(disabledstring, name,onclick)
+    return base_button(
+        id="viewresults",
+        name=name,
+        disabledstring=disabledstring,
+        onclick = "" if onclick is None else """onclick="{0}()" """.format(onclick)
+    )
 
 def core_pyodide(extra_commands="", onstart=None):
     call = "main();" if onstart is None else onstart
@@ -280,9 +274,7 @@ with page.add_card() as card:
     """))
 
     # Have to string break through the action keyword to set the target to the iframe
-    with card.add_form(action="""return scanCode();" target="dummyframe" id="setcontent""") as form:
-        #form.add_formtextarea("SourceCode", "code")
-        
+    with card.add_form(action="""return scanCode();" target="dummyframe" id="setcontent""") as form:        
         form.add(html("""
 <style type="text/css" media="screen">
 #editorContainer {
@@ -310,7 +302,6 @@ with page.add_card() as card:
         form.add(html(get_submissionbutton()))
         form.add(html(get_viewresultsbutton()))
         form.add(html(get_resetbutton()))
-
 
 
 with page.add_card(classes = """ " style="visibility:hidden;" id="banditresults_container""") as card:
