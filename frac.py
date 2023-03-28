@@ -27,7 +27,12 @@ with page.add_card() as card:
     card.add_text("by " + page.href("Miles Frantz", "https://rebrand.ly/frantzme"))
     card.add_text("""This is a very rudimentary completely static Python Playground that allows you to analyse your code for common security issues. This process only happens within your browser thanks to the power of Pyodide.""")
     card.add_text("""Why did I do this?
-Simply because I am a Ph.D. Security Researcher interested in both Static Code Analysis and I want security tools to be more accessible!""")
+Simply because I am a Ph.D. Security Researcher interested in both Static Code Analysis and I want security tools to be more accessible!
+
+No code computation, source code, or results are sent or saved anywhere.
+I only have the bare Google analytics on to see if people do use this.
+You can check this in the <a href="https://github.com/franceme/franceme.github.io/blob/master/frac.py">source code</a>.
+""")
 
     card.add_text("The following Python Security Tools have been included within this playground:")
     card.add_text(f"""
