@@ -56,6 +56,17 @@ page.add_html("""
 <script src="https://bossanova.uk/jspreadsheet/v4/jexcel.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/ajaxorg/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.22.1/full/pyodide.js"></script>
+
+<!-- Google tag (gtag.js), I just want to see if anyone else is using this besides me -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JSVB5LYE9F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JSVB5LYE9F');
+</script>
+
 """)
 
 def base_button(id, name, disabledstring, onclick):
