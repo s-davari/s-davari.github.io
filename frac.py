@@ -23,7 +23,7 @@ var content_to_share = [];
 """)
 
 with page.add_card() as card:
-    card.add_header("Welcome to FRAC (Frantz's Rule Analysis Checker)!")
+    card.add_header("Welcome to FRAC (Frantzs Rule Analysis Checker)!")
     card.add_text("by " + page.href("Miles Frantz", "https://rebrand.ly/frantzme"))
     card.add_text("""This is a very rudimentary completely static Python Playground that allows you to analyse your code for common security issues. This process only happens within your browser thanks to the power of Pyodide.""")
     card.add_text("""Why did I do this?
