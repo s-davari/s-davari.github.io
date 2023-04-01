@@ -97,8 +97,11 @@
                 {% if dyct['show_skills'] -%}
                 <li class="nav-item"><a class="nav-link" href="#skills" title="Skills"><span class="menu-title">Skills</span></a></li>
                 {%- endif%}
-                {% if dyct['show_docker'] -%}
+                {% if False and dyct['show_docker'] -%}
                 <li class="nav-item"><a class="nav-link" href="#my_dock" title="MyDocker"><span class="menu-title">My Docker</span></a></li>
+                {%- endif%}
+                {% if True -%}
+                <li class="nav-item"><a class="nav-link" href="https://rebrand.ly/frantzme_frac" title="FRAC"><span class="menu-title">FRAC</span></a></li>
                 {%- endif%}
                 {% if dyct['show_exp'] -%}
                 <li class="nav-item"><a class="nav-link" href="#experience" title="Work Experience"><span class="menu-title">Work Experience</span></a></li>
@@ -247,7 +250,7 @@
 	#}
         <br>
         <br>
-        I enjoy working on side projects to learn new skills and techniques.
+        I enjoy working on side projects to help developers secure their code.
         </div>
         <div class="col-md-5 offset-lg-1">
           <div class="row mt-2">
@@ -398,7 +401,7 @@
             SpotBugs, and Coverity.</q></blockquote>",color="yellow")|safe
        }}
        {{
-          "<a href='https://arxiv.org/pdf/2201.07651' >Enhancing CryptoGuard’s Deployability for Continuous Software Security Scanning</a>"|get_base(
+          "<a href='https://arxiv.org/pdf/2201.07651' >Enhancing CryptoGuards Deployability for Continuous Software Security Scanning</a>"|get_base(
           "<a href='https://vtechworks.lib.vt.edu/handle/10919/5534'>VT ETDs</a>",
           "May 2020",
           "",
@@ -492,6 +495,13 @@
     <div class="projects-section">
       <h2 class="h2 fw-light mb-4">Projects</h2>
       <div class="timeline">
+        {{
+          "FRAC"|get_base(
+          "<a href='https://github.com/franceme/franceme.github.io/blob/master/frac.py'>GitHub Repo</a>",
+          "2023",
+          "Present",
+          "This is a <b>fully static</b>, <b>client-side</b>, <b>proof of concept code analysis platform</b>. I was inspired by the late <a href='https://www.dhs.gov/science-and-technology/swamp'>Software Assurance Marketplace (SWAMP)</a>. SWAMP was both a public and private platform that allowed users to upload source code and run various code analysis tools on their code. While hosting their own public cloud instance, they were also able to package the platform for private installation; extending the platform to DoD or government agencies. Unfortunately the project was closed due to funding issues. Since there seemed to be no static platform that had the same capabilities of SWAMP, I waited until the technology was available to make a mvp myself. Currently <a href='https://rebrand.ly/frantzme_frac'>Frantzs Rule Analysis Checker (FRAC)</a>, as it is currently named, is a compiled single and fully static html page. A user is able to write in Python source code, click the button to scan the source code with all of the tools currently supported, and see each of the tools results. This process is supported by <a href='https://pyodide.org/en/stable/'>Pyodide</a>, a WASM based Python runtime, enabling the <b>entirety</b> of the process to run <b>inside the browser itself</b>. The process is <b>not saved elsewhere</b> and the <b>results are not transmitted elsewhere</b>. I have only added the base Google Analytics to see how many people visit the site. As this is a live project there will be ongoing additions. Please visit the website page itself at <a href='https://rebrand.ly/frantzme_frac'>https://rebrand.ly/frantzme_frac</a> for more details.<br><br> Topics: GitHub Actions, Python, Python3, Static Analysis, Website, Code Analysis, Platform, Privacy, Security",color="blue")|safe
+       }}
         {{
           "Scripts | funbelts"|get_base(
           "<a href='https://github.com/franceme/Scripts'>GitHub Repo</a>",
