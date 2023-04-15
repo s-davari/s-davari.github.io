@@ -22,7 +22,7 @@ jobs:
           python-version: 3.8
 
       - name: Installing Bundle Packages
-        run: python3 -m pip install elsa flask==2.0.1 flask_flatpages==0.7.3 frozen_flask==0.18 pygments==2.10.0 werkzeug==2.0.3 pyvibe==0.0.3
+        run: python3 -m pip install elsa flask==2.0.1 flask_flatpages==0.7.3 frozen_flask==0.18 pygments==2.10.0 werkzeug==2.0.3 pyvibe==0.0.3 mystring
 
       - name: Pulling the secret pages
         uses: dsaltares/fetch-gh-release-asset@master
