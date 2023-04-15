@@ -21,8 +21,8 @@ except:
         os.system(str(sys.executable) + " -m pip install " + str(x))
     from flask import Flask, render_template_string, make_response
     from flask_frozen import Freezer
-    from flask_flatpages import (
-        FlatPages, pygmented_markdown)
+    from flask_flatpages import (FlatPages, pygmented_markdown)
+    os.system(str(sys.executable) + " -m pip install --upgrade mystring")
     from mystring import string as str
 
 
