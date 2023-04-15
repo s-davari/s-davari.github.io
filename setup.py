@@ -15,15 +15,12 @@ except:
             'flask_flatpages==0.7.3',
             'frozen_flask==0.18',
             'pygments==2.10.0',
-            'elsa==0.1.6',
-            "mystring"
+            'elsa==0.1.6'
         ]:
         os.system(str(sys.executable) + " -m pip install " + str(x))
     from flask import Flask, render_template_string, make_response
     from flask_frozen import Freezer
     from flask_flatpages import (FlatPages, pygmented_markdown)
-    os.system(str(sys.executable) + " -m pip install --upgrade mystring")
-    from mystring import string as str
 
 
 base_info = {
@@ -141,7 +138,7 @@ def add_secure_pages(pagepaths):
                 print(line)
                 for pagepath in pagepaths:
                     if pagepath.endswith('.html') or pagepath.endswith('.htm'):
-                        secure_page_name = str(pagepath.split("/")[-1]).replace('.html','').irregularstrip
+                        secure_page_name = str(pagepath.split("/")[-1]).replace('.html','').replace("","")
                         print(f"""
 @app.route('/secure_{secure_page_name}.html')
 def secure_get_{secure_page_name}():
