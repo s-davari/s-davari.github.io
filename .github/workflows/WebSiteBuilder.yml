@@ -41,7 +41,7 @@ jobs:
         run: python3 frac.py
 
       - name: Show the contents
-        run: ls -altr .
+        run: cat setup.py
 
       - name: Compiling the Website
         run: python3 setup.py freeze
