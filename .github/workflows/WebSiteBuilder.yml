@@ -40,9 +40,6 @@ jobs:
       - name: Compiling the Frac Webpage
         run: python3 frac.py
 
-      - name: Show the contents
-        run: cat setup.py
-
       - name: Compiling the Website
         run: python3 setup.py freeze
 
