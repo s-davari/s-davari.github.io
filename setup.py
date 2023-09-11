@@ -242,7 +242,7 @@ def paperRss():
         content = []
         with open(foil, 'r') as reader:
             for line in reader.readlines():
-                content += [json.loads(reader)]
+                content += [json.loads(line)]
 
         for article in content:
             fe = fg.add_entry()
