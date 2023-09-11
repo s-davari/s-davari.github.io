@@ -235,12 +235,14 @@ def paperRss():
     fg.description('A feed of paper news pulled from the email')
     fg.link(href="https://franceme.github.io/paperss")
 
-    foil = 'paperss.json'
+    foil = 'paperss.jsonl'
     if os.path.exists(foil):
 
         import json
+        content = []
         with open(foil, 'r') as reader:
-            content = json.load(reader)
+            for line in reader.readlines():
+                content += [json.loads(reader)]
 
         for article in content:
             fe = fg.add_entry()
