@@ -247,9 +247,10 @@ def paperRss():
         for article in content:
             fe = fg.add_entry()
             fe.title(article['Title'])
-            fe.link(href=article['Link'])
+            link = article['Link'].replace('https://franceme.github.io/<','').replace('>','')
+            fe.link(href=link)
             fe.description(article['Content'])
-            fe.guid(article['Link'], permalink=True)
+            fe.guid(link, permalink=True)
             fe.author(name=article['AuthorName'], email=article['AuthorEmail'])
             fe.pubDate(article['PubDate'])
 
