@@ -8,6 +8,7 @@ try:
     from flask_frozen import Freezer
     from flask_flatpages import (
         FlatPages, pygmented_markdown)
+    from feedgen.feed import FeedGenerator
 except:
     for x in [
             'requests',
@@ -15,12 +16,14 @@ except:
             'flask_flatpages==0.7.3',
             'frozen_flask==0.18',
             'pygments==2.10.0',
+            'feedgen==0.9.0',
             'elsa==0.1.6'
         ]:
         os.system(str(sys.executable) + " -m pip install " + str(x))
     from flask import Flask, render_template_string, make_response
     from flask_frozen import Freezer
     from flask_flatpages import (FlatPages, pygmented_markdown)
+    from feedgen.feed import FeedGenerator
 
 
 base_info = {
@@ -221,6 +224,37 @@ def sok_grab():
 def rss_grab():
     return page_redirect('https://zapier.com/engine/rss/8296213/frantzme')
 
+@app.route('/paperss')
+def paperRss():
+    """
+    # https://www.reddit.com/r/flask/comments/evjcc5/question_on_how_to_generate_a_rss_feed/
+    # https://github.com/lkiesow/python-feedgen
+    """
+    fg = FeedGenerator()
+    fg.title('Faper rss feed')
+    fg.description('A feed of paper news pulled from the email')
+    fg.link(href="https://franceme.github.io/paperss")
+
+    foil = 'paperss.json'
+    if os.path.exists(foil):
+
+        import json
+        with open(foil, 'r') as reader:
+            content = json.load(reader)
+
+        for article in content:
+            fe = fg.add_entry()
+            fe.title(article['Title'])
+            fe.link(href=article['Link'])
+            fe.description(article['Content'])
+            fe.guid(article['Link'], permalink=True)
+            fe.author(name=article['AuthorName'], email=article['AuthorEmail'])
+            fe.pubDate(article['PubDate'])
+
+    response = make_response(fg.rss_str())
+    response.headers.set('Content-Type', 'application/rss+xml')
+    return response
+
 @app.route('/security.txt')
 def security():
     return f"""
@@ -368,6 +402,7 @@ setup(name='My Website',
             'frozen_flask==0.18',
             'pygments==2.10.0',
             'elsa==0.1.6',
+            'feedgen==0.9.0',
             'werkzeug==2.0.3' #https://stackoverflow.com/questions/71661851/typeerror-init-got-an-unexpected-keyword-argument-as-tuple#answer-71662972
         ]
 )
