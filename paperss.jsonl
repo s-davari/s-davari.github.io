@@ -819,3 +819,209 @@
 {"Title": "[PDF] Revisiting File Context for Source Code Summarization ", "Link": "<https://scholar.google.it/scholar_url?url=https://arxiv.org/pdf/2309.02326&hl=en&sa=X&d=1601132782969440243&ei=pGj8ZPqrCZH4yATU2Zz4CA&scisig=AFWwaeZ8Tz_5kFfEJf7dThnylKtO&oi=scholaralrt&hist=RKKj9VgAAAAJ:15219440454738880671:AFWwaeaDupe0auBTFB-WiqkZ4-Ux&html=&pos=6&folt=rel>", "Content": "Twitter] \nLinkedIn] \nFacebook] \nA Bansal, CY Su, C McMillan - arXiv preprint arXiv:2309.02326, 2023\nSource code summarization is the task of writing natural language \ndescriptions of \nsource code. A typical use case is generating short summaries of \nsubroutines for use \nin API documentation. The heart of almost all current research into code \u2026\n", "AuthorName": "GScholar :> Luca Pascarella", "AuthorEmail": "https://scholar.google.com/scholar_alerts?view_op=list_alerts&hl=en", "PubDate": null}
 {"Title": "[PDF] An Empirical Evaluation of Using Large Language Models for Automated Unit Test Generation ", "Link": "<https://scholar.google.it/scholar_url?url=http://www.franktip.org/pubs/testpilot2023.pdf&hl=en&sa=X&d=15413866527499605876&ei=pGj8ZPqrCZH4yATU2Zz4CA&scisig=AFWwaeaU8f1EzKeBO1gPffdi-xby&oi=scholaralrt&hist=RKKj9VgAAAAJ:15219440454738880671:AFWwaeaDupe0auBTFB-WiqkZ4-Ux&html=&pos=7&folt=rel>", "Content": "Twitter] \nLinkedIn] \nFacebook] \nM Sch\u00e4fer, S Nadi, A Eghbali, F Tip\nUnit tests play a key role in ensuring the correctness of software. \nHowever, manually \ncreating unit tests is a laborious task, motivating the need for \nautomation. Large \nLanguage Models (LLMs) have recently been applied to various aspects of \nsoftware \u2026\n", "AuthorName": "GScholar :> Luca Pascarella", "AuthorEmail": "https://scholar.google.com/scholar_alerts?view_op=list_alerts&hl=en", "PubDate": null}
 {"Title": "[PDF] Energy-Aware Evolutionary Multi-Objective Refactoring for Bad Code Smells Correction of Android Applications ", "Link": "<https://scholar.google.it/scholar_url?url=https://scj.kashanu.ac.ir/article_113924_79abd25568f1df2b1c479a145b691d01.pdf&hl=en&sa=X&d=6165364015594138868&ei=pGj8ZPqrCZH4yATU2Zz4CA&scisig=AFWwaeaJDvyLLdBjGQOCa5PahSyx&oi=scholaralrt&hist=RKKj9VgAAAAJ:15219440454738880671:AFWwaeaDupe0auBTFB-WiqkZ4-Ux&html=&pos=8&folt=rel>", "Content": "Twitter] \nLinkedIn] \nFacebook] \nM Zamzame, S Sedighian Kashi, A Nikanjam - Soft Computing Journal, 2023\nIn software engineering, energy efficiency is an influential factor in the \nsoftware \ndevelopment and maintenance especially for battery-limited devices. While \nrefactoring can improve the quality of software, recent studies suggest \nthat some \u2026\n", "AuthorName": "GScholar :> Luca Pascarella", "AuthorEmail": "https://scholar.google.com/scholar_alerts?view_op=list_alerts&hl=en", "PubDate": null}
+{"Title":"[PDF] Practical *Privacy*-Preserving *Machine Learning *using Fully Homomorphic Encryption *machine* *learning* training using fully homomorphic encryption. … order to enable *privacy* in *Machine* *Learning*, by introducing practical tools that will allow the training …","Link":"<https://scholar.google.com/scholar_url?url=https://eprint.iacr.org/2023/1320.pdf&hl=en&sa=X&d=245755231612165000&ei=LKb_ZOSEAaSP6rQPoceo4Ac&scisig=AFWwaea34qWmoyNRozEunwDbLpCj&oi=scholaralrt&hist=RKKj9VgAAAAJ:17741223331555957934:AFWwaeZiurmu-iywJprIp_zDHHr8&html=&pos=0&folt=kw>","Content":"M Brand, G Pradel - Cryptology ePrint Archive, 2023;… In this work, we present a practically viable approach to *privacy*preserving 
+","AuthorName":"GScholar :> intitle:'machine learning"  privacy","AuthorEmail":"https://scholar.google.com/scholar_alerts?view_op=list_alerts&hl=en","PubDate":""}
+{"Title":"[PDF] *Machine Learning *in the Modern World: Challenges and Opportunities ","Link":"<https://scholar.google.com/scholar_url?url=https://osf.io/phf6q/download&hl=en&sa=X&d=11608540442641484406&ei=LKb_ZOSEAaSP6rQPoceo4Ac&scisig=AFWwaeZFWOhwjXyTKuRL1IyBqKyN&oi=scholaralrt&hist=RKKj9VgAAAAJ:17741223331555957934:AFWwaeZiurmu-iywJprIp_zDHHr8&html=&pos=1&folt=kw>","Content":"Twitter] ;LinkedIn] 
+Facebook] 
+J Smith - 2023
+… landscape of *machine* *learning*, delving into the challenges it 
+presents and the 
+abundant opportunities it offers. From data *privacy* concerns to bias 
+mitigation, 
+ethical considerations, and the democratization of AI, we navigate the 
+complex …
+","AuthorName":"GScholar :> intitle:'machine learning"  privacy","AuthorEmail":"https://scholar.google.com/scholar_alerts?view_op=list_alerts&hl=en","PubDate":""}
+{"Title":"[PDF] *Machine Learning *Applications for Detecting Anomalies and Ensuring Data Integrity in Clinical Trials ","Link":"<https://scholar.google.com/scholar_url?url=https://osf.io/4m9r5/download&hl=en&sa=X&d=3181163817770783910&ei=LKb_ZOSEAaSP6rQPoceo4Ac&scisig=AFWwaeYNgXR66Z0tbTGZgzStddY4&oi=scholaralrt&hist=RKKj9VgAAAAJ:17741223331555957934:AFWwaeZiurmu-iywJprIp_zDHHr8&html=&pos=2&folt=kw>","Content":"Twitter] ;LinkedIn] 
+Facebook] 
+K Dash - 2023
+… By upholding strong ethical standards and prioritizing participant 
+*privacy*, the 
+integration of *machine* *learning* for anomaly detection and data 
+integrity in clinical 
+trials can contribute to the advancement of research while respecting the 
+rights and …
+","AuthorName":"GScholar :> intitle:'machine learning"  privacy","AuthorEmail":"https://scholar.google.com/scholar_alerts?view_op=list_alerts&hl=en","PubDate":""}
+{"Title":"[PDF] The Intersection of Data Governance and *Machine Learning *in Clinical Trials ","Link":"<https://scholar.google.com/scholar_url?url=https://osf.io/cwjb5/download&hl=en&sa=X&d=7311581078277047876&ei=LKb_ZOSEAaSP6rQPoceo4Ac&scisig=AFWwaeYD1ZhbHOqQtBTy9JMMm2dd&oi=scholaralrt&hist=RKKj9VgAAAAJ:17741223331555957934:AFWwaeZiurmu-iywJprIp_zDHHr8&html=&pos=3&folt=kw>","Content":"Twitter] ;LinkedIn] 
+Facebook] 
+A Hassan - 2023
+… By examining their synergistic relationship, we aim to shed light on the 
+transformative impact that effective data governance, coupled with *machine* 
+*learning* 
+algorithms, can have on the integrity of clinical trial data, the 
+protection of participant …
+","AuthorName":"GScholar :> intitle:'machine learning"  privacy","AuthorEmail":"https://scholar.google.com/scholar_alerts?view_op=list_alerts&hl=en","PubDate":""}
+{"Title":"Efficient Pruning for *Machine Learning *under Homomorphic Encryption ","Link":"<https://scholar.google.com/scholar_url?url=https://research.ibm.com/publications/efficient-pruning-for-machine-learning-under-homomorphic-encryption&hl=en&sa=X&d=7098015652444007883&ei=LKb_ZOSEAaSP6rQPoceo4Ac&scisig=AFWwaeZT9FobA4XRMmHYetm8ZG5i&oi=scholaralrt&hist=RKKj9VgAAAAJ:17741223331555957934:AFWwaeZiurmu-iywJprIp_zDHHr8&html=&pos=4&folt=kw>","Content":"Twitter] ;LinkedIn] 
+Facebook] 
+E Aharoni, M Baruch, P Bose, A Buyuktosunoglu… - European Symposium on …, 
+2023
+… *Privacy*-preserving *machine* *learning* (PPML) solutions are gaining 
+widespread 
+popularity. Among these, many rely on homomorphic encryption (HE) that 
+offers 
+confidentiality of the model and the data, butat the cost of large latency 
+and memory …
+","AuthorName":"GScholar :> intitle:'machine learning"  privacy","AuthorEmail":"https://scholar.google.com/scholar_alerts?view_op=list_alerts&hl=en","PubDate":""}
+{"Title":"[PDF] Managing Fake News on Social Media Through *Machine Learning*-A Comprehensive Analysis ","Link":"<https://scholar.google.com/scholar_url?url=https://www.opastpublishers.com/open-access-articles/managing-fake-news-on-social-media-through-machine-learning--a-comprehensive-analysis.pdf&hl=en&sa=X&d=8978963824614275526&ei=LKb_ZOSEAaSP6rQPoceo4Ac&scisig=AFWwaeaPS7id5Y3Hix0_5Py6gsHh&oi=scholaralrt&hist=RKKj9VgAAAAJ:17741223331555957934:AFWwaeZiurmu-iywJprIp_zDHHr8&html=&pos=5&folt=kw>","Content":"Twitter] ;LinkedIn] 
+Facebook] 
+Y Wang - J Sen Net Data Comm, 2023
+… *Machine* *learning* models must consider contextual information, such as 
+the 
+source of the news and the reactions of users, to accurately … Ethical and 
+*Privacy* 
+Concerns Implementing *machine* *learning* models to detect fake news 
+raises …
+","AuthorName":"GScholar :> intitle:'machine learning"  privacy","AuthorEmail":"https://scholar.google.com/scholar_alerts?view_op=list_alerts&hl=en","PubDate":""}
+{"Title":"Towards Early Cyberattack Discrimination in the Smart Grid Using Statistical Approach with *Machine Learning *Techniques ","Link":"<https://scholar.google.com/scholar_url?url=https://europepmc.org/article/ppr/ppr720803&hl=en&sa=X&d=14625169636352790766&ei=LKb_ZOSEAaSP6rQPoceo4Ac&scisig=AFWwaebUmLpb-CRSz3XZ052IOyjJ&oi=scholaralrt&hist=RKKj9VgAAAAJ:17741223331555957934:AFWwaeZiurmu-iywJprIp_zDHHr8&html=&pos=6&folt=kw>","Content":"Twitter] ;LinkedIn] 
+Facebook] 
+V AN, P BS - 2023
+… Smart Grid has been exposed to cyberattacks that penetrate the 
+Supervisory 
+Control and Data Acquisition systems, causing *privacy* and … This paper 
+aims to 
+develop a robust Anomaly-Based Intrusion Detection System using the 
+statistical …
+","AuthorName":"GScholar :> intitle:'machine learning"  privacy","AuthorEmail":"https://scholar.google.com/scholar_alerts?view_op=list_alerts&hl=en","PubDate":""}
+{"Title":"[PDF] Unleashing the Power of Data: Enhancing Physician Outreach through *Machine Learning* ","Link":"<https://scholar.google.com/scholar_url?url=https://www.researchgate.net/profile/Shashank-Agarwal-20/publication/373515317_Unleashing_the_Power_of_Data_Enhancing_Physician_Outreach_through_Machine_Learning/links/64efa23467890027e16f5ed0/Unleashing-the-Power-of-Data-Enhancing-Physician-Outreach-through-Machine-Learning.pdf&hl=en&sa=X&d=3529187197749901558&ei=LKb_ZOSEAaSP6rQPoceo4Ac&scisig=AFWwaebKSKFHWndoYUyMu3biw1Te&oi=scholaralrt&hist=RKKj9VgAAAAJ:17741223331555957934:AFWwaeZiurmu-iywJprIp_zDHHr8&html=&pos=7&folt=kw>","Content":"Twitter] ;LinkedIn] 
+Facebook] 
+S Agarwal - 2023
+… concerns, physician resistance, legal and ethical implications, as well 
+as the 
+limitations of *machine* *learning* algorithms, will be … , *privacy* 
+concerns, physician 
+resistance, and legal and ethical implications in order to ensure 
+responsible and …
+","AuthorName":"GScholar :> intitle:'machine learning"  privacy","AuthorEmail":"https://scholar.google.com/scholar_alerts?view_op=list_alerts&hl=en","PubDate":""}
+{"Title":"Leveraging *Machine Learning *for Disease Diagnoses based on Wearable Devices: A Survey ","Link":"<https://scholar.google.com/scholar_url?url=https://ieeexplore.ieee.org/abstract/document/10243618/&hl=en&sa=X&d=1441860229657408839&ei=LKb_ZOSEAaSP6rQPoceo4Ac&scisig=AFWwaeaBdSoxEQzyQf4Uuf5jp64b&oi=scholaralrt&hist=RKKj9VgAAAAJ:17741223331555957934:AFWwaeZiurmu-iywJprIp_zDHHr8&html=&pos=8&folt=kw>","Content":"Twitter] ;LinkedIn] 
+Facebook] 
+Z Jiang, V van Zoest, W Deng, ECH Ngai, J Liu - IEEE Internet of Things 
+Journal, 2023
+… Based on the literature review, we discuss the challenges and propose 
+future 
+directions from the perspectives of *privacy* concerns, security concerns, 
+transmission 
+latency and reliability, energy consumption, multi-modality, multi-sensor, 
+multi-devices …
+","AuthorName":"GScholar :> intitle:'machine learning"  privacy","AuthorEmail":"https://scholar.google.com/scholar_alerts?view_op=list_alerts&hl=en","PubDate":""}
+{"Title":"*Machine learning *based intrusion detection system for IoMT ","Link":"<https://scholar.google.com/scholar_url?url=https://link.springer.com/article/10.1007/s13198-023-02119-4&hl=en&sa=X&d=13039992722706757256&ei=LKb_ZOSEAaSP6rQPoceo4Ac&scisig=AFWwaeYkAXEx8tL1bPmPh7B1S2Nm&oi=scholaralrt&hist=RKKj9VgAAAAJ:17741223331555957934:AFWwaeZiurmu-iywJprIp_zDHHr8&html=&pos=9&folt=kw>","Content":"Twitter] ;LinkedIn] 
+Facebook] 
+P Kulshrestha, TV Vijay Kumar - … Journal of System Assurance Engineering 
+and …, 2023
+… However, the networking protocols used by IoMT are not adequate enough to 
+ensure the security and *privacy* of EHRs. Consequently… *machine* 
+*learning*-driven 
+intrusion detection systems as a solution to tackle this issue. The focus 
+of this study …
+","AuthorName":"GScholar :> intitle:'machine learning"  privacy","AuthorEmail":"https://scholar.google.com/scholar_alerts?view_op=list_alerts&hl=en","PubDate":""}
+{"Title":"[PDF] Compositional Taint Analysis for Enforcing Security Policies at Scale ","Link":"<https://scholar.google.com/scholar_url?url=https://linghuiluo.github.io/fse23industry.pdf&hl=en&sa=X&d=6237282350570683449&ei=K6b_ZIfNM4G7yASmu6ToAQ&scisig=AFWwaeZMJn5QmS4SL25IOQBxhxlN&oi=scholaralrt&hist=RKKj9VgAAAAJ:10794398129121069010:AFWwaebcgYm5i9RbmcZpCtpctkY5&html=&pos=0&folt=kw>","Content":"S Banerjee, S Cui, M Emmi, A Filieri, L Hadarean, P Li… - 2023;Automated static dataflow analysis is an effective technique for detecting 
+security 
+critical issues like sensitive data leak, and vulnerability to injection 
+attacks. Ensuring 
+high precision and recall requires an analysis that is context, field and 
+object …
+","AuthorName":"GScholar :> 'francesco Logozzo"","AuthorEmail":"https://scholar.google.com/scholar_alerts?view_op=list_alerts&hl=en","PubDate":""}
+{"Title":"Lean Six Sigma 4.0–a framework and review for Lean Six Sigma practices in the digital era ","Link":"<https://scholar.google.com/scholar_url?url=https://www.emerald.com/insight/content/doi/10.1108/BIJ-09-2022-0586/full/html&hl=en&sa=X&d=26238347371710652&ei=K6b_ZLrKLKSb6rQP4eOm2A8&scisig=AFWwaeaQI0wyWzR3dX2AAi5T32_M&oi=scholaralrt&hist=RKKj9VgAAAAJ:7851251243740277248:AFWwaeaF4RcST1au3gWvS4uUiy2W&html=&pos=0&folt=kw>","Content":"G Citybabu, S Yamini - Benchmarking: An International Journal, 2023;Purpose Lean Six Sigma 4.0 has brought about a paradigm shift in 
+customization, 
+automation, value creation and digitalization to achieve excellence in 
+human factors, 
+operations and sustainable development. Despite its potential, LSS 4.0 is 
+still in its …
+","AuthorName":"GScholar :> 'security" "augmented reality"","AuthorEmail":"https://scholar.google.com/scholar_alerts?view_op=list_alerts&hl=en","PubDate":""}
+{"Title":" Showing most relevant results above and less relevant results belowUpdate alert to receive fewer, more relevant results  Enhancing Biomedical Education with Real-Time Object Identification through *Augmented Reality* ","Link":"<https://scholar.google.com/scholar_url?url=https://ieeexplore.ieee.org/abstract/document/10239781/&hl=en&sa=X&d=11265652170587392520&ei=K6b_ZLrKLKSb6rQP4eOm2A8&scisig=AFWwaeae3gc6IOqRkZQlBs4azd7e&oi=scholaralrt&hist=RKKj9VgAAAAJ:7851251243740277248:AFWwaeaF4RcST1au3gWvS4uUiy2W&html=&pos=1&folt=kw>","Content":"Twitter] ;LinkedIn] 
+Facebook] 
+DN Jayawardana, R Agada, J Yan - 2023 8th Asia-Pacific Conference on 
+Intelligent …, 2023
+… an educational tool using computer vision and *augmented* *reality* to 
+train first and 
+second- … In this paper, we developed a mobile *augmented* *reality* 
+application that 
+can assist the students … Data Privacy and *Security*: As AR applications 
+in biomedical …
+","AuthorName":"GScholar :> 'security" "augmented reality"","AuthorEmail":"https://scholar.google.com/scholar_alerts?view_op=list_alerts&hl=en","PubDate":""}
+{"Title":"[PDF] Version 1.1| 9 May 2023 ","Link":"<https://scholar.google.com/scholar_url?url=https://elumplatform.com/TV%2520-%2520elum%2520WHITE%2520PAPER%2520ver%25201.3.pdf&hl=en&sa=X&d=3089120592619738169&ei=K6b_ZLrKLKSb6rQP4eOm2A8&scisig=AFWwaeZUHF4n7KcQGtxFIPcgRjzR&oi=scholaralrt&hist=RKKj9VgAAAAJ:7851251243740277248:AFWwaeaF4RcST1au3gWvS4uUiy2W&html=&pos=2&folt=kw>","Content":"Twitter] ;LinkedIn] 
+Facebook] 
+T Van Alstine
+… We investigate the use of XR technologies such as *augmented* *reality* 
+(AR), virtual 
+reality (VR), and mixed reality (MR) to create immersive and … i3's elum 
+platform is 
+a commercial solution that leverages sophisticated instructional systems 
+design …
+","AuthorName":"GScholar :> 'security" "augmented reality"","AuthorEmail":"https://scholar.google.com/scholar_alerts?view_op=list_alerts&hl=en","PubDate":""}
+{"Title":"Decide wisely: Interactive videos as appealing educational element to attract students to information *security* ","Link":"<https://scholar.google.com/scholar_url?url=https://aisel.aisnet.org/wi2023/18/&hl=en&sa=X&d=855066674377772318&ei=K6b_ZLrKLKSb6rQP4eOm2A8&scisig=AFWwaeYKxBtGjy4AxVWxkxYMW5p7&oi=scholaralrt&hist=RKKj9VgAAAAJ:7851251243740277248:AFWwaeaF4RcST1au3gWvS4uUiy2W&html=&pos=3&folt=kw>","Content":"Twitter] ;LinkedIn] 
+Facebook] 
+M Brehmer - 2023
+… , eg, interactive videos, games, simulations and *augmented* *reality* 
+approaches. 
+Within the context of interactive educational videos, digital … conducted 
+using the 
+term “(*security*-education OR information-*security*- awareness-training 
+OR cyber-*security*-awareness-training …
+","AuthorName":"GScholar :> 'security" "augmented reality"","AuthorEmail":"https://scholar.google.com/scholar_alerts?view_op=list_alerts&hl=en","PubDate":""}
+{"Title":"[PDF] Innovative AI-driven Automation System Leveraging Advanced Perceptive Technologies to Establish an Ideal Self-Regulating Video Surveillance Model ","Link":"<https://scholar.google.com/scholar_url?url=https://propulsiontechjournal.com/index.php/journal/article/download/220/197&hl=en&sa=X&d=7498076508202115752&ei=K6b_ZLrKLKSb6rQP4eOm2A8&scisig=AFWwaebgA2_4SjeKGXBbG9Q-euzB&oi=scholaralrt&hist=RKKj9VgAAAAJ:7851251243740277248:AFWwaeaF4RcST1au3gWvS4uUiy2W&html=&pos=4&folt=kw>","Content":"Twitter] ;LinkedIn] 
+Facebook] 
+J Nadaf, TB Patil, R kumar Lavate, M Beldar, R Abhang… - Tuijin 
+Jishu/Journal of …, 2023
+… accuracy in detecting and analyzing potential *security* breaches and 
+anomalies. 
+Through … that is poised to reshape the very foundations of *security* and 
+surveillance.[4] From its humble … [15] From *augmented* *reality* overlays 
+to …
+","AuthorName":"GScholar :> 'security" "augmented reality"","AuthorEmail":"https://scholar.google.com/scholar_alerts?view_op=list_alerts&hl=en","PubDate":""}
+{"Title":"A Comprehensive review of 'Internet of Healthcare Things': Networking aspects, technologies, services, applications, challenges, and *security *concerns ","Link":"<https://scholar.google.com/scholar_url?url=https://www.sciencedirect.com/science/article/pii/S1574013723000588&hl=en&sa=X&d=17622965621756616275&ei=K6b_ZLrKLKSb6rQP4eOm2A8&scisig=AFWwaeae65a6x9oVjwJP5l8Q8OGT&oi=scholaralrt&hist=RKKj9VgAAAAJ:7851251243740277248:AFWwaeaF4RcST1au3gWvS4uUiy2W&html=&pos=5&folt=kw>","Content":"Twitter] ;LinkedIn] 
+Facebook] 
+H Verma, N Chauhan, LK Awasthi - Computer Science Review, 2023
+… This article discusses several IoHT *security* concerns, requirements, 
+challenges, 
+and potential threats/attacks. Moreover, this article includes 
+recommendations for 
+addressing numerous research issues and defining the future scope of 
+research in …
+","AuthorName":"GScholar :> 'security" "augmented reality"","AuthorEmail":"https://scholar.google.com/scholar_alerts?view_op=list_alerts&hl=en","PubDate":""}
+{"Title":"Cost-efficient *security*-aware scheduling for dependent tasks with endpoint contention in edge computing ","Link":"<https://scholar.google.com/scholar_url?url=https://www.sciencedirect.com/science/article/pii/S0140366423003092&hl=en&sa=X&d=10271410188586397574&ei=K6b_ZLrKLKSb6rQP4eOm2A8&scisig=AFWwaeaMIZyNOlQbi8ySbaYVb6cF&oi=scholaralrt&hist=RKKj9VgAAAAJ:7851251243740277248:AFWwaeaF4RcST1au3gWvS4uUiy2W&html=&pos=6&folt=kw>","Content":"Twitter] ;LinkedIn] 
+Facebook] 
+Z Li, H Yu, G Fan, Q Tang, J Zhang, L Chen - Computer Communications, 2023
+… Despite the advantages, intermediate data across edge servers faces 
+external 
+*security* … to minimize the execution cost under the *security* and 
+deadline 
+constraints in the edge computing … the k th *security* service is optimal 
+for t i if the …
+","AuthorName":"GScholar :> 'security" "augmented reality"","AuthorEmail":"https://scholar.google.com/scholar_alerts?view_op=list_alerts&hl=en","PubDate":""}
+{"Title":"[PDF] Image Processing and Intelligent Remote Sensing in E-commerce: Revolutionizing Visual Shopping Experiences ","Link":"<https://scholar.google.com/scholar_url?url=http://journal.hmjournals.com/index.php/JIPIRS/article/download/2700/2451&hl=en&sa=X&d=16776163751827390499&ei=K6b_ZLrKLKSb6rQP4eOm2A8&scisig=AFWwaeanb7hBRPES-zWw9HHqR5gH&oi=scholaralrt&hist=RKKj9VgAAAAJ:7851251243740277248:AFWwaeaF4RcST1au3gWvS4uUiy2W&html=&pos=7&folt=kw>","Content":"Twitter] ;LinkedIn] 
+Facebook] 
+S Ramesh - Journal of Image Processing and Intelligent Remote …, 2023
+… It explores their applications in product visualization, *augmented* 
+*reality* (AR) 
+shopping, visual search, and inventory management. Additionally, it 
+discusses the 
+myriad benefits they bring to e-commerce, from improved customer engagement 
+to …
+","AuthorName":"GScholar :> 'security" "augmented reality"","AuthorEmail":"https://scholar.google.com/scholar_alerts?view_op=list_alerts&hl=en","PubDate":""}
+{"Title":"[PDF] Bridging the Gap: The Pervasive Application of Computer Science in Commerce ","Link":"<https://scholar.google.com/scholar_url?url=http://journal.hmjournals.com/index.php/JECNAM/article/download/2701/2452&hl=en&sa=X&d=8743134166485926464&ei=K6b_ZLrKLKSb6rQP4eOm2A8&scisig=AFWwaeajCfSMSjblKr17sGGnBomI&oi=scholaralrt&hist=RKKj9VgAAAAJ:7851251243740277248:AFWwaeaF4RcST1au3gWvS4uUiy2W&html=&pos=8&folt=kw>","Content":"Twitter] ;LinkedIn] 
+Facebook] 
+S Ramesh - Journal of Electronics, Computer Networking and …, 2023
+… Cryptography is a cornerstone of e-commerce *security*, and Yasin, 
+Haseeb, and 
+Qureshi review the cryptographic underpinnings of e-commerce *security*. 
+This work 
+underscores how computer science, particularly cryptography, fortifies the 
+e-commerce …
+","AuthorName":"GScholar :> 'security" "augmented reality"","AuthorEmail":"https://scholar.google.com/scholar_alerts?view_op=list_alerts&hl=en","PubDate":""}
+{"Title":"Theoretical Models of Information and Communication Interaction of State and Society in the Context of National *Security* ","Link":"<https://scholar.google.com/scholar_url?url=https://link.springer.com/chapter/10.1007/978-3-031-33724-6_7&hl=en&sa=X&d=10992004467369175634&ei=K6b_ZLrKLKSb6rQP4eOm2A8&scisig=AFWwaeao9f1JxltCnXu8jm0ga7Ly&oi=scholaralrt&hist=RKKj9VgAAAAJ:7851251243740277248:AFWwaeaF4RcST1au3gWvS4uUiy2W&html=&pos=9&folt=kw>","Content":"Twitter] ;LinkedIn] 
+Facebook] 
+O Radchenko, F Venislavskyi, О Krutii, O Marusheva… - … *Security *Drivers 
+of Ukraine …, 2023
+… The use of information, communication, and psychological tools of 
+strategic 
+communications is designed to ensure public support or at least loyalty of 
+critical 
+mass of citizens to official public policy and institutions of government 
+as an …
+","AuthorName":"GScholar :> 'security" "augmented reality"","AuthorEmail":"https://scholar.google.com/scholar_alerts?view_op=list_alerts&hl=en","PubDate":""}
+{"Title":"[HTML] An Analytical Review of the Source Code Models for Exploit Analysis ","Link":"<https://scholar.google.com/scholar_url?url=https://www.mdpi.com/2078-2489/14/9/497&hl=en&sa=X&d=2903838900778025109&ei=K6b_ZPCROZj0yATBj5eoBg&scisig=AFWwaeZNou4f5e66nFAKp2oYvBy-&oi=scholaralrt&hist=RKKj9VgAAAAJ:16774887715424332566:AFWwaeY3_iyLDSwzV0-sa9e_ZyHt&html=&pos=0&folt=kw>","Content":"E Fedorchenko, E Novikova, A Fedorchenko… - Information, 2023;… The study of source *code* *analysis* methods was based on the 
+recommendations 
+for a systematic analysis of the scientific literature [1], … The key 
+objective of this 
+study is to analyze approaches for source *code* *analysis* with a possible 
+assessment …
+","AuthorName":"GScholar :> intitle:'code analysis"","AuthorEmail":"https://scholar.google.com/scholar_alerts?view_op=list_alerts&hl=en","PubDate":""}
