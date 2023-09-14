@@ -255,7 +255,8 @@ def paperRss():
             fe.description(article['Content'].replace('Twitter] ;LinkedIn] Facebook]','').replace('"',"'"))
             fe.guid(link, permalink=True)
             fe.author(name=article['AuthorName'], email=article['AuthorEmail'])
-            fe.pubDate(article['PubDate'])
+            if article['PubDate'] != "":
+                fe.pubDate(article['PubDate'])
 
     response = make_response(fg.rss_str())
     response.headers.set('Content-Type', 'application/rss+xml')
