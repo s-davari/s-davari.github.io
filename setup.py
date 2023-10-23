@@ -57,7 +57,8 @@ base_info = {
     "show_skills":True,
     "show_docker":True,
     "show_consult":True,
-    "show_path":True
+    "show_path":True,
+    "show_utils":True
 }
 
 #https://stackoverflow.com/questions/20646822/how-to-serve-static-files-in-flask
@@ -189,7 +190,7 @@ def industry():
         if x.startswith('show_'):
             base_info[x] = True
 
-    for x in ['show_edu','show_talks','show_sub']:
+    for x in ['show_edu','show_talks','show_sub',"show_utils"]:
         base_info[x] = False
     return rendre('index.html')
 

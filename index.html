@@ -543,7 +543,7 @@
           "<a href='https://github.com/franceme/franceme.github.io'>GitHub Repo</a>",
           "2019",
           "Present",
-          "This is my ‘now and again’ public website. I’ve used the same framework to generate the static website, and I have migrated the build to GitHub actions to ensure public transparency. I only made it public after hiding some of the web content since the build for the website is activated AFTER the Resume repo is complete. This was a neat trick that allows the Website to automatically download and host the most recent documents, as well as load the most recent web content (since this website used yml files that were created from the Resume Repo).",color="blue")|safe
+          "This is my 'now and again' public website. I've used the same framework to generate the static website, and I have migrated the build to GitHub actions to ensure public transparency. I only made it public after hiding some of the web content since the build for the website is activated AFTER the Resume repo is complete. This was a neat trick that allows the Website to automatically download and host the most recent documents, as well as load the most recent web content (since this website used yml files that were created from the Resume Repo).",color="blue")|safe
        }}
        #}
        {{
@@ -574,6 +574,120 @@
           "2020",
           "This is a static and compiled code analyzer, serving as my current thesis project. This project will scan cryptographic misuse in Java Projects (Maven/Gradle based) and Android Projects. Recent works with this project have included making an enhanced interface for this to work with other programs and tools. <br><br> Topics: Java, Build System, Build Tool, Code Analysis, Cryptography, Analysis",color="blue")|safe
        }}
+       {{
+          "Cryptolation"|get_base(
+          "<a href='https://github.com/franceme/cryptoguard'>GitHub Repo</a>",
+          "2020",
+          "Present",
+          "A Python static code analysis tool. <br><br> Topics: Python, Code Analysis",color="blue")|safe
+       }}
+       {{
+          "PyCryptoBench"|get_base(
+          "<a href='https://github.com/franceme/PyCryptoBench'>GitHub Repo</a>",
+          "2020",
+          "Present",
+          "A purposely vulnerable cryptographic dataset to help advanced code analysis tools. Feel free to download this sqlite or use it live at DBHub. <br><br> Topics: Python, Benchmark, TestBed",color="blue")|safe
+       }}
+      </div>
+    </div>
+  </div>
+  {%- endif %}
+  {% if dyct['show_utils'] -%}
+  <div class="shadow-1-strong bg-white my-5 p-5" id="utils">
+    <div class="utils-section">
+      <h2 class="h2 fw-light mb-4">Utils</h2>
+      <div class="timeline">
+        {{
+            "Mystring"|get_base(
+            "<a href='https://github.com/franceme/mystring'></a>",
+            "2020",
+            "Present",
+            "A Python project that started out as a simple Python string wrapper that provided extra utilities. This has expanded in scope to different object types, such as dataframes, but always providing useful utilities to each data object.", color="blue")|safe
+        }}
+       {{
+           "Hugg"|get_base(
+           "<a href='https://github.com/franceme/hugg'></a>",
+           "2020",
+           "Present",
+           "A Python project that provided a very simple common interface between different data storages. What seperates this interface is the low requirements for each interface and the focus on scripting the files.", color="blue")|safe
+       }}
+       {{
+           "Sdock"|get_base(
+           "<a href='https://github.com/franceme/sdock'></a>",
+           "2020",
+           "Present",
+           "A Python project that started out as a common way to interact with Docker commands through Python. There is the basis for additional capabilities within Virtual Box, Ansible, and others. This work has been currently delayed however.", color="blue")|safe
+       }}
+       {{
+           "Splunkr"|get_base(
+           "<a href='https://github.com/franceme/splunkr'></a>",
+           "2020",
+           "Present",
+           "A Python wrapper to expose the Splunk HTTP Event Collector provided from this <a href=\"https://github.com/georgestarcher/Splunk-Class-httpevent/\">post</a> to PyPi. No work has been done to the internal script and the original script remains the work of the original poster.", color="blue")|safe
+       }}
+       {{
+           "Xcyl"|get_base(
+           "<a href='https://github.com/franceme/xcyl'></a>",
+           "2020",
+           "Present",
+           "A very basic Python project that stands to be a simple interface between raw data files, such as sqlite and excel files. This is still in its infancy.", color="blue")|safe
+       }}
+       {{
+           "Ephfile"|get_base(
+           "<a href='https://github.com/franceme/ephfile'></a>",
+           "2020",
+           "Present",
+           "A Python project to extend the capabilities of temporary files. While the current tempfile module provides the capability to create temp files, this library allows users to automatically write to the files and automatically get the file path.", color="blue")|safe
+       }}
+       {{
+           "Gett"|get_base(
+           "<a href='https://github.com/franceme/gett'></a>",
+           "2020",
+           "Present",
+           "A Python wrapper to re-expose the wget source code provided from this <a href=\"https://pypi.org/project/wget/\">post</a> to PyPi. The only change I have done is to fix an issue with handling files that don't have a file extension.", color="blue")|safe
+       }}
+       {{
+          "Bal_Fileops"|get_base(
+          "<a href='https://github.com/franceme/bal_fileops'></a>",
+          "2020",
+          "Present",
+          "A Ballerina Project that simply manages file operations, such as reading, writing, and overwriting files.", color="blue")|safe
+        }}
+        {{
+            "Bal_Generics"|get_base(
+            "<a href='https://github.com/franceme/bal_generics'></a>",
+            "2020",
+            "Present",
+            "A Ballerina Project that provides a simple set of generics to the Ballerina log module. This also tries to have simple operators working alongside the generics.", color="blue")|safe
+        }}
+        {{
+            "Bal_Strings"|get_base(
+            "<a href='https://github.com/franceme/bal_strings'></a>",
+            "2020",
+            "Present",
+            "A Ballerina Project that provides extra operators and helpers to the string module..", color="blue")|safe
+        }}
+        {{
+            "Logg"|get_base(
+            "<a href='https://github.com/franceme/logg'></a>",
+            "2020",
+            "Present",
+            "A Ballerina Project that helps to create a general logging interface.", color="blue")|safe
+        }}
+        {{
+            "Repos"|get_base(
+            "<a href='https://github.com/franceme/repos'></a>",
+            "2020",
+            "Present",
+            "A Ballerina Project that creates the ability to sift through GitHub repositories and retrieve their files.", color="blue")|safe
+        }}
+        {{
+            "Splunk"|get_base(
+            "<a href='https://github.com/franceme/splunk'></a>",
+            "2020",
+            "Present",
+            "Similar to <a href=\"https://github.com/franceme/splunkr/\">franceme/splunkr</a>, this Ballerina library aims to create the functionality to communicate with a Splunk Http event collector.", color="blue")|safe
+        }}
       </div>
     </div>
   </div>
@@ -585,6 +699,7 @@
       <div class="row">
         <div class="col-md-6">
           {{'Python3'|get_skill(100)|safe}}
+          {{'Ballerina'|get_skill(70)|safe}}
           {{'Bash Scripts'|get_skill(50)|safe}}
           {{'C#'|get_skill(25)|safe}}
           {{'SQL'|get_skill(65)|safe}}
