@@ -30,7 +30,7 @@ base_info = {
     'name':"Miles Frantz",
     'title':"Cyber Security Ph.D. Student",
     'NAME':"Miles Frantz",
-    'EMAIL':"g00qhtdbp@relay.firefox.com",
+    'EMAIL':"codeanalysis@vt.edu",
     'GITHUB':"franceme",
     'DOCKER':"frantzme",
     'RESUME':'https://rebrand.ly/frantzme_resume',
