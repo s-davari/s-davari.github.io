@@ -92,7 +92,7 @@
       */
     </script>
   <body class="bg-light" id="top">
-    <button onclick="goto('/#top')" id="myBtn" title="Go to top">Top</button>
+    <button onclick="goto('/#top')" id="myBtn" title="Go to top" style="background-color:rgb(57, 100, 234);">Top</button>
     <header class="d-print-none">
       <div class="container text-center text-lg-left">
         <div class="pt-4 clearfix">
@@ -154,10 +154,10 @@
 <div class="resume-container">
   <div class="shadow-1-strong bg-white my-5" id="intro">
     <div class="bg-info text-white">
-      <div class="cover bg-image"><img src="images/header-background.jpg"/>
+      <div class="cover bg-image"><img src="images/header-background.jpg" alt="My Professional Headshot Photo"/>
         <div class="mask" style="background-color: rgba(0, 0, 0, 0.7);backdrop-filter: blur(2px);">
           <div class="text-center p-5">
-            <div class="avatar p-1"><img class="img-thumbnail shadow-2-strong" src="images/avatar.jpg" width="160" height="160"/></div>
+            <div class="avatar p-1"><img class="img-thumbnail shadow-2-strong" src="images/avatar.jpg" width="160" height="160" alt="My Professional Headshot Photo"/></div>
             <div class="header-bio mt-3">
               <div data-aos="zoom-in" data-aos-delay="0">
                 <h2 class="h1">{{dyct['name']}}</h2>
@@ -747,7 +747,7 @@
   <div class="shadow-1-strong bg-white my-5 p-5" id="my_dock">
     <div class="my_dock">
       <h2 class="h2 fw-light mb-4">My Docker Setup</h2>
-      <a href="https://rebrand.ly/my_dock"><img src="https://rebrand.ly/my_dock" style="width:100%;height:100%;"/></a>
+      <a href="https://rebrand.ly/my_dock" aria-label="A mind map representing my current Docker triaged environment."><img src="https://rebrand.ly/my_dock" style="width:100%;height:100%;" alt="A mind map representing my current Docker triaged environment."/></a>
       Since I use a various set of tools for different development and research environments, I needed to be able to easily switch my toolsets. Due to hard-drive space limitations, I started to leverage Docker. I used my familiarity with GitHub actions to create a chain creation of several Docker Images. The Scripts and PyScripts are both Python script repositories creating inbuilt scripts. BaseDocker is the first Docker Image that builds, and each subsequent Docker image builds off of it. For example, JavaDev is built off of BaseDocker using a script from PyScript to automatically download and include several packages.
       <br><br>
       Why did I do this? Simply to create an inheritence based environment tool chain. If I need a common utility between two docker images, I just include it in BaseDocker and the changes will trickle down. Many of these are private simply due to various custom builds processes I use.
@@ -1023,7 +1023,7 @@
               <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="frantzme" data-color="#fbfffc" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#FFDD00" ></script>
               <br>
               <br>
-              <img src="images/VCard.svg"/>
+              <img src="images/VCard.svg" alt="A QR code that when scanned will generate my contact information"/>
             </div>
           </div>
         </div>
@@ -1117,9 +1117,7 @@
             </nav>
           </div>
         </div>
-        <div class="text-small">
-          <div class="mb-1">&copy; <a href="https://templateflip.com/templates/material-resume/">Material Resume</a>. All rights reserved.</div>
-          <div>Design - <a href="https://templateflip.com/" target="_blank">TemplateFlip</a></div>
+        <div class="text-small" style="color:black">Made using &copy; Material Resume and Design - TemplateFlip
         </div>
       </div>
     </footer>
@@ -1135,6 +1133,7 @@
       window.onscroll = function() {scrollFunction()};
       
       function scrollFunction() {
+        mybutton.style.backgroundColor = "background-color:rgb(57, 100, 234);";
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
           mybutton.style.display = "block";
         } else {
