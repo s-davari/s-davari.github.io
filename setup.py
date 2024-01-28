@@ -5,18 +5,19 @@ import sys,os, base64
 try:
     from flask import Flask, render_template_string, make_response
     from mystring import string as str
-    from flask_frozen import Freezer
+    from flask3frozen import Freezer
     from flask_flatpages import (
         FlatPages, pygmented_markdown)
     from feedgen.feed import FeedGenerator
 except:
     for x in [
             'requests',
-            'flask==2.0.1',
+            'flask==3.0.1',
             'flask_flatpages==0.7.3',
-            'frozen_flask==0.18',
+            'frozen_flask==1.0.1',
             'pygments==2.10.0',
             'feedgen==0.9.0',
+            'werkzeug==2.2.2',
             'elsa==0.1.6'
         ]:
         os.system(str(sys.executable) + " -m pip install " + str(x))
@@ -405,12 +406,12 @@ setup(name='My Website',
         url='',
         packages=find_packages(),
         install_requires=[
-            'flask==2.0.1',
+            'flask==3.0.1',
             'flask_flatpages==0.7.3',
-            'frozen_flask==0.18',
+            'frozen_flask==1.0.1',
             'pygments==2.10.0',
             'elsa==0.1.6',
             'feedgen==0.9.0',
-            'werkzeug==2.0.3' #https://stackoverflow.com/questions/71661851/typeerror-init-got-an-unexpected-keyword-argument-as-tuple#answer-71662972
+            'werkzeug==2.2.2' #https://stackoverflow.com/questions/77213053/why-did-flask-start-failing-with-importerror-cannot-import-name-url-quote-fr
         ]
 )

@@ -158,11 +158,12 @@
             <div class="header-bio mt-3">
               <div data-aos="zoom-in" data-aos-delay="0">
                 <h2 class="h1">{{dyct['name']}}</h2>
-                <p>{{dyct['title']}}: Interested in Security Research Positions</p>
+                <p>{{dyct['title']}}: Interested in Human Computer Interaction Research Positions</p>
               </div>
               <div class="header-social mb-3 d-print-none" data-aos="zoom-in" data-aos-delay="200">
                 <nav role="navigation">
                   <ul class="nav justify-content-center">
+              {% if 'GITHUB' in dyct  %}
                 <li class="nav-item">
                   <a class="nav-link" href="https://github.com/{{dyct['GITHUB']}}" title="Github">
                     <i class="fab fa-github"></i>
@@ -170,6 +171,7 @@
                   </a>
                 </li>
                 <li>
+                  {% endif  %}
               {% if 'DOCKER' in dyct  %}
               <li>
                   <a class="nav-link" href="https://hub.docker.com/u/{{ dyct['DOCKER'] }}" title="Docker">
@@ -226,11 +228,13 @@
                   </a>
               </li>
               {% endif  %}
+              <!--
                <li>
                     <a class="nav-link" href="https://oca.opensource.oracle.com/?ojr=contrib-list" title="Docker">
                       <i style="padding:10px;" class="fab fa-java" title="Java Oracle Contributor Agreement"></i>
                   </a>
               </li>
+              -->
               <li>
                     <a class="nav-link" href="/rss.html" title="RSS">
                       <i style="padding:10px;" class="fa fa-rss" title="RSS Feed"></i>
