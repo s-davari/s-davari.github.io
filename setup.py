@@ -27,25 +27,25 @@ except:
 
 
 base_info = {
-    'name':"Miles Frantz",
-    'title':"Cyber Security Ph.D. Student",
-    'NAME':"Miles Frantz",
-    'EMAIL':"codeanalysis@vt.edu",
-    'GITHUB':"franceme",
-    'DOCKER':"frantzme",
-    'RESUME':'https://rebrand.ly/frantzme_resume',
-    'CV':'https://rebrand.ly/frantzme_cv',
-    'GITHUB_USERNAME': 'franceme',
-    'LINKEDIN_USERNAME': 'franceme',
-    'SCHOLAR_USERNAME': 'RKKj9VgAAAAJ',
+    'name':"Shakiba Davari",
+    'title':"Human computer Interaction Ph.D. Student",
+    'NAME':"Shakiba Davari",
+    'EMAIL':"sdavari@vt.edu",
+    #'GITHUB':"",
+    #'DOCKER':"sdavari",
+    'RESUME':'https://rebrand.ly/sdavari_resume',
+    'CV':'https://rebrand.ly/sdavari_cv',
+    #'GITHUB_USERNAME': 'sdavari',
+    'LINKEDIN_USERNAME': 'sdavari',
+    'SCHOLAR_USERNAME': '0C3C2PEAAAAJ',
     #'MENDELEY_USERNAME': 'myles-f',
     #'ieee': 'MilesFrantz662182',
     #'acm': 'here',
-    #'MEDIUM': 'frantzme',
-    'ORCID': '0000-0002-7329-6979',
-    'ZENODO': '3701552',
-    'WEBSITE': 'franceme.github.io',
-    'LINKEDIN': 'frantzme',
+    #'MEDIUM': 'sdavari',
+    'ORCID': '0000-0003-3128-1979',
+    #'ZENODO': '3701552',
+    'WEBSITE': 's-davari.github.io',
+    'LINKEDIN': 'sdavari',
     # 'phone': '513-480-3169',
     "show_edu":True,
     "show_exp":True,
@@ -54,11 +54,11 @@ base_info = {
     "show_ment":True,
     "show_sub":True,
     "show_talks":True,
-    "show_skills":True,
-    "show_docker":True,
-    "show_consult":True,
-    "show_path":True,
-    "show_utils":True
+    "show_skills":False,
+    "show_docker":False,
+    "show_consult":False,
+    "show_path":False,
+    "show_utils":False
 }
 
 #https://stackoverflow.com/questions/20646822/how-to-serve-static-files-in-flask
@@ -211,11 +211,11 @@ def diagrams():
 
 @app.route('/resume.html')
 def resume_grab():
-    return page_redirect('https://rebrand.ly/frantzme_resume')
+    return page_redirect('https://rebrand.ly/sdavari_resume')
 
 @app.route('/cv.html')
 def cv_grab():
-    return page_redirect('https://rebrand.ly/frantzme_cv')
+    return page_redirect('https://rebrand.ly/sdavari_cv')
 
 @app.route('/sok.html')
 def sok_grab():
@@ -223,7 +223,7 @@ def sok_grab():
 
 @app.route('/rss.html')
 def rss_grab():
-    return page_redirect('https://zapier.com/engine/rss/8296213/frantzme')
+    return page_redirect('https://zapier.com/engine/rss/8296213/sdavari')
 
 @app.route('/paperss')
 def paperRss():
@@ -234,7 +234,7 @@ def paperRss():
     fg = FeedGenerator()
     fg.title('Faper rss feed')
     fg.description('A feed of paper news pulled from the email')
-    fg.link(href="https://franceme.github.io/paperss")
+    fg.link(href="https://sdavari.github.io/paperss")
 
     foil = 'paperss.jsonl'
     if os.path.exists(foil):
@@ -251,7 +251,7 @@ def paperRss():
         for article in content:
             fe = fg.add_entry()
             fe.title(article['Title'])
-            link = article['Link'].replace('https://franceme.github.io/','').replace('<','').replace('>','')
+            link = article['Link'].replace('https://sdavari.github.io/','').replace('<','').replace('>','')
             fe.link(href=link)
             fe.description(article['Content'].replace('Twitter] ;LinkedIn] Facebook]','').replace('"',"'"))
             fe.guid(link, permalink=True)
@@ -266,7 +266,7 @@ def paperRss():
 @app.route('/security.txt')
 def security():
     return f"""
-# Miles Frantz Website
+# Shakiba Davari Website
 Contact: mailto:{base_info['EMAIL']}
 Preferred-Languages: en
 Expires: 2025-12-31T18:00:00.000Z
@@ -275,7 +275,7 @@ Expires: 2025-12-31T18:00:00.000Z
 @app.route('/robots.txt')
 def robots():
     return f"""
-# robots.txt - for Miles Frantz Website
+# robots.txt - for Shakiba Davari Website
 
 User-agent: *
 Disallow: /
@@ -394,14 +394,14 @@ elif arg('install'):
     sys.exit(os.system('python3 -m pip install -e .'))
 elif __name__ == '__main__':
     from elsa import cli
-    sys.exit(cli(app, base_url='https://franceme.github.io'))
+    sys.exit(cli(app, base_url='https://sdavari.github.io'))
 
 
 setup(name='My Website',
         version='0.0.0',
         description='Python Website',
-        author='Miles Frantz',
-        author_email='frantzme@vt.edu',
+        author='Shakiba Davari',
+        author_email='sdavari@vt.edu',
         url='',
         packages=find_packages(),
         install_requires=[
