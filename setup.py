@@ -5,16 +5,16 @@ import sys,os, base64
 try:
     from flask import Flask, render_template_string, make_response
     from mystring import string as str
-    from flask_frozen import Freezer
+    from flask3frozen import Freezer
     from flask_flatpages import (
         FlatPages, pygmented_markdown)
     from feedgen.feed import FeedGenerator
 except:
     for x in [
             'requests',
-            'flask==2.0.1',
+            'flask==3.0.1',
             'flask_flatpages==0.7.3',
-            'frozen_flask==0.18',
+            'frozen_flask==1.0.1',
             'pygments==2.10.0',
             'feedgen==0.9.0',
             'werkzeug==2.2.2',
@@ -406,9 +406,9 @@ setup(name='My Website',
         url='',
         packages=find_packages(),
         install_requires=[
-            'flask==2.0.1',
+            'flask==3.0.1',
             'flask_flatpages==0.7.3',
-            'frozen_flask==0.18',
+            'frozen_flask==1.0.1',
             'pygments==2.10.0',
             'elsa==0.1.6',
             'feedgen==0.9.0',
