@@ -17,6 +17,7 @@ except:
             'frozen_flask==0.18',
             'pygments==2.10.0',
             'feedgen==0.9.0',
+            'werkzeug==2.2.2',
             'elsa==0.1.6'
         ]:
         os.system(str(sys.executable) + " -m pip install " + str(x))
@@ -411,6 +412,6 @@ setup(name='My Website',
             'pygments==2.10.0',
             'elsa==0.1.6',
             'feedgen==0.9.0',
-            'werkzeug==2.0.3' #https://stackoverflow.com/questions/71661851/typeerror-init-got-an-unexpected-keyword-argument-as-tuple#answer-71662972
+            'werkzeug==2.2.2' #https://stackoverflow.com/questions/77213053/why-did-flask-start-failing-with-importerror-cannot-import-name-url-quote-fr
         ]
 )
