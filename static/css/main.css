@@ -65,7 +65,7 @@ html, body {
 .nav-link {
   z-index: 99;
   padding: 0;
-  font-size: 1rem;
+  font-size: 1.3rem;
   line-height: 2.5rem;
   color: inherit;
   opacity: 0.8; }
@@ -75,9 +75,8 @@ html, body {
 
 .nav-link:hover,
 .nav-link:focus {
-  background-color: #900C3F;    
-  opacity: .45; 
-  color: #e5c9d4;}
+  background-color: d#34495e;     
+  color: black;}
 
 .nav-item + .nav-item {
   margin-left: 1rem; }
@@ -160,3 +159,4 @@ footer a:not(.nav-link) {
   .page-break {
     padding-top: 5rem;
     page-break-before: always; } }
+

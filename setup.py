@@ -28,37 +28,28 @@ except:
 
 base_info = {
     'name':"Shakiba Davari",
-    'title':"Human computer Interaction Ph.D. Student",
+    'title':"Ph.D. Candidate",
     'NAME':"Shakiba Davari",
     'EMAIL':"sdavari@vt.edu",
-    #'GITHUB':"",
-    #'DOCKER':"sdavari",
-    'RESUME':'https://drive.google.com/drive/u/0/folders/1bgIyVS_CDl8F6Bj6ZXcy3VIi32C-e-tq',
-    'CV':'https://drive.google.com/drive/u/0/folders/1bgIyVS_CDl8F6Bj6ZXcy3VIi32C-e-tq',
-    #'GITHUB_USERNAME': 'sdavari',
     'LINKEDIN_USERNAME': 'sdavari',
     'SCHOLAR_USERNAME': '0C3C2PEAAAAJ',
-    #'MENDELEY_USERNAME': 'myles-f',
-    #'ieee': 'MilesFrantz662182',
-    #'acm': 'here',
-    #'MEDIUM': 'sdavari',
-    'ORCID': '0000-0003-3128-1979',
-    #'ZENODO': '3701552',
+    'ORCID_ID': '0000-0003-3128-1979',
+    'ORCID': 'https://orcid.org/0000-0003-3128-1979',
+    'SCHOLAR': 'https://scholar.google.com/citations?user=0C3C2PEAAAAJ',
+    'LINKEDIN': 'https://www.linkedin.com/in/sdavari/',
+    '3DILAB': 'https://wordpress.cs.vt.edu/3digroup/author/sdavari/',
+    'RESUME':'https://drive.google.com/drive/u/0/folders/1bgIyVS_CDl8F6Bj6ZXcy3VIi32C-e-tq',
+    'CV':'https://drive.google.com/drive/u/0/folders/1bgIyVS_CDl8F6Bj6ZXcy3VIi32C-e-tq',
     'WEBSITE': 's-davari.github.io',
-    'LINKEDIN': 'sdavari',
-    # 'phone': '513-480-3169',
+    "show_about":True,
     "show_edu":True,
-    "show_exp":True,
+    "show_service":True,
+    "show_honors":True,
+    "show_personal":True,
     "show_proj":True,
-    "show_grp":True,
-    "show_ment":True,
-    "show_sub":True,
+    "show_pubs":True,
     "show_talks":True,
-    "show_skills":True,
-    "show_docker":True,
-    "show_consult":True,
-    "show_path":True,
-    "show_utils":True
+    "show_teachingExp":True,
 }
 
 #https://stackoverflow.com/questions/20646822/how-to-serve-static-files-in-flask
@@ -164,66 +155,129 @@ def secure_get_{secure_page_name.split('.')[0]}():
 # === URL Routes === #
 
 @app.route('/')
+@app.route('/about')
 @app.route('/index.html')
 def index():
     for x in base_info.keys():
         if x.startswith('show_'):
-            base_info[x] = True
-
-    for x in ['show_skills','show_ment']:
-        base_info[x] = False
+            base_info[x] = False
+    base_info['show_about'] = True
+    base_info['show_edu'] = True
+    base_info['show_service'] = True
+    base_info['show_honors'] = True
+    base_info['show_personal'] = True
     return rendre('index.html')
 
-@app.route('/research.html')
+@app.route('/education')
+def education():
+    for x in base_info.keys():
+        if x.startswith('show_'):
+            base_info[x] = False
+    base_info['show_edu'] = True
+    return rendre('index.html')
+
+@app.route('/projects')
+@app.route('/research')
+@app.route('/researchexperience')
 def research():
     for x in base_info.keys():
         if x.startswith('show_'):
-            base_info[x] = True
-
-    for x in ['show_skills','show_exp','show_grp','show_docker']:
-        base_info[x] = False
+            base_info[x] = False
+    base_info['show_proj'] = True
     return rendre('index.html')
 
-@app.route('/industry.html')
-def industry():
+
+@app.route('/publications')
+@app.route('/publicationlist')
+def publication():
     for x in base_info.keys():
         if x.startswith('show_'):
-            base_info[x] = True
-
-    for x in ['show_edu','show_talks','show_sub',"show_utils"]:
-        base_info[x] = False
+            base_info[x] = False
+    base_info['show_pubs'] = True
     return rendre('index.html')
 
-@app.route('/frac.html')
-def fracpage():
-    return rendre('frac.html')
-
-@app.route('/full.html')
-def full():
+@app.route('/honors')
+@app.route('/awards')
+@app.route('/honors&awards')
+def honors():
     for x in base_info.keys():
         if x.startswith('show_'):
-            base_info[x] = True
+            base_info[x] = False
+    base_info['show_honors'] = True
     return rendre('index.html')
 
-@app.route('/diagrams.html')
-def diagrams():
-    return page_redirect('https://rebrand.ly/graphz')
 
-@app.route('/resume.html')
+
+@app.route('/service')
+@app.route('/serviceactivities')
+@app.route('/activities')
+@app.route('/leadership')
+def service():
+    for x in base_info.keys():
+        if x.startswith('show_'):
+            base_info[x] = False
+    base_info['show_service'] = True
+    return rendre('index.html')
+
+
+
+@app.route('/demos')
+@app.route('/talks')
+@app.route('/presentations')
+@app.route('/conferences')
+@app.route('/videos')
+def talks():
+    for x in base_info.keys():
+        if x.startswith('show_'):
+            base_info[x] = False
+    base_info['show_talks'] = True
+    return rendre('index.html')
+
+@app.route('/teaching')
+@app.route('/teachingexperience')
+def teaching():
+    for x in base_info.keys():
+        if x.startswith('show_'):
+            base_info[x] = False
+    base_info['show_teachingExp'] = True
+    return rendre('index.html')
+
+@app.route('/resume')
 def resume_grab():
-    return page_redirect('https://rebrand.ly/sdavari_resume')
+    return page_redirect(base_info['RESUME'])
 
-@app.route('/cv.html')
+@app.route('/email')
+def email_grab():
+    return page_redirect(base_info['EMAIL'])
+
+
+@app.route('/cv')
 def cv_grab():
-    return page_redirect('https://rebrand.ly/sdavari_cv')
+    return page_redirect(base_info['CV'])
 
-@app.route('/sok.html')
-def sok_grab():
-    return page_redirect('https://oaklandsok.github.io')
+@app.route('/3dilab')
+@app.route('/3dilabpage')
+def labpage_grab():
+    return page_redirect(base_info['3DILAB'])
 
-@app.route('/rss.html')
-def rss_grab():
-    return page_redirect('https://zapier.com/engine/rss/8296213/sdavari')
+@app.route('/linkedin')
+def linkedin_grab():
+    return page_redirect(base_info['LINKEDIN'])
+
+@app.route('/scholar')
+@app.route('/g-scholar')
+@app.route('/googlescholar')
+@app.route('/gscholar')
+def scholar_grab():
+    return page_redirect(base_info['SCHOLAR'])
+
+@app.route('/orcid')
+def orcid_grab():
+    return page_redirect(base_info['ORCID'])
+
+@app.route('/mendeley')
+def mendeley_grab():
+    return page_redirect(base_info['MENDELEY'])
 
 @app.route('/paperss')
 def paperRss():

@@ -46,13 +46,13 @@
         padding: 15px;
         border-radius: 4px;
         opacity: 0.45;
-        background-color: #e5c9d4;
-        color:#900C3F;
+        background-color: #34495e;
+        color: white;
       }
       
       #myBtn:hover {
-        background-color: #900C3F;
-        color: #ccd9f8;
+        background-color: black;
+        color: white;
       }
       </style>
   </head>
@@ -89,94 +89,130 @@
       }
       */
     </script>
-  <body class="bg-light" id="top" style="background-color: #ccd9f8 !important;">
+  <body class="bg-light" id="top" style="background-color: #eef1f8 !important; ">
     <button onclick="goto('/#top')" id="myBtn" title="Go to top">Top</button>
     <header class="d-print-none">
       <div class="container text-center text-lg-left">
-        <div class="pt-4 clearfix" style="background-color: #ccd9f8; color:#900C3F; position: fixed; z-index: 99;" >
+        <div class="pt-4 clearfix" style="background-color: #eef1f8; color:#34495e; position: fixed; z-index: 99; padding-inline: inherit; max-width: 1140px;  width: 100%; padding-right: 8%;" >
           <!--<h1 class="site-title mb-0"><a href="/index.html" >{{dyct['name']}}</a> <br>
             {{ "Research"|get_main_url("Info")|safe }} {{ "Industry"|get_main_url("Info")|safe }} {{ "Full"|get_main_url("Info")|safe }}
           </h1> -->
-          <div class="site-nav"> 
-            <nav role="navigation">
-              <ul class="nav justify-content-center">
-                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; border-style: solid; border-color: #e5c9d4;" href="#about" title="About" ><span class="menu-title">About</span></a></li>
-                {% if dyct['show_edu'] -%}
-                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; border-style: solid; border-color: #e5c9d4;"  href="#education" title="Education"><span class="menu-title">Education</span></a></li>
-                {%- endif%}
-                {% if dyct['show_proj'] -%}
-                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; border-style: solid; border-color: #e5c9d4;" href="#projects" title="Research Experience and Projects"><span class="menu-title">Research Experience and Projects</span></a></li>
-                {%- endif%}
-                {% if dyct['show_sub'] -%}
-                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; border-style: solid; border-color: #e5c9d4;" href="#submissions" title="Publications"><span class="menu-title">Publications</span></a></li>
-                {%- endif%}
-                {% if dyct['show_talks'] -%}
-                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; border-style: solid; border-color: #e5c9d4;" href="#talks" title="Demos and Talks"><span class="menu-title">Demos and Talks</span></a></li>
-                {%- endif%}
-                {% if dyct['show_utils'] -%}
-                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; border-style: solid; border-color: #e5c9d4;" href="#utils" title="Teaching Experience"><span class="menu-title">Teaching Experience</span></a></li>
-                {%- endif%}
-                {% if dyct['show_docker'] -%}
-                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; border-style: solid; border-color: #e5c9d4;" href="#my_dock" title="Service Activities"><span class="menu-title">Service Activities</span></a></li>
-                {%- endif%}
-                {% if dyct['show_exp'] -%}
-                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; border-style: solid; border-color: #e5c9d4;" href="#experience" title="Honors and Awards"><span class="menu-title">Honors and Awards</span></a></li>
-                {%- endif%}
-                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; border-style: solid; border-color: #e5c9d4;" href="#contact" title="Contact"><span class="menu-title">Contact</span></a></li>
+          <div class="site-nav "> 
+            <nav role="navigation" style="line-height: .5rem;">
+              {% if dyct['show_about'] or dyct['show_edu'] or dyct['show_service'] or dyct['show_honors'] -%} 
+              <ul class="nav" style="border:thin, border-width: 1.5px; outline-style: double; width: fit-content !important;"> 
+ 
+                {% if not dyct['show_about'] and dyct['show_edu'] -%} 
+                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; outline-style: inset;" href="/education" title="Education"><span class="menu-title">Education</span></a></li>
+                {% else -%}         
+                <li class="nav-item"><a class="nav-link" style="border-color:  #ffffff ;" href="/education" title="Education"><span class="menu-title">Education</span></a></li>
+                {% endif -%}
+
+                {% if not dyct['show_about'] and dyct['show_service'] -%}
+                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; outline-style: inset;" href="/service" title="Service Activities"><span class="menu-title">Service Activities</span></a></li>
+                {% else -%}
+                <li class="nav-item"><a class="nav-link" style="border-color:  #ffffff ;" href="/service" title="Service Activities"><span class="menu-title">Service Activities</span></a></li>                
+                {% endif -%}
+
+                {% if not dyct['show_about'] and dyct['show_honors'] -%}
+                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; outline-style: inset;" href="/honors" title="Honors and Awards"><span class="menu-title">Honors and Awards</span></a></li>
+                {% else -%}
+                <li class="nav-item"><a class="nav-link" style="border-color:  #ffffff ;" href="/honors" title="Honors and Awards"><span class="menu-title">Honors and Awards</span></a></li>
+                {% endif -%}
+                                
               </ul>
+              {% endif -%}
+              <br>
+              <ul class="nav" style="width:inherit !important;" >
+                {% if not dyct['show_about'] -%}
+                <li class="nav-item"><a class="nav-link" style="border-color:  #ffffff ;" href="/" title="About" ><span class="menu-title">About Me</span></a></li>
+                {% else -%}
+                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; outline-style: inset;" href="/" title="About" ><span class="menu-title">About Me</span></a></li>
+                {% endif -%}
+
+                {% if not dyct['show_proj'] -%}
+                <li class="nav-item"><a class="nav-link" style="border-color:  #ffffff ;" href="/projects" title="Research Experience and Projects"><span class="menu-title">Research Experience and Projects</span></a></li>
+                {% else -%}
+                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; outline-style: inset;" href="/projects" title="Research Experience and Projects"><span class="menu-title">Research Experience and Projects</span></a></li>
+                {% endif -%}
+
+
+                {% if not dyct['show_teachingExp'] -%}
+                <li class="nav-item"><a class="nav-link" style="border-color:  #ffffff ;" href="/teaching" title="Teaching Experience"><span class="menu-title">Teaching Experience</span></a></li>
+                {% else -%}
+                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; outline-style: inset;" href="/teaching" title="Teaching Experience"><span class="menu-title">Teaching Experience</span></a></li>
+                {% endif -%}
+
+
+                {% if not dyct['show_pub'] -%}
+                <li class="nav-item"><a class="nav-link" style="border-color:  #ffffff ;" href="/publications" title="Publications"><span class="menu-title">Publications</span></a></li>
+                {% else -%}
+                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; outline-style: inset;" href="/publications" title="Publications"><span class="menu-title">Publications</span></a></li>
+                {% endif -%}
+
+
+                {% if not dyct['show_talks'] -%}
+                <li class="nav-item"><a class="nav-link" style="border-color:  #ffffff ;" href="/talks" title="Demos and Talks"><span class="menu-title">Demos and Talks</span></a></li>
+                {% else -%}
+                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; outline-style: inset;" href="/talks" title="Demos and Talks"><span class="menu-title">Demos and Talks</span></a></li>
+                {% endif -%}
+
+                </ul>
+
+
+ 
+                <!--{% if dyct['show_skills'] -%}
+                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; border-style: solid; border-color: #ffffff;" href="/skills" title="Skills"><span class="menu-title">Skills</span></a></li>
+                {%- endif%}
+                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; border-style: solid; border-color: #ffffff;" href="#contactCollapsed" title="Contact"><span class="menu-title">Contact</span></a></li>-->
+
             </nav>
           </div>
         </div>
       </div>
     </header>
-    <div class="page-content" style="background-color: #ccd9f8;">
+    <div class="page-content" style="background-color: #eef1f8;">
       <div class="container">
 <div class="resume-container">
   <div class="shadow-1-strong bg-white my-5" id="intro">
     <div class="bg-info text-white">
-      <div class="cover bg-image"><img src="images/header-background.jpg" alt="My Professional Headshot Photo"/>
+      <div class="cover bg-image"><img src="images/bg-header.jpg" alt="My Professional Headshot Photo"/>
         <div class="mask" style="background-color: rgba(0, 0, 0, 0.7);backdrop-filter: blur(2px);">
           <div class="text-center p-5">
-            <div class="avatar p-1"><img class="img-thumbnail shadow-2-strong" src="images/avatar.jpg" width="160" height="160" alt="My Professional Headshot Photo"/></div>
+            <div class="avatar p-1"><img class="img-thumbnail shadow-2-strong"  style="position: sticky; margin-block-start:1.8em ;"src="images/sdavari.jpg" width="160" height="160" alt="My Headshot Photo"/></div>
             <div class="header-bio mt-3">
               <div data-aos="zoom-in" data-aos-delay="0">
                 <h2 class="h1">{{dyct['name']}}</h2>
-                <p>{{dyct['title']}}: Interested in Security Research Positions</p>
+                <p>{{dyct['title']}}: Context-Intelligent Augmented Reality Interface</p>
               </div>
               <div class="header-social mb-3 d-print-none" data-aos="zoom-in" data-aos-delay="200">
                 <nav role="navigation">
                   <ul class="nav justify-content-center">
-                <li class="nav-item">
-                  <a class="nav-link" href="https://github.com/{{dyct['GITHUB']}}" title="Github">
-                    <i class="fab fa-github"></i>
-                    <span style="padding:10px;" class="menu-title sr-only">Github</span>
-                  </a>
-                </li>
                 <li>
-              {% if 'DOCKER' in dyct  %}
+              {% if '3DILAB' in dyct  %}
               <li>
-                  <a class="nav-link" href="https://hub.docker.com/u/{{ dyct['DOCKER'] }}" title="Docker">
-                      <i style="padding:10px;" class="fab fa-docker" title="Docker link"></i>
+                  <a class="nav-link" href="/3dilab" title="3DILAB">
+                     <img src="https://wordpress.cs.vt.edu/3digroup/wp-content/uploads/sites/141/2020/09/logo1_py_solid.png" width="20" height="20" alt="link to my page on the 3D Interaction Lab's website"/>
                   </a>
               </li>
               {% endif  %}
-              {% if 'LINKEDIN_USERNAME' in dyct  %}
+              {% if 'LINKEDIN' in dyct  %}
               <li>
-                      <a class="nav-link" href="https://www.linkedin.com/in/{{ dyct['LINKEDIN_USERNAME']|escape }}" title="Linkedin">
-                      <i style="padding:10px;" class="fab fa-linkedin" title="Linkedin link"></i>
+                      <a class="nav-link" href="/linkedin" title="Linkedin">
+                      <i style="padding:10px;" class="fab fa-linkedin" title="LinkedIn link"></i>
                   </a>
               </li>
               {% endif  %}
-               {% if 'SCHOLAR_USERNAME' in dyct  %}
+               {% if 'SCHOLAR' in dyct  %}
               <li>
-                    <a class="nav-link" href="https://scholar.google.com/citations?user={{ dyct['SCHOLAR_USERNAME'] }}" title="Linkedin">
-                      <i style="padding:10px;" class="ai ai-google-scholar-square" title="Google Scholar"></i>
+                    <a class="nav-link" href="/scholar" title="Google Scholar">
+                      <i style="padding:10px;" class="ai ai-google-scholar-square" title="Google Scholar Link"></i>
                   </a>
               </li>
               {% endif  %}
               {% if 'MENDELEY_USERNAME' in dyct  %}
               <li>
-                    <a class="nav-link" href="https://www.mendeley.com/profiles/{{ dyct['MENDELEY_USERNAME'] }}" title="Docker">
+                    <a class="nav-link" href="/mendeley" title="Mendeley">
                       <i style="padding:10px;" class="ai ai-mendeley" title="Mendeley Account"></i>
                   </a>
               </li>
@@ -188,43 +224,22 @@
                   </a>
               </li>
               {% endif  %}
-              {% if 'MEDIUM' in dyct  %}
-              <li>
-                    <a class="nav-link" href="https://medium.com/@{{ dyct['MEDIUM'] }}" title="Docker">
-                      <i style="padding:10px;" class="fab fa-medium" title="Medium Account"></i>
-                  </a>
-              </li>
-              {% endif  %}
               {% if 'ORCID' in dyct  %}
               <li>
-                    <a class="nav-link" href="https://orcid.org/{{ dyct['ORCID'] }}" title="Docker">
-                      <i style="padding:10px;" class="fab fa-orcid" title="Orcid Account"></i>
+                    <a class="nav-link" href="/orcid" title="ORCID">
+                      <i style="padding:10px;" class="fab fa-orcid" title="Orcid"></i>
                   </a>
               </li>
               {% endif  %}
-              {% if False and 'ZENODO' in dyct  %}
-              <li>
-                    <a class="nav-link" href="https://zenodo.org/search?page=1&size=20&q=owners:{{ dyct['ZENODO'] }}" title="Docker">
-                      <img class="custom-icon" style="padding-top:30%;" src="https://about.zenodo.org/static/img/logos/zenodo-white.svg" width="80%"/>
-                  </a>
-              </li>
-              {% endif  %}
-               <li>
-                    <a class="nav-link" href="https://oca.opensource.oracle.com/?ojr=contrib-list" title="Docker">
-                      <i style="padding:10px;" class="fab fa-java" title="Java Oracle Contributor Agreement"></i>
-                  </a>
-              </li>
-              <li>
-                    <a class="nav-link" href="/rss.html" title="RSS">
-                      <i style="padding:10px;" class="fa fa-rss" title="RSS Feed"></i>
-                  </a>
-              </li>
                   </ul>
                 </nav>
               </div>
               <div class="d-print-none">
-                <a class="btn btn-outline-light btn-lg shadow-sm mt-1 me-3" href="/cv.html" data-aos="fade-right" data-aos-delay="700">CV</a>
-                <a class="btn btn-outline-light btn-lg shadow-sm mt-1 me-3" href="/resume.html" data-aos="fade-left" data-aos-delay="700">Resume</a>
+                <!--<a class="nav-link" href="\resume" title="Resume">
+                      <i style="padding:10px;" class="fab fa-resume" title="Resume Link"></i>
+                  </a>-->
+                <a class="btn btn-outline-light btn-lg shadow-sm mt-1 me-3" href="/cv" data-aos="fade-right" data-aos-delay="700">CV</a>
+                <a class="btn btn-outline-light btn-lg shadow-sm mt-1 me-3" href="/resume" data-aos="fade-left" data-aos-delay="700">Resume</a>
               </div>
             </div>
           </div>
@@ -232,26 +247,14 @@
       </div>
     </div>
   </div>
+  {% if dyct['show_about'] -%}
   <div class="shadow-1-strong bg-white my-5 p-5" id="about">
     <div class="about-section">
       <div class="row">
         <div class="col-md-6">
           <h2 class="h2 fw-light mb-4">About Me</h2>
           I am a Ph.D. student with research focusing on creating code analysis tools to assist developers by identifying cryptographic misuse in software repositories.
-	My tools save developers time by using on-demand static code analysis to specifically scan for the cryptographic rules that may be broken.
-	My tools also show higher precision than existing tools to ensure developers pay attention to the results.
-	I also utilize several formats for my results to fit into many different DevOps tools and fit nicely into the development lifecycle.
-	<br>
-	<br>
-    Focusing on the source of the vulnerabilities will provide better long-term solutions as opposed to continuing patching the issues.
-    My application-focused research allows me to provide direct impact to current and upcoming vulnerabilities.
-	{#
-        I am a 3rd-year Ph.D. Computer Science student and am currently working on exciting projects.
-        Currently, I am working with <a href="http://people.cs.vt.edu/danfeng/">Dr. Danfeng Yao</a>.
-        <br>
-        Previously I have worked in <a href="https://worldpay.com/">Worldpay from FIS</a> for several Internships (or Co-Ops) and have learned a lot through my various teams.
-        <br>
-	#}
+	
         <br>
         <br>
         I enjoy working on side projects to help developers secure their code.
@@ -322,16 +325,17 @@
       </div>
     </div>
   </div>
+  {% endif  %}
   {% if False %}
   <div class="shadow-1-strong bg-white my-5 p-5" id="education">
-    <div class="education-section">
+    <div class="educationCollapsed">
       <h2 class="h2 fw-light mb-4">Education</h2>
     </div>
   </div>
   {% endif%}
   {% if dyct['show_edu'] -%}
   <div class="shadow-1-strong bg-white my-5 p-5" id="education">
-    <div class="education-section">
+    <div class="educationExpanded">
       <h2 class="h2 fw-light mb-4">Education</h2>
       <div class="timeline">
         {{
@@ -357,16 +361,15 @@
           "April 2018",
           "During my Undergraduate Program, I learned a lot throughout the classes I took and the Co-Ops I was a part of. The Co-Ops was the best part of the degree, as it gave me real-world experience and a chance for practical application.",
           False)|safe
-       }}
-        
+       }} 
       </div>
     </div>
   </div>
   {%- endif %}
-  {% if dyct['show_sub'] -%}
-  <div class="shadow-1-strong bg-white my-5 p-5" id="submissions">
-    <div class="submissions-section">
-      <h2 class="h2 fw-light mb-4">Submissions</h2>
+  {% if dyct['show_pubs'] -%}
+  <div class="shadow-1-strong bg-white my-5 p-5" id="publications">
+    <div class="publications-section">
+      <h2 class="h2 fw-light mb-4">Publications</h2>
       <div class="timeline">
         {{
           "Methods and Benchmark for Detecting Cryptographic API Misuses in Python"|get_base(
@@ -475,7 +478,7 @@
   {% if dyct['show_talks'] -%}
   <div class="shadow-1-strong bg-white my-5 p-5" id="talks">
     <div class="talks-section">
-      <h2 class="h2 fw-light mb-4">Talks</h2>
+      <h2 class="h2 fw-light mb-4">Demos and Talks</h2>
       <div class="timeline">
         {{
           "<a href='https://esorics2021.athene-center.de/tutorial-09-08.php' >Esorics 2021 Demo</a>"|get_base(
@@ -513,7 +516,7 @@
   {% if dyct['show_proj'] -%}
   <div class="shadow-1-strong bg-white my-5 p-5" id="projects">
     <div class="projects-section">
-      <h2 class="h2 fw-light mb-4">Projects</h2>
+      <h2 class="h2 fw-light mb-4">Research Experience and Projects</h2>
       <div class="timeline">
         {{
           "FRAC"|get_base(
@@ -584,10 +587,10 @@
     </div>
   </div>
   {%- endif %}
-  {% if dyct['show_utils'] -%}
-  <div class="shadow-1-strong bg-white my-5 p-5" id="utils">
-    <div class="utils-section">
-      <h2 class="h2 fw-light mb-4">Utils</h2>
+  {% if dyct['show_teachingExp'] -%}
+  <div class="shadow-1-strong bg-white my-5 p-5" id="teachingExp">
+    <div class="teachingExp-section">
+      <h2 class="h2 fw-light mb-4">Teaching Experience</h2>
       <div class="timeline">
         {{
             "Mystring"|get_base(
@@ -684,70 +687,18 @@
     </div>
   </div>
   {%- endif %}
-  {% if dyct['show_skills'] -%}
-  <div class="shadow-1-strong bg-white my-5 p-5" id="skills">
-    <div class="skills-section">
-      <h2 class="h2 fw-light mb-4">Technical Skills</h2>
-      <div class="row">
-        <div class="col-md-6">
-          {{'Python3'|get_skill(100)|safe}}
-          {{'Ballerina'|get_skill(70)|safe}}
-          {{'Bash Scripts'|get_skill(50)|safe}}
-          {{'C#'|get_skill(25)|safe}}
-          {{'SQL'|get_skill(65)|safe}}
-          {{'GO'|get_skill(40)|safe}}
-          {{'C++'|get_skill(1)|safe}}
-
-          {{'Maven'|get_skill(85)|safe}}
-          {{'Gradle'|get_skill(65)|safe}}
-          {{'Flask'|get_skill(25)|safe}}
-          {{'Mako'|get_skill(40)|safe}}
-
-          {{'Rest Webservices'|get_skill(65)|safe}}
-          {{'Docker'|get_skill(85)|safe}}
-
-          {{'Cuckoo'|get_skill(25)|safe}}
-          {{'VirtualBox'|get_skill(65)|safe}}
-        </div>
-        <div class="col-md-6">
-          {{'Java EE'|get_skill(90,False)|safe}}
-          {{'Rust'|get_skill(40,False)|safe}}
-          {{'Tasktop Integrations'|get_skill(85,False)|safe}}
-          {{'HTML'|get_skill(50,False)|safe}}
-          {{'.NET'|get_skill(25,False)|safe}}
-          {{'Scala'|get_skill(65,False)|safe}}
-          {{'JavaScript'|get_skill(15,False)|safe}}
-
-          {{'Spring'|get_skill(50,False)|safe}}
-          {{'Jenkins'|get_skill(50,False)|safe}}
-          {{'Tensorflow'|get_skill(30,False)|safe}}
-          {{'Prompt Engineering'|get_skill(45,False)|safe}}
-
-          {{'Soap Webservices'|get_skill(75,False)|safe}}
-          {{'Machine Learning'|get_skill(40,False)|safe}}
-
-          {{'Kubernetes'|get_skill(45,False)|safe}}
-          {{'Scripting'|get_skill(100,False)|safe}}
-        </div>
-      </div>
-    </div>
-  </div>
-  {%- endif %}
-  {% if dyct['show_docker'] -%}
-  <div class="shadow-1-strong bg-white my-5 p-5" id="my_dock">
-    <div class="my_dock">
-      <h2 class="h2 fw-light mb-4">My Docker Setup</h2>
-      <a href="https://rebrand.ly/my_dock" aria-label="A mind map representing my current Docker triaged environment."><img src="https://rebrand.ly/my_dock" style="width:100%;height:100%;" alt="A mind map representing my current Docker triaged environment."/></a>
-      Since I use a various set of tools for different development and research environments, I needed to be able to easily switch my toolsets. Due to hard-drive space limitations, I started to leverage Docker. I used my familiarity with GitHub actions to create a chain creation of several Docker Images. The Scripts and PyScripts are both Python script repositories creating inbuilt scripts. BaseDocker is the first Docker Image that builds, and each subsequent Docker image builds off of it. For example, JavaDev is built off of BaseDocker using a script from PyScript to automatically download and include several packages.
-      <br><br>
-      Why did I do this? Simply to create an inheritence based environment tool chain. If I need a common utility between two docker images, I just include it in BaseDocker and the changes will trickle down. Many of these are private simply due to various custom builds processes I use.
+  {% if dyct['show-service'] -%}
+  <div class="shadow-1-strong bg-white my-5 p-5" id="service">
+    <div class="service-section">
+      <h2 class="h2 fw-light mb-4">Service Activities</h2>
+      
     </div>
   </div>
   {% endif%}
-  {% if dyct['show_exp'] -%}
-  <div class="shadow-1-strong bg-white my-5 p-5" id="experience">
-    <div class="work-experience-section">
-      <h2 class="h2 fw-light mb-4">Work Experience</h2>
+  {% if dyct['show_honors'] -%}
+  <div class="shadow-1-strong bg-white my-5 p-5" id="honors">
+    <div class="honors-section">
+      <h2 class="h2 fw-light mb-4">Honors and Awards</h2>
       <div class="timeline">
         {{
           "Graduate Teaching Assistant"|get_base(
@@ -874,153 +825,58 @@
     </div>
   </div>
   {%- endif %}
-  {% if dyct['show_path'] -%}
-  <div class="shadow-1-strong bg-white my-5 p-5" id="path">
-    <div class="current-career-path-section">
-      <h2 class="h2 fw-light mb-4">Career Path</h2>
-      <div class="timeline">
-        {{
-          "Security Researcher"|get_base("",
-          "2018",
-          "Present",
-          "From the start of my <a href='/#Grad_MSDegree'>Graduate Degree</a> I started investigating security cryptographic misuse in Java Projects. Helping to identify cryptographic issues using the latest code slicing techniques is very exciting. The quickest way to fix a vulnerability is at the source code before it makes it past the developer, and I aim to create the fastest and most efficient ways to do that.",color="indigo")|safe
-       }}
-        {{
-          "DevOps Engineer"|get_base("",
-          "2019",
-          "2022",
-          "I have had several internships with work concentrating on DevOps; both from my Graduate degree at <a href='/#UnderGrad_DevOps'>WorldPay From FIS</a> and also at <a href='/#Grad_DevOps_Peraton'>Peraton</a>. I learned how to directly help developers using several tools I picked up throughout my internships as well as various tools throughout my schooling. While I lightly used several different technologies, I utilized Docker the most. I leveraged the Docker framework throughout my personal work to create a <a href='/#my_dock'>self-building and inheritence-based structure, creating different images for my different tasks</a>.",color="indigo")|safe
-       }}
-        {{
-          "Software Engineer"|get_base("",
-          "2015",
-          "Present",
-          "The internships I had throughout my Undergraduate Degree starting from <a href='/#UnderGrad_Internship_Start'>2015</a> solidifed the Software Engineering skills I still use today. My two mentors taught me both how to create working code using proper etiqutte. They also helped me to manage less than optimal projects and adapt them to our modern development practices.",color="indigo")|safe
-       }}
-      </div>
-      </div>
-    </div>
-  {%- endif %}
-  {% if dyct['show_grp'] -%}
-  <div class="shadow-1-strong bg-white my-5 p-5" id="groups">
-    <div class="groups-section">
-      <h2 class="h2 fw-light mb-4">Groups</h2>
-      <div class="timeline">
-        {{
-          "Advisor"|get_base(
-          "<a href='https://rebrand.ly/csgc'>Graduate Student Council</a>",
-          "2022",
-          "2023",
-          "This group represents the interests of the graduate student body at Virginia Tech and assists within any meetings for the department. It also creates events to help enhance the graduate student climate such as fun activities and welcome back meetings.",color="orange")|safe
-       }}
-       {{
-          "President"|get_base(
-          "<a href='https://rebrand.ly/csgc'>Graduate Student Council</a>",
-          "2021",
-          "2022",
-          "This group represents the interests of the graduate student body at Virginia Tech and assists within any meetings for the department. It also creates events to help enhance the graduate student climate such as fun activities and welcome back meetings.",color="orange")|safe
-       }}
-       {{
-          "Slack Admin"|get_base(
-          "<a href='https://sites.google.com/vt.edu/imentor/home'>iMentor</a>",
-          "2020",
-          "2020",
-          "From the <a href='https://sites.google.com/vt.edu/imentor/home'>homepage</a>. iMentor focuses squarely on attracting, mentoring, and career advising early-stage graduate students from underrepresented communities who want to pursue a career in computer security. Being virtually co-located with the ACM Conference on Computer and Communications Security (ACM CCS) 2020, the workshop provides an opportunity for attendees to also participate in the main conference and benefit from it. ACM CCS is a top-tier venue for the quick and wide dissemination of cutting-edge research results in computer and communications security.",color="orange")|safe
-       }}
-       {{
-          "Vice President"|get_base(
-          "<a href='https://rebrand.ly/csgc'>Graduate Student Council</a>",
-          "2020",
-          "2021",
-          "This group represents the interests of the graduate student body at Virginia Tech and assists within any meetings for the department. It also creates events to help enhance the graduate student climate such as fun activities and welcome back meetings. I have set up the GitHub Organization and the website to auto-build using GitHub Actions.",color="orange")|safe
-       }}
-       {{
-          "Member"|get_base(
-          "<a href='https://order-of-the-engineer.org/'>Order of The Engineer</a>",
-          "2018",
-          "Present",
-          "Upholding Devotion to the Standards and Dignity of the Engineering Profession. This group is a ceremonious group acknowledging members' commitments to uphold high qualities and their duty as an engineer.",color="orange")|safe
-       }}
-      </div>
-    </div>
-  </div>
-  {%- endif %}
-  {% if dyct['show_ment'] -%}
-  <div class="shadow-1-strong bg-white my-5 p-5" id="mentees">
-    <div class="mentees-section">
-      <h2 class="h2 fw-light mb-4">Mentees</h2>
-      <div class="timeline">
-        {{
-          "UNLISTED"|get_base(
-          "UNLISTED",
-          "08/29/2020",
-          "01/01/2021",
-          "Instructed about assistance on the CryptoGuard Project. Helping instruct them on creating an IDE plugin.",color="purple")|safe
-       }}
-       {{
-          "Bachelor in Computer Science"|get_base(
-          "Jason",
-          "06/08/2020",
-          "08/22/2020",
-          "Instructed about assistance on the CryptoGuard Project. Read the proper review <a href='https://docs.google.com/document/d/18Xa6M5ymDyZ-zvPFqN5tAlQuIPqd27nWBdp2pevpytU/edit?usp=sharing'>here</a>.",color="purple")|safe
-       }}
-       {{
-          "UNLISTED"|get_base(
-          "UNLISTED",
-          "01/22/2020",
-          "05/30/2020",
-          "Help lead them on the Cryptoguard project. Help to instruct them on current Java research.",color="purple")|safe
-       }}
-       {{
-          "UNLISTED"|get_base(
-          "UNLISTED",
-          "01/09/2017",
-          "08/12/2017",
-          "Instructed them on current project workflows. Helped them to build up them Java API skills.",color="purple")|safe
-       }}
-       {{
-          "UNLISTED"|get_base(
-          "UNLISTED",
-          "01/09/2017",
-          "08/12/2017",
-          "Instructed them on current project workflows. Helped to teach them about the projects within the teams.",color="purple")|safe
-       }}
-       
-      </div>
-    </div>
-  </div>
-  {%- endif %}
-  {% if dyct['show_consult'] -%}
-  <div class="shadow-1-strong bg-white my-5 p-5" id="consultations">
-    <div class="mentees-section">
-      <h2 class="h2 fw-light mb-4">Consultations</h2>
-      <div class="timeline">
-        {{
-          "Demo User"|get_base(
-          "<a href='https://www.pipedreams.org/'>PipeDreams</a>",
-          "08/30/2022",
-          "Current",
-          "I was recently introduced to the project and have taken to it well. I have attempted to use Zapier before but found it too constricting. I have already made <a href='https://github.com/PipedreamHQ/pipedream/issues/created_by/franceme'>several suggestions for additional app integrations</a> that I would be interested and look forward to using it.",color="pink")|safe
-       }}
-       {{
-          "User"|get_base(
-          "<a href='https://www.orchest.io/'>Orchest</a>",
-          "08/01/2021",
-          "Current",
-          "I have been currently using this for several of my data cleaning pipelines. Since I have had to do various processes this helps me visually organize the code flow. When I talked with the CTO many my changes were already being addressed. However with the extra addition of Webhooks, I also needed to create a enhanced transfer library. Shown <a href='https://github.com/franceme/messenger_python'>here</a> is the result of my work, as Orchest currently natively allows only one output to be transferred to other steps. This library allows me to transfer more data between steps.",color="pink")|safe
-       }}
-       {{
-          "An Original Member"|get_base(
-          "<a href='https://www.trymito.io/'>Mito</a>",
-          "01/22/2020",
-          "Current",
-          "I believe I was one of the early users of the project and had various meetings with the owners. Many of my contributions made it into the current project. My main idea contributed to the project is the idea of <a href='https://docs.trymito.io/how-to/using-the-generated-code'>code generation</a>. Since I truely believe in reproducible code, I saw the code generation as a necessity to transfer the steps to other people. This also enables the developers to quickly template dataframe changes using Mito and then copy paste the snippet to a seperate python script.",color="pink")|safe
-       }}
+
+  {% if dyct['show_skills'] -%}
+  <div class="shadow-1-strong bg-white my-5 p-5" id="skills">
+    <div class="skills-section">
+      <h2 class="h2 fw-light mb-4">Technical Skills</h2>
+      <div class="row">
+        <div class="col-md-6">
+          {{'Python3'|get_skill(100)|safe}}
+          {{'Ballerina'|get_skill(70)|safe}}
+          {{'Bash Scripts'|get_skill(50)|safe}}
+          {{'C#'|get_skill(25)|safe}}
+          {{'SQL'|get_skill(65)|safe}}
+          {{'GO'|get_skill(40)|safe}}
+          {{'C++'|get_skill(1)|safe}}
+
+          {{'Maven'|get_skill(85)|safe}}
+          {{'Gradle'|get_skill(65)|safe}}
+          {{'Flask'|get_skill(25)|safe}}
+          {{'Mako'|get_skill(40)|safe}}
+
+          {{'Rest Webservices'|get_skill(65)|safe}}
+          {{'Docker'|get_skill(85)|safe}}
+
+          {{'Cuckoo'|get_skill(25)|safe}}
+          {{'VirtualBox'|get_skill(65)|safe}}
+        </div>
+        <div class="col-md-6">
+          {{'Java EE'|get_skill(90,False)|safe}}
+          {{'Rust'|get_skill(40,False)|safe}}
+          {{'Tasktop Integrations'|get_skill(85,False)|safe}}
+          {{'HTML'|get_skill(50,False)|safe}}
+          {{'.NET'|get_skill(25,False)|safe}}
+          {{'Scala'|get_skill(65,False)|safe}}
+          {{'JavaScript'|get_skill(15,False)|safe}}
+
+          {{'Spring'|get_skill(50,False)|safe}}
+          {{'Jenkins'|get_skill(50,False)|safe}}
+          {{'Tensorflow'|get_skill(30,False)|safe}}
+          {{'Prompt Engineering'|get_skill(45,False)|safe}}
+
+          {{'Soap Webservices'|get_skill(75,False)|safe}}
+          {{'Machine Learning'|get_skill(40,False)|safe}}
+
+          {{'Kubernetes'|get_skill(45,False)|safe}}
+          {{'Scripting'|get_skill(100,False)|safe}}
+        </div>
       </div>
     </div>
   </div>
   {%- endif %}
 
+<!-- CONTACT 
   <div class="shadow-1-strong bg-white my-5 p-5" id="contact">
     <div class="contant-section">
       <h2 class="h2 fw-light text mb-4">Contact</h2>
@@ -1034,7 +890,7 @@
               <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="frantzme" data-color="#fbfffc" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#FFDD00" ></script>
               <br>
               <br>
-              <!-- Created with the website: https://www.qr-code-generator.com/solutions/vcard-qr-code/-->
+              
               <img src="images/VCard.svg" alt="A QR code that when scanned will generate my contact information"/>
             </div>
           </div>
@@ -1042,6 +898,8 @@
       </div>
     </div>
   </div>
+-->
+<!-- QR CODE Created with the website: https://www.qr-code-generator.com/solutions/vcard-qr-code/-->
 </div></div>
     </div>
     <footer class="pt-4 pb-4 text-muted text-center d-print-none">
