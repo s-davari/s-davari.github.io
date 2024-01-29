@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="context, context-aware, augmented reality, virtual reality, VR, AR, adaptive AR, intelligent interface, mixed reality, mixed methods research, qualitative research, quantitative research, UX, User Experience, Doug Bowman, 3DI Lab, research, researcher, developer, scientist, engineer, data analysis, ML, machine learning, computer vision" />
+    <meta name="description" content="I'm Shakiba, a Computer Science Ph.D. student at the 3D Interaction Group at Virginia Tech under the supervision of Doug Bowman. Intelligent Augmented Reality (AR) Interface Design: My research interest lies in connecting my past research experience in applied machine learning (ML) and my current passion for AR interface design. I am a 3D interaction/interface designer, focusing on intelligent AR interfaces. I concentrate on different aspects of detecting AR user's context and utilizing it to adapt their AR interface. Such context-aware interfaces mitigate the existing challenges of AR, such as real-world occlusion and social intrusiveness, while providing more reliable and efficient information access and interaction in AR."/>
+    <title>Shakiba Davari</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" media="print" onload="this.media='all'"/>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap"/>
+    </noscript>
+    <link href="css/font-awesome/css/all.min.css?ver=1.2.1" rel="stylesheet">
+    <link href="css/mdb.min.css?ver=1.2.1" rel="stylesheet">
+    <link href="css/aos.css?ver=1.2.1" rel="stylesheet">
+    <link href="/css/main.css?ver=1.2.1" rel="stylesheet">
+    <noscript>
+      <style type="text/css">
+        [data-aos] {
+            opacity: 1 !important;
+            transform: translate(0) scale(1) !important;
+        }
+      </style>
+    </noscript>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+      }
+      
+      #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+        opacity: 0.45;
+        background-color: #34495e;
+        color: white;
+      }
+      
+      #myBtn:hover {
+        background-color: black;
+        color: white;
+      }
+      </style>
+  </head>
+  
+    <!-- Google tag (gtag.js) (https://analytics.google.com)-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F7R0M67LLC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+  
+      gtag('config', 'G-F7R0M67LLC');
+    </script>
+    <script>
+      /*
+      printPdf = function (url) {
+        var iframe = this._printIframe;
+        if (!this._printIframe) {
+          iframe = this._printIframe = document.createElement('iframe');
+          document.body.appendChild(iframe);
+
+          iframe.style.display = 'none';
+          iframe.onload = function() {
+            setTimeout(function() {
+              iframe.focus();
+              iframe.contentWindow.print();
+            }, 1);
+          };
+        }
+
+        iframe.src = url;
+      }
+      */
+    </script>
+  <body class="bg-light" id="top" style="background-color: #eef1f8 !important; ">
+    <button onclick="goto('/#top')" id="myBtn" title="Go to top">Top</button>
+    <header class="d-print-none">
+      <div class="container text-center text-lg-left">
+        <div class="pt-4 clearfix" style="background-color: #eef1f8; color:#34495e; position: fixed; z-index: 99; padding-inline: inherit; max-width: 1140px;  width: 100%; padding-right: 8%;" >
+          <!--<h1 class="site-title mb-0"><a href="/index.html" >Shakiba Davari</a> <br>
+             <a href="/research.html">Research_Info</a>   <a href="/industry.html">Industry_Info</a>   <a href="/full.html">Full_Info</a> 
+          </h1> -->
+          <div class="site-nav "> 
+            <nav role="navigation" style="line-height: .5rem;">
+              <ul class="nav" style="border:thin, border-width: 1.5px; outline-style: double; width: fit-content !important;"> 
+                <li class="nav-item"><a class="nav-link" style="border-color:  #ffffff ;" href="/" title="About" ><span class="menu-title">About Me</span></a></li>
+                <!--<li class="nav-item"><a class="nav-link" style="border-color:  #ffffff ;" href="/research" title="Research Interest"><span class="menu-title">Research Interest</span></a></li>
+                -->
+
+                <li class="nav-item"><a class="nav-link" style="border-color:  #ffffff ;" href="/education" title="Education"><span class="menu-title">Education</span></a></li>
+                <li class="nav-item"><a class="nav-link" style="border-color:  #ffffff ;" href="/service" title="Service Activities"><span class="menu-title">Service Activities</span></a></li>                
+                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; outline-style: inset;" href="/honors" title="Honors and Awards"><span class="menu-title">Honors and Awards</span></a></li>
+                <!--<li class="nav-item"><a class="nav-link" style="border-color:  #ffffff ;" href="/personal" title="Me on a Personal Level"><span class="menu-title">Me on a Personal Level</span></a></li>
+                -->     
+                </ul>
+              <br>
+              <ul class="nav" style="border:thin, border-width: 1.5px; outline-style: double; width:inherit !important;" >
+
+                <li class="nav-item"><a class="nav-link" style="border-color:  #ffffff ;" href="/projects" title="Research Experience and Projects"><span class="menu-title">Research Experience and Projects</span></a></li>
+                <li class="nav-item"><a class="nav-link" style="border-color:  #ffffff ;" href="/teaching" title="Teaching Experience"><span class="menu-title">Teaching Experience</span></a></li>
+                <li class="nav-item"><a class="nav-link" style="border-color:  #ffffff ;" href="/publications" title="Publications"><span class="menu-title">Publications</span></a></li>
+                <li class="nav-item"><a class="nav-link" style="border-color:  #ffffff ;" href="/talks" title="Demos and Talks"><span class="menu-title">Demos and Talks</span></a></li>
+                </ul>
+
+
+ 
+                <!--
+                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; border-style: solid; border-color: #ffffff;" href="#contactCollapsed" title="Contact"><span class="menu-title">Contact</span></a></li>-->
+
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="page-content" style="background-color: #eef1f8;">
+      <div class="container">
+<div class="resume-container">
+  <div class="shadow-1-strong bg-white my-5" id="intro">
+    <div class="bg-info text-white">
+      <div class="cover bg-image"><img src="images/bg-header.jpg" alt="My Headshot Photo"/>
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.7);backdrop-filter: blur(2px);">
+          <div class="text-center p-5">
+            <div class="avatar p-1"><img class="img-thumbnail shadow-2-strong"  style="position: sticky; margin-block-start:1.8em ;"src="images/sdavari.jpg" width="160" height="160" alt="My Headshot Photo"/></div>
+            <div class="header-bio mt-3">
+              <div data-aos="zoom-in" data-aos-delay="0">
+                <h2 class="h1">Shakiba Davari</h2>
+                <p>Ph.D. Candidate: Context-Intelligent Augmented Reality Interface</p>
+              </div>
+              <div class="header-social mb-3 d-print-none" data-aos="zoom-in" data-aos-delay="200">
+                <nav role="navigation">
+                  <ul class="nav justify-content-center">
+                <li>
+              
+              <li>
+                  <a class="nav-link" href="/3dilab" title="3DILAB" target="_blank" >
+                     <img src="https://wordpress.cs.vt.edu/3digroup/wp-content/uploads/sites/141/2020/09/logo1_py_solid.png" width="20" height="20" alt="link to my page on the 3D Interaction Lab's website"/>
+                  </a>
+              </li>
+              
+              
+              <li>
+                      <a class="nav-link" href="/linkedin" title="Linkedin" target="_blank">
+                      <i class="fab fa-linkedin" title="LinkedIn link"></i>
+                  </a>
+              </li>
+              
+               
+              <li>
+                    <a class="nav-link" href="/scholar" title="Google Scholar" target="_blank" >
+                      <i class="ai ai-google-scholar-square" title="Google Scholar Link"></i>
+                  </a>
+              </li>
+              
+              
+              
+              
+              <li>
+                    <a class="nav-link" href="/orcid" title="ORCID" target="_blank" >
+                      <i class="fab fa-orcid" title="Orcid"></i>
+                  </a>
+              </li>
+              
+              <li>
+                    <a class="nav-link" href="/email" title="Email" target="_blank">
+                      <i class="far fa-envelope pe-2 text-muted" title="Email"> </i> 
+                  </a>
+              </li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="d-print-none">
+                <!--<a class="nav-link" href="\resume" title="Resume">
+                      <i style="padding:10px;" class="fab fa-resume" title="Resume Link"></i>
+                  </a>-->
+                <a class="btn btn-outline-light btn-lg shadow-sm mt-1 me-3" href="/cv" data-aos="fade-right" data-aos-delay="700" target="_blank" >CV</a>
+                <a class="btn btn-outline-light btn-lg shadow-sm mt-1 me-3" href="/resume" data-aos="fade-left" data-aos-delay="700" target="_blank" >Resume</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  
+
+  
+  
+  
+  <div class="shadow-1-strong bg-white my-5 p-5" id="honors">
+    <div class="honors-section">
+      <h2 class="h2 fw-light mb-4"> Honors and Awards</h2>
+      <div class="timeline">
+        
+<div class="timeline-card timeline-card-blue" data-aos="fade-in" data-aos-delay="0" timeline-card-blue None>
+    <div class="timeline-head px-4 pt-3">
+    <div class="h5">Invited Talk <span class="text-muted h6"> at <a href='https://www.ismar.net/ISMAR/'> IEEE International Symposium on Mixed and Augmented Reality</a></span></div>
+    </div>
+    <div class="timeline-body px-4 pb-4">
+    <div class="text-muted text-small mb-3"><a href='https://www.percxr.com/'>IEEE Workshop on Perceptual and Cognitive Issues in xR (PERCxR)</a> - 2022</div>
+    <div>Talk: Context Aware Inference and Adaptation in Intelligent AR Interfaces</div>
+    </div>
+</div>
+        
+<div class="timeline-card timeline-card-blue" data-aos="fade-in" data-aos-delay="0" timeline-card-blue None>
+    <div class="timeline-head px-4 pt-3">
+    <div class="h5">Winning Team for Best 3D User Interface Design <span class="text-muted h6"> at <a href='https://ieeevr.org/'>IEEE Conference on Virtual Reality and 3D User Interfaces </a> </span></div>
+    </div>
+    <div class="timeline-body px-4 pb-4">
+    <div class="text-muted text-small mb-3">3D User Interface Contest - 2020 and 2021</div>
+    <div> <b>2021:</b> Clean the Ocean: An Immersive VR Experience Proposing New Modifications to Go-Go and WiM Techniques <br>
+             <b> 2020:</b> Fantastic Voyage 2021: Using Interactive VR Storytelling to Explain Targeted COVID-19 Vaccine Delivery to Antigen-Presenting Cells</div>
+    </div>
+</div>
+       
+<div class="timeline-card timeline-card-blue" data-aos="fade-in" data-aos-delay="0" timeline-card-blue None>
+    <div class="timeline-head px-4 pt-3">
+    <div class="h5">Recipient of the Departmental Student Service Award <span class="text-muted h6"> at <a href='https://vt.edu'>Virginia Tech </a> </span></div>
+    </div>
+    <div class="timeline-body px-4 pb-4">
+    <div class="text-muted text-small mb-3"><a href='https://cs.vt.edu'>Depratment of Computer Science</a> - 2020</div>
+    <div> In Recognition of Community Services Within the CS Department</div>
+    </div>
+</div>
+        
+<div class="timeline-card timeline-card-blue" data-aos="fade-in" data-aos-delay="0" timeline-card-blue None>
+    <div class="timeline-head px-4 pt-3">
+    <div class="h5">Recipient of the Grace Hopper Scholarship <span class="text-muted h6"> at <a href='https://cs.vt.edu'>Depratment of Computer Science</a></span></div>
+    </div>
+    <div class="timeline-body px-4 pb-4">
+    <div class="text-muted text-small mb-3"><a href='https://ghc.anitab.org'>Grace Hopper Celebration of Women in Computing</a> - 2021 and 2022</div>
+    <div>Awarded by Virginia Tech's Depratment of Computer Science.</div>
+    </div>
+</div>
+        
+<div class="timeline-card timeline-card-blue" data-aos="fade-in" data-aos-delay="0" timeline-card-blue None>
+    <div class="timeline-head px-4 pt-3">
+    <div class="h5">Recipient of the Divercity and Inclusion Scholarship  <span class="text-muted h6"> at <a href='https://ieeevr.org/'>IEEE Conference on Virtual Reality and 3D User Interfaces </a> </span></div>
+    </div>
+    <div class="timeline-body px-4 pb-4">
+    <div class="text-muted text-small mb-3">2021</div>
+    <div> </div>
+    </div>
+</div>
+        
+<div class="timeline-card timeline-card-blue" data-aos="fade-in" data-aos-delay="0" timeline-card-blue None>
+    <div class="timeline-head px-4 pt-3">
+    <div class="h5">Recipient of ACM Capital Region Celebration of Women in Computing Scholarship <span class="text-muted h6"> at <a href='https://cs.vt.edu'>Depratment of Computer Science at Virginia Tech</a></span></div>
+    </div>
+    <div class="timeline-body px-4 pb-4">
+    <div class="text-muted text-small mb-3">2020</div>
+    <div></div>
+    </div>
+</div>
+        
+<div class="timeline-card timeline-card-blue" data-aos="fade-in" data-aos-delay="0" timeline-card-blue None>
+    <div class="timeline-head px-4 pt-3">
+    <div class="h5">Recipient of Tapia Celebration of Diversity in Computing Scholarship Scholarship <span class="text-muted h6"></span></div>
+    </div>
+    <div class="timeline-body px-4 pb-4">
+    <div class="text-muted text-small mb-3">2017 - 2019 - 2020</div>
+    <div><b> 2020: </b> Awarded by the Tapia Foundation <br>
+          <b> 2019: </b> Awarded by Depratment of Computer Science at Virginia Tech <br>
+          <b> 2017: </b> Awarded by georgia Institute of Technology</div>
+    </div>
+</div>
+        
+<div class="timeline-card timeline-card-blue" data-aos="fade-in" data-aos-delay="0" timeline-card-blue None>
+    <div class="timeline-head px-4 pt-3">
+    <div class="h5">Selected Exceptionally Talented Student in the School of Engineering <span class="text-muted h6"> at <a href='https://en.sbu.ac.ir/' target='_blank'>Shahid Beheshti University, Iran</a></span></div>
+    </div>
+    <div class="timeline-body px-4 pb-4">
+    <div class="text-muted text-small mb-3">2010 - 2014</div>
+    <div></div>
+    </div>
+</div>
+        
+<div class="timeline-card timeline-card-blue" data-aos="fade-in" data-aos-delay="0" timeline-card-blue None>
+    <div class="timeline-head px-4 pt-3">
+    <div class="h5">Fellowship in Support of Preparation for Iran’s National University Entrance Exam <span class="text-muted h6"> at Ghalamchi Foundation, Iran</span></div>
+    </div>
+    <div class="timeline-body px-4 pb-4">
+    <div class="text-muted text-small mb-3">2008 - 2010</div>
+    <div> </div>
+    </div>
+</div>
+        
+        
+<div class="timeline-card timeline-card-blue" data-aos="fade-in" data-aos-delay="0" timeline-card-blue None>
+    <div class="timeline-head px-4 pt-3">
+    <div class="h5">Fellowship in Support of High School Education <span class="text-muted h6"> at Sama Nation-wide Private High School, Iran</span></div>
+    </div>
+    <div class="timeline-body px-4 pb-4">
+    <div class="text-muted text-small mb-3">2006 - 2010</div>
+    <div> </div>
+    </div>
+</div>
+        
+<div class="timeline-card timeline-card-blue" data-aos="fade-in" data-aos-delay="0" timeline-card-blue None>
+    <div class="timeline-head px-4 pt-3">
+    <div class="h5">Ranked 1st in Nationwide Programming Exam <span class="text-muted h6"> at Sama Nation-wide Private High School, Iran</span></div>
+    </div>
+    <div class="timeline-body px-4 pb-4">
+    <div class="text-muted text-small mb-3">2009</div>
+    <div> </div>
+    </div>
+</div>
+        
+<div class="timeline-card timeline-card-blue" data-aos="fade-in" data-aos-delay="0" timeline-card-blue None>
+    <div class="timeline-head px-4 pt-3">
+    <div class="h5">Ranked 3rd in Nationwide Math Exam <span class="text-muted h6"> at Sama Nation-wide Private High School, Iran</span></div>
+    </div>
+    <div class="timeline-body px-4 pb-4">
+    <div class="text-muted text-small mb-3">2008</div>
+    <div> </div>
+    </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+  
+  
+
+  
+
+
+  
+
+<!-- CONTACT 
+  <div class="shadow-1-strong bg-white my-5 p-5" id="contact">
+    <div class="contant-section">
+      <h2 class="h2 fw-light text mb-4">Contact</h2>
+      <div class="row mb-4">
+        <div class="col-md-5" data-aos="fade-left" data-aos-delay="200">
+          <div class="mt-1">
+            <div class="h6"><i class="far fa-envelope pe-2 text-muted" style="width:24px;opacity:0.85;"></i>
+              <a href="mailto:mailto://sdavari@vt.edu">mailto://sdavari@vt.edu</a>
+              <br>
+              <br>
+              <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="frantzme" data-color="#fbfffc" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#FFDD00" ></script>
+              <br>
+              <br>
+              
+              <img src="images/VCard.svg" alt="A QR code that when scanned will generate my contact information"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+-->
+<!-- QR CODE Created with the website: https://www.qr-code-generator.com/solutions/vcard-qr-code/-->
+</div></div>
+    </div>
+    <footer class="pt-4 pb-4 text-muted text-center d-print-none">
+      <div class="container">
+            <ul class="nav justify-content-center">
+                <li>
+              
+              <li>
+                  <a class="nav-link"  href="/3dilab" title="3DILAB">
+                     <img src="https://wordpress.cs.vt.edu/3digroup/wp-content/uploads/sites/141/2020/09/logo1_py_solid.png" width="20" height="20" alt="link to my page on the 3D Interaction Lab's website"/>
+                  </a>
+              </li>
+              
+              
+              <li>
+                      <a class="nav-link" href="/linkedin" title="Linkedin">
+                      <i class="fab fa-linkedin" title="LinkedIn link"></i>
+                  </a>
+              </li>
+              
+               
+              <li>
+                    <a class="nav-link" href="/scholar" title="Google Scholar">
+                      <i class="ai ai-google-scholar-square" title="Google Scholar Link"></i>
+                  </a>
+              </li>
+              
+              
+              
+              
+              <li>
+                    <a class="nav-link" href="/orcid" title="ORCID">
+                      <i class="fab fa-orcid" title="Orcid"></i>
+                  </a>
+              </li>
+              
+              <li>
+                  <a class="nav-link" href="/email" title="Email" target="_blank" >
+                      <i class="far fa-envelope pe-2 text-muted"title="Email"> </i> 
+                  </a>
+              </li>
+            </ul>
+      </div>
+    </footer>
+    <script src="scripts/mdb.min.js?ver=1.2.1"></script>
+    <script src="scripts/aos.js?ver=1.2.1"></script>
+    <script src="scripts/main.js?ver=1.2.1"></script>
+    <script>
+      //Taken From https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_scroll_to_top
+      //Get the button
+      var mybutton = document.getElementById("myBtn");
+      
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+      
+      function scrollFunction() {
+        mybutton.style.backgroundColor = "background-color:rgb(57, 100, 234);";
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+      
+      // When the user clicks on the button, scroll to the top of the document
+      function goto(location) {
+        //window.location.href = location;
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+  </body>
+</html>

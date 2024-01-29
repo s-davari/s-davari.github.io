@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="context, context-aware, augmented reality, virtual reality, VR, AR, adaptive AR, intelligent interface, mixed reality, mixed methods research, qualitative research, quantitative research, UX, User Experience, Doug Bowman, 3DI Lab, research, researcher, developer, scientist, engineer, data analysis, ML, machine learning, computer vision" />
+    <meta name="description" content="I'm Shakiba, a Computer Science Ph.D. student at the 3D Interaction Group at Virginia Tech under the supervision of Doug Bowman. Intelligent Augmented Reality (AR) Interface Design: My research interest lies in connecting my past research experience in applied machine learning (ML) and my current passion for AR interface design. I am a 3D interaction/interface designer, focusing on intelligent AR interfaces. I concentrate on different aspects of detecting AR user's context and utilizing it to adapt their AR interface. Such context-aware interfaces mitigate the existing challenges of AR, such as real-world occlusion and social intrusiveness, while providing more reliable and efficient information access and interaction in AR."/>
+    <title>Shakiba Davari</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" media="print" onload="this.media='all'"/>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap"/>
+    </noscript>
+    <link href="css/font-awesome/css/all.min.css?ver=1.2.1" rel="stylesheet">
+    <link href="css/mdb.min.css?ver=1.2.1" rel="stylesheet">
+    <link href="css/aos.css?ver=1.2.1" rel="stylesheet">
+    <link href="/css/main.css?ver=1.2.1" rel="stylesheet">
+    <noscript>
+      <style type="text/css">
+        [data-aos] {
+            opacity: 1 !important;
+            transform: translate(0) scale(1) !important;
+        }
+      </style>
+    </noscript>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+      }
+      
+      #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+        opacity: 0.45;
+        background-color: #34495e;
+        color: white;
+      }
+      
+      #myBtn:hover {
+        background-color: black;
+        color: white;
+      }
+      </style>
+  </head>
+  
+    <!-- Google tag (gtag.js) (https://analytics.google.com)-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F7R0M67LLC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+  
+      gtag('config', 'G-F7R0M67LLC');
+    </script>
+    <script>
+      /*
+      printPdf = function (url) {
+        var iframe = this._printIframe;
+        if (!this._printIframe) {
+          iframe = this._printIframe = document.createElement('iframe');
+          document.body.appendChild(iframe);
+
+          iframe.style.display = 'none';
+          iframe.onload = function() {
+            setTimeout(function() {
+              iframe.focus();
+              iframe.contentWindow.print();
+            }, 1);
+          };
+        }
+
+        iframe.src = url;
+      }
+      */
+    </script>
+  <body class="bg-light" id="top" style="background-color: #eef1f8 !important; ">
+    <button onclick="goto('/#top')" id="myBtn" title="Go to top">Top</button>
+    <header class="d-print-none">
+      <div class="container text-center text-lg-left">
+        <div class="pt-4 clearfix" style="background-color: #eef1f8; color:#34495e; position: fixed; z-index: 99; padding-inline: inherit; max-width: 1140px;  width: 100%; padding-right: 8%;" >
+          <!--<h1 class="site-title mb-0"><a href="/index.html" >Shakiba Davari</a> <br>
+             <a href="/research.html">Research_Info</a>   <a href="/industry.html">Industry_Info</a>   <a href="/full.html">Full_Info</a> 
+          </h1> -->
+          <div class="site-nav "> 
+            <nav role="navigation" style="line-height: .5rem;">
+              <ul class="nav" style="border:thin, border-width: 1.5px; outline-style: double; width: fit-content !important;"> 
+                <li class="nav-item"><a class="nav-link" style="border-color:  #ffffff ;" href="/" title="About" ><span class="menu-title">About Me</span></a></li>
+                </ul>
+              <br>
+              <ul class="nav" style="border:thin, border-width: 1.5px; outline-style: double; width:inherit !important;" >
+
+                <li class="nav-item"><a class="nav-link" style="border-color:  #ffffff ;" href="/projects" title="Research Experience and Projects"><span class="menu-title">Research Experience and Projects</span></a></li>
+                <li class="nav-item"><a class="nav-link" style="border-color:  #ffffff ;" href="/teaching" title="Teaching Experience"><span class="menu-title">Teaching Experience</span></a></li>
+                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; outline-style: inset;" href="/publications" title="Publications"><span class="menu-title">Publications</span></a></li>
+                <li class="nav-item"><a class="nav-link" style="border-color:  #ffffff ;" href="/talks" title="Demos and Talks"><span class="menu-title">Demos and Talks</span></a></li>
+                </ul>
+
+
+ 
+                <!--
+                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; border-style: solid; border-color: #ffffff;" href="#contactCollapsed" title="Contact"><span class="menu-title">Contact</span></a></li>-->
+
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="page-content" style="background-color: #eef1f8;">
+      <div class="container">
+<div class="resume-container">
+  <div class="shadow-1-strong bg-white my-5" id="intro">
+    <div class="bg-info text-white">
+      <div class="cover bg-image"><img src="images/bg-header.jpg" alt="My Headshot Photo"/>
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.7);backdrop-filter: blur(2px);">
+          <div class="text-center p-5">
+            <div class="avatar p-1"><img class="img-thumbnail shadow-2-strong"  style="position: sticky; margin-block-start:1.8em ;"src="images/sdavari.jpg" width="160" height="160" alt="My Headshot Photo"/></div>
+            <div class="header-bio mt-3">
+              <div data-aos="zoom-in" data-aos-delay="0">
+                <h2 class="h1">Shakiba Davari</h2>
+                <p>Ph.D. Candidate: Context-Intelligent Augmented Reality Interface</p>
+              </div>
+              <div class="header-social mb-3 d-print-none" data-aos="zoom-in" data-aos-delay="200">
+                <nav role="navigation">
+                  <ul class="nav justify-content-center">
+                <li>
+              
+              <li>
+                  <a class="nav-link" href="/3dilab" title="3DILAB" target="_blank" >
+                     <img src="https://wordpress.cs.vt.edu/3digroup/wp-content/uploads/sites/141/2020/09/logo1_py_solid.png" width="20" height="20" alt="link to my page on the 3D Interaction Lab's website"/>
+                  </a>
+              </li>
+              
+              
+              <li>
+                      <a class="nav-link" href="/linkedin" title="Linkedin" target="_blank">
+                      <i class="fab fa-linkedin" title="LinkedIn link"></i>
+                  </a>
+              </li>
+              
+               
+              <li>
+                    <a class="nav-link" href="/scholar" title="Google Scholar" target="_blank" >
+                      <i class="ai ai-google-scholar-square" title="Google Scholar Link"></i>
+                  </a>
+              </li>
+              
+              
+              
+              
+              <li>
+                    <a class="nav-link" href="/orcid" title="ORCID" target="_blank" >
+                      <i class="fab fa-orcid" title="Orcid"></i>
+                  </a>
+              </li>
+              
+              <li>
+                    <a class="nav-link" href="/email" title="Email" target="_blank">
+                      <i class="far fa-envelope pe-2 text-muted" title="Email"> </i> 
+                  </a>
+              </li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="d-print-none">
+                <!--<a class="nav-link" href="\resume" title="Resume">
+                      <i style="padding:10px;" class="fab fa-resume" title="Resume Link"></i>
+                  </a>-->
+                <a class="btn btn-outline-light btn-lg shadow-sm mt-1 me-3" href="/cv" data-aos="fade-right" data-aos-delay="700" target="_blank" >CV</a>
+                <a class="btn btn-outline-light btn-lg shadow-sm mt-1 me-3" href="/resume" data-aos="fade-left" data-aos-delay="700" target="_blank" >Resume</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  
+
+  <div class="shadow-1-strong bg-white my-5 p-5" id="publications">
+    <div class="publications-section">
+      <h2 class="h2 fw-light mb-4">Publications</h2>
+      <div class="timeline">
+        
+<div class="timeline-card timeline-card-yellow" data-aos="fade-in" data-aos-delay="0" timeline-card-yellow None>
+    <div class="timeline-head px-4 pt-3">
+    <div class="h5">Methods and Benchmark for Detecting Cryptographic API Misuses in Python <span class="text-muted h6"> at <a href='https://www.computer.org/csdl/journal/ts'>IEEE TSE</a></span></div>
+    </div>
+    <div class="timeline-body px-4 pb-4">
+    <div class="text-muted text-small mb-3">March 2023 - <u><i>Currently Under Review</i></u></div>
+    <div><q>Our tool Cryptolation successfully scans complex Python code based on our 18 preset rules.</q></div>
+    </div>
+</div>
+        
+<div class="timeline-card timeline-card-yellow" data-aos="fade-in" data-aos-delay="0" timeline-card-yellow None>
+    <div class="timeline-head px-4 pt-3">
+    <div class="h5"><a href='https://www.researchgate.net/publication/370124743_Cryptolation' >Poster: Cryptolation</a> <span class="text-muted h6"> at <a href='https://cyberinitiative-swva.org/news/previous-events/cci-student-researcher-showcase-221.html'>CCI Student Researcher Showcase</a></span></div>
+    </div>
+    <div class="timeline-body px-4 pb-4">
+    <div class="text-muted text-small mb-3">April 2023</div>
+    <div><blockquote cite='https://www.researchgate.net/publication/370124743_Cryptolation'><q>Our tool Cryptolation successfully scans complex Python code based on our 18 preset rules. Despite our high precision, we will reduce its memory and linear-time performance based on the number of dynamic ASTs allowed by the developer.</q></blockquote></div>
+    </div>
+</div>
+        
+<div class="timeline-card timeline-card-yellow" data-aos="fade-in" data-aos-delay="0" timeline-card-yellow None>
+    <div class="timeline-head px-4 pt-3">
+    <div class="h5"><a href='https://esorics2021.athene-center.de/tutorial-09-08.php' >Principles and Practices of Secure Cryptographic Coding in Java</a> <span class="text-muted h6"> at <a href='https://esorics2021.athene-center.de/tutorial-09-08.php'>Esorics</a></span></div>
+    </div>
+    <div class="timeline-body px-4 pb-4">
+    <div class="text-muted text-small mb-3">September 2021</div>
+    <div><blockquote cite='https://esorics2021.athene-center.de/tutorial-09-08.php'><q>Various software libraries and frameworks provide a variety of APIs to support secure coding. However, misusing these APIs can cost developers tremendous time and effort, introduce security vulnerabilities to software, and cause serious consequences like data leakage or Denial of Service (DoS) on servers. Our tutorial aims to educate people on the best practice of secure coding, the pitfalls that should be avoided, and the detection tools and fixing suggestions of insecure code.</q></blockquote></div>
+    </div>
+</div>
+       
+<div class="timeline-card timeline-card-yellow" data-aos="fade-in" data-aos-delay="0" timeline-card-yellow None>
+    <div class="timeline-head px-4 pt-3">
+    <div class="h5"><a href='https://secdev.ieee.org/2020/accepted/' >Tutorial: Principles and Practices of Secure Cryptographic Coding in Java</a> <span class="text-muted h6"> at <a href='https://secdev.ieee.org/2020/accepted/'>SecDev20</a></span></div>
+    </div>
+    <div class="timeline-body px-4 pb-4">
+    <div class="text-muted text-small mb-3">September 2020</div>
+    <div></div>
+    </div>
+</div>
+       
+<div class="timeline-card timeline-card-yellow" data-aos="fade-in" data-aos-delay="0" timeline-card-yellow None>
+    <div class="timeline-head px-4 pt-3">
+    <div class="h5"><a href='https://dl.acm.org/doi/pdf/10.1145/3319535.3345659' >CryptoGuard: High Precision Detection of Cryptographic Vulnerabilities in Massive-sized Java Projects</a> <span class="text-muted h6"> at <a href='https://sigsac.org/ccs/CCS2019/'>ACM CCS</a></span></div>
+    </div>
+    <div class="timeline-body px-4 pb-4">
+    <div class="text-muted text-small mb-3">November 2019</div>
+    <div><blockquote cite='https://dl.acm.org/doi/pdf/10.1145/3319535.3345659'><q>Cryptographic API misuses, such as exposed secrets, predictable
+            random numbers, and vulnerable certificate verification, seriously
+            threaten software security. The vision of automatically screening
+            cryptographic API calls in massive-sized (e.g., millions of LoC) pro-
+            grams is not new. However, hindered by the practical difficulty
+            of reducing false positives without compromising analysis qual-
+            ity, this goal has not been accomplished. CryptoGuard is a set
+            of detection algorithms that refine program slices by identifying
+            language-specific irrelevant elements. The refinements reduce false
+            alerts by 76% to 80% in our experiments. Running our tool, Cryp-
+            toGuard, on 46 high-impact large-scale Apache projects and 6,181
+            Android apps generated many security insights. Our findings helped
+            multiple popular Apache projects to harden their code, including
+            Spark, Ranger, and Ofbiz. We also have made progress towards the
+            science of analysis in this space, including manually analyzing 1,295
+            Apache alerts, confirming 1,277 true positives (98.61% precision),
+            and in-depth comparison with leading solutions including CrySL,
+            SpotBugs, and Coverity.</q></blockquote></div>
+    </div>
+</div>
+       
+<div class="timeline-card timeline-card-yellow" data-aos="fade-in" data-aos-delay="0" timeline-card-yellow None>
+    <div class="timeline-head px-4 pt-3">
+    <div class="h5"><a href='https://arxiv.org/pdf/2201.07651' >Enhancing CryptoGuards Deployability for Continuous Software Security Scanning</a> <span class="text-muted h6"> at <a href='https://vtechworks.lib.vt.edu/handle/10919/5534'>VT ETDs</a></span></div>
+    </div>
+    <div class="timeline-body px-4 pb-4">
+    <div class="text-muted text-small mb-3">May 2020</div>
+    <div><blockquote cite='https://arxiv.org/pdf/2201.07651'><q>The increasing development speed via Agile[1] may introduce overlooked security steps in
+            the process, with an example being the Iowa Caucus application[2]. Verifying the protection
+            of confidential information such as social security numbers requires security at all levels,
+            providing protection through any connected applications. CryptoGuard[3]1 is a static code
+            analyzer for Java. This program verifies that developers do not leave vulnerabilities in their
+            application. The program aids the developer by identifying cryptographic misuses such as
+            hard-coded keys, weak program hashes, and using insecure protocols. In my Master thesis
+            work, I made several important contributions to improving the deployability, accessibility,
+            and usability of CryptoGuard. I extended CryptoGuard to scan source and compiled code,
+            created live documentation, and supported a dual cloud and local tool-suite. I also created
+            build tool plugins and a program aid for CryptoGuard. In addition, I also analyzed several
+            Java-related surveys encompassing more than 50,000 developers and reported interesting
+            current practices of real-world software developers.</q></blockquote></div>
+    </div>
+</div>
+       
+<div class="timeline-card timeline-card-yellow" data-aos="fade-in" data-aos-delay="0" timeline-card-yellow None>
+    <div class="timeline-head px-4 pt-3">
+    <div class="h5"><a href='https://dl.acm.org/doi/pdf/10.1145/3319535.3363252' >Deployment-quality and Accessible Solutions for Cryptography Code Development</a> <span class="text-muted h6"> at <a href='https://sigsac.org/ccs.html'>ACM SIGSAC</a></span></div>
+    </div>
+    <div class="timeline-body px-4 pb-4">
+    <div class="text-muted text-small mb-3">November 2019</div>
+    <div><blockquote cite='https://dl.acm.org/doi/pdf/10.1145/3319535.3363252'><q>Cryptographic API misuses seriously threaten software security.
+            Automatic screening of cryptographic misuse vulnerabilities has
+            been a popular and important line of research over the years. How-
+            ever, the vision of producing a scalable detection tool that devel-
+            opers can routinely use to screen millions of line of code has not
+            been achieved yet.
+            Our main technical goal is to attain a high precision and high
+            throughput approach based on specialized program analysis. Specifi-
+            cally, we design inter-procedural program slicing on top of a new on-
+            demand flow-, context- and field- sensitive data flow analysis. Our
+            current prototype named CryptoGuard can detect a wide range of
+            Java cryptographic API misuses with a precision of 98.61%, when
+            evaluated on 46 complex Apache Software Foundation projects
+            (including, Spark, Ranger, and Ofbiz). Our evaluation on 6,181 An-
+            droid apps also generated many security insights. We created a
+            comprehensive benchmark named CryptoApi-Bench with 40-unit
+            basic cases and 131-unit advanced cases for in-depth comparison
+            with leading solutions (e.g., SpotBugs, CrySL, Coverity). To make
+            CryptoGuard widely accessible, we are in the process of inte-
+            grating CryptoGuard with the Software Assurance Marketplace
+            (SWAMP). SWAMP is a popular no-cost service for continuous soft-
+            ware assurance and static code analysis.</q></blockquote></div>
+    </div>
+</div>
+       
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+
+  
+
+
+  
+
+<!-- CONTACT 
+  <div class="shadow-1-strong bg-white my-5 p-5" id="contact">
+    <div class="contant-section">
+      <h2 class="h2 fw-light text mb-4">Contact</h2>
+      <div class="row mb-4">
+        <div class="col-md-5" data-aos="fade-left" data-aos-delay="200">
+          <div class="mt-1">
+            <div class="h6"><i class="far fa-envelope pe-2 text-muted" style="width:24px;opacity:0.85;"></i>
+              <a href="mailto:mailto://sdavari@vt.edu">mailto://sdavari@vt.edu</a>
+              <br>
+              <br>
+              <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="frantzme" data-color="#fbfffc" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#FFDD00" ></script>
+              <br>
+              <br>
+              
+              <img src="images/VCard.svg" alt="A QR code that when scanned will generate my contact information"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+-->
+<!-- QR CODE Created with the website: https://www.qr-code-generator.com/solutions/vcard-qr-code/-->
+</div></div>
+    </div>
+    <footer class="pt-4 pb-4 text-muted text-center d-print-none">
+      <div class="container">
+            <ul class="nav justify-content-center">
+                <li>
+              
+              <li>
+                  <a class="nav-link"  href="/3dilab" title="3DILAB">
+                     <img src="https://wordpress.cs.vt.edu/3digroup/wp-content/uploads/sites/141/2020/09/logo1_py_solid.png" width="20" height="20" alt="link to my page on the 3D Interaction Lab's website"/>
+                  </a>
+              </li>
+              
+              
+              <li>
+                      <a class="nav-link" href="/linkedin" title="Linkedin">
+                      <i class="fab fa-linkedin" title="LinkedIn link"></i>
+                  </a>
+              </li>
+              
+               
+              <li>
+                    <a class="nav-link" href="/scholar" title="Google Scholar">
+                      <i class="ai ai-google-scholar-square" title="Google Scholar Link"></i>
+                  </a>
+              </li>
+              
+              
+              
+              
+              <li>
+                    <a class="nav-link" href="/orcid" title="ORCID">
+                      <i class="fab fa-orcid" title="Orcid"></i>
+                  </a>
+              </li>
+              
+              <li>
+                  <a class="nav-link" href="/email" title="Email" target="_blank" >
+                      <i class="far fa-envelope pe-2 text-muted"title="Email"> </i> 
+                  </a>
+              </li>
+            </ul>
+      </div>
+    </footer>
+    <script src="scripts/mdb.min.js?ver=1.2.1"></script>
+    <script src="scripts/aos.js?ver=1.2.1"></script>
+    <script src="scripts/main.js?ver=1.2.1"></script>
+    <script>
+      //Taken From https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_scroll_to_top
+      //Get the button
+      var mybutton = document.getElementById("myBtn");
+      
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+      
+      function scrollFunction() {
+        mybutton.style.backgroundColor = "background-color:rgb(57, 100, 234);";
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+      
+      // When the user clicks on the button, scroll to the top of the document
+      function goto(location) {
+        //window.location.href = location;
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+  </body>
+</html>

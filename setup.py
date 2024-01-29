@@ -157,7 +157,6 @@ def secure_get_{secure_page_name.split('.')[0]}():
 # === URL Routes === #
 
 @app.route('/')
-@app.route('/about')
 @app.route('/index.html')
 def index():
     for x in base_info.keys():
@@ -170,6 +169,10 @@ def index():
     base_info['show_personal'] = True
     return rendre('index.html')
 
+@app.route('/about')
+def index_one():
+    return index()
+
 @app.route('/education')
 def education():
     for x in base_info.keys():
@@ -178,8 +181,6 @@ def education():
     base_info['show_edu'] = True
     return rendre('index.html')
 
-@app.route('/projects')
-@app.route('/research')
 @app.route('/researchexperience')
 def research():
     for x in base_info.keys():
@@ -188,8 +189,15 @@ def research():
     base_info['show_proj'] = True
     return rendre('index.html')
 
+@app.route('/projects')
+def research_one():
+    return research()
 
-@app.route('/publications')
+@app.route('/research')
+def research_two():
+    return research()
+
+
 @app.route('/publicationlist')
 def publication():
     for x in base_info.keys():
@@ -198,8 +206,11 @@ def publication():
     base_info['show_pubs'] = True
     return rendre('index.html')
 
-@app.route('/honors')
-@app.route('/awards')
+
+@app.route('/publications')
+def publication_one():
+    return publication()
+
 @app.route('/honors&awards')
 def honors():
     for x in base_info.keys():
@@ -208,11 +219,14 @@ def honors():
     base_info['show_honors'] = True
     return rendre('index.html')
 
+@app.route('/honors')
+def honors_one():
+    return honors()
+@app.route('/awards')
+def honors_two():
+    return honors()
 
 
-@app.route('/service')
-@app.route('/serviceactivities')
-@app.route('/activities')
 @app.route('/leadership')
 def serviceAct():
     for x in base_info.keys():
@@ -221,10 +235,17 @@ def serviceAct():
     base_info['show_service'] = True
     return rendre('index.html')
 
-@app.route('/demos')
-@app.route('/talks')
-@app.route('/presentations')
-@app.route('/conferences')
+@app.route('/service')
+def serviceAct_one():
+    return serviceAct()
+@app.route('/serviceactivities')
+def serviceAct_two():
+    return serviceAct()
+@app.route('/activities')
+def serviceAct_three():
+    return serviceAct()
+
+
 @app.route('/videos')
 def talks():
     for x in base_info.keys():
@@ -233,7 +254,20 @@ def talks():
     base_info['show_talks'] = True
     return rendre('index.html')
 
-@app.route('/teaching')
+@app.route('/demos')
+def talks_one():
+    return talks()
+@app.route('/talks')
+def talks_two():
+    return talks()
+@app.route('/presentations')
+def talks_three():
+    return talks()
+@app.route('/conferences')
+def talks_four():
+    return talks()
+
+
 @app.route('/teachingexperience')
 def teaching():
     for x in base_info.keys():
@@ -241,6 +275,10 @@ def teaching():
             base_info[x] = False
     base_info['show_teachingExp'] = True
     return rendre('index.html')
+
+@app.route('/teaching')
+def teaching_one():
+    return teaching()
 
 @app.route('/resume')
 def resume_grab():
@@ -255,21 +293,31 @@ def email_grab():
 def cv_grab():
     return page_redirect(base_info['CV'])
 
-@app.route('/3dilab')
+
 @app.route('/3dilabpage')
 def labpage_grab():
     return page_redirect(base_info['3DILAB'])
+@app.route('/3dilab')
+def labpage_grab_one():
+    return labpage_grab()
 
 @app.route('/linkedin')
 def linkedin_grab():
     return page_redirect(base_info['LINKEDIN'])
 
-@app.route('/scholar')
-@app.route('/g-scholar')
-@app.route('/googlescholar')
+
 @app.route('/gscholar')
 def scholar_grab():
     return page_redirect(base_info['SCHOLAR'])
+@app.route('/scholar')
+def scholar_grab_one():
+    return scholar_grab()
+@app.route('/g-scholar')
+def scholar_grab_two():
+    return scholar_grab()
+@app.route('/googlescholar')
+def scholar_grab_three():
+    return scholar_grab()
 
 @app.route('/orcid')
 def orcid_grab():
