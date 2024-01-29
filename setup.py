@@ -12,12 +12,13 @@ try:
 except:
     for x in [
             'requests',
-            'flask==2.0.1',
+            'flask==3.0.1',
             'flask_flatpages==0.7.3',
-            'frozen_flask==0.18',
+            'frozen_flask==1.0.1',
             'pygments==2.10.0',
             'feedgen==0.9.0',
-            'elsa==0.1.6'
+            'elsa==0.1.6',
+            'werkzeug==3.0.0'
         ]:
         os.system(str(sys.executable) + " -m pip install " + str(x))
     from flask import Flask, render_template_string, make_response
@@ -458,12 +459,12 @@ setup(name='My Website',
         url='',
         packages=find_packages(),
         install_requires=[
-            'flask==2.0.1',
+            'flask==3.0.1',
             'flask_flatpages==0.7.3',
-            'frozen_flask==0.18',
+            'frozen_flask==1.0.1',
             'pygments==2.10.0',
             'elsa==0.1.6',
             'feedgen==0.9.0',
-            'werkzeug==2.2.2' #https://stackoverflow.com/questions/71661851/typeerror-init-got-an-unexpected-keyword-argument-as-tuple#answer-71662972
+            'werkzeug==3.0.0' #https://stackoverflow.com/questions/71661851/typeerror-init-got-an-unexpected-keyword-argument-as-tuple#answer-71662972
         ]
 )
