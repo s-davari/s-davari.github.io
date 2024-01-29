@@ -35,7 +35,7 @@ jobs:
         run: cp 404.html docs/
 
       - name: Raw Try to copy every file with non extension to html similar #https://www.reddit.com/r/github/comments/gt5lyb/removing_html_extension_from_github_pages_url/
-        run: cd docs/ && for x in $(find . -type f ! -name "*.*");do cp $x $x.html;mkdir $x;cp $x $x/index.html;done
+        run: cd docs/ && for x in $(find . -type f ! -name "*.*");do mv $x $x.html;mkdir $x;cp $x.html $x/index.html;done
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
