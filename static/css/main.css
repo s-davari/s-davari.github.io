@@ -68,14 +68,26 @@ html, body {
   font-size: 1.3rem;
   line-height: 2.5rem;
   color: inherit;
-  opacity: 0.8; }
+  opacity: 0.8;
+  padding-right:10px;
+   }
 
 .header-social .nav-link {
   font-size: 1.25rem; }
 
+a{
+  color: steelblue;
+}
+
+a:hover,
+a:focus
+{
+  color: teal !important;
+  background-color: ghostwhite; !important;
+}
 .nav-link:hover,
 .nav-link:focus {
-  background-color: d#34495e;     
+  background-color: white;     
   color: black;}
 
 .nav-item + .nav-item {

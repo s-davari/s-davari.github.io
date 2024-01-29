@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="context, context-aware, augmented reality, virtual reality, VR, AR, adaptive AR, intelligent interface, mixed reality, mixed methods research, qualitative research, quantitative research, UX, User Experience, Doug Bowman, 3DI Lab, research, researcher, developer, scientist, engineer, data analysis, ML, machine learning, computer vision" />
-    <meta name="description" content="I’m Shakiba, a Computer Science Ph.D. student at the 3D Interaction Group at Virginia Tech under the supervision of Doug Bowman. Intelligent Augmented Reality (AR) Interface Design: My research interest lies in connecting my past research experience in applied machine learning (ML) and my current passion for AR interface design. I am a 3D interaction/interface designer, focusing on intelligent AR interfaces. I concentrate on different aspects of detecting AR user’s context and utilizing it to adapt their AR interface. Such context-aware interfaces mitigate the existing challenges of AR, such as real-world occlusion and social intrusiveness, while providing more reliable and efficient information access and interaction in AR."/>
+    <meta name="description" content="I'm Shakiba, a Computer Science Ph.D. student at the 3D Interaction Group at Virginia Tech under the supervision of Doug Bowman. Intelligent Augmented Reality (AR) Interface Design: My research interest lies in connecting my past research experience in applied machine learning (ML) and my current passion for AR interface design. I am a 3D interaction/interface designer, focusing on intelligent AR interfaces. I concentrate on different aspects of detecting AR user's context and utilizing it to adapt their AR interface. Such context-aware interfaces mitigate the existing challenges of AR, such as real-world occlusion and social intrusiveness, while providing more reliable and efficient information access and interaction in AR."/>
     <title>{{dyct['name']}}</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap"/>
@@ -99,9 +99,20 @@
           </h1> -->
           <div class="site-nav "> 
             <nav role="navigation" style="line-height: .5rem;">
-              {% if dyct['show_about'] or dyct['show_edu'] or dyct['show_service'] or dyct['show_honors'] -%} 
               <ul class="nav" style="border:thin, border-width: 1.5px; outline-style: double; width: fit-content !important;"> 
- 
+                {% if not dyct['show_about'] -%}
+                <li class="nav-item"><a class="nav-link" style="border-color:  #ffffff ;" href="/" title="About" ><span class="menu-title">About Me</span></a></li>
+                {% else -%}
+                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; outline-style: inset;" href="/" title="About" ><span class="menu-title">About Me</span></a></li>
+                {% endif -%}
+
+                {% if dyct['show_about'] or dyct['show_edu'] or dyct['show_service'] or dyct['show_honors'] -%} 
+                <!--{% if not dyct['show_about'] and dyct['show_research'] -%} 
+                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; outline-style: inset;" href="/research" title="Research Interest"><span class="menu-title">Research Interest</span></a></li>
+                {% else -%}         
+                <li class="nav-item"><a class="nav-link" style="border-color:  #ffffff ;" href="/research" title="Research Interest"><span class="menu-title">Research Interest</span></a></li>
+                {% endif -%}-->
+
                 {% if not dyct['show_about'] and dyct['show_edu'] -%} 
                 <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; outline-style: inset;" href="/education" title="Education"><span class="menu-title">Education</span></a></li>
                 {% else -%}         
@@ -119,16 +130,16 @@
                 {% else -%}
                 <li class="nav-item"><a class="nav-link" style="border-color:  #ffffff ;" href="/honors" title="Honors and Awards"><span class="menu-title">Honors and Awards</span></a></li>
                 {% endif -%}
-                                
+
+                <!--{% if not dyct['show_about'] and dyct['show_personal'] -%} 
+                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; outline-style: inset;" href="/personal" title="Me on a Personal Level"><span class="menu-title">Me on a Personal Level</span></a></li>
+                {% else -%}         
+                <li class="nav-item"><a class="nav-link" style="border-color:  #ffffff ;" href="/personal" title="Me on a Personal Level"><span class="menu-title">Me on a Personal Level</span></a></li>
+                {% endif -%}-->     
+                {% endif -%}            
               </ul>
-              {% endif -%}
               <br>
-              <ul class="nav" style="width:inherit !important;" >
-                {% if not dyct['show_about'] -%}
-                <li class="nav-item"><a class="nav-link" style="border-color:  #ffffff ;" href="/" title="About" ><span class="menu-title">About Me</span></a></li>
-                {% else -%}
-                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; outline-style: inset;" href="/" title="About" ><span class="menu-title">About Me</span></a></li>
-                {% endif -%}
+              <ul class="nav" style="border:thin, border-width: 1.5px; outline-style: double; width:inherit !important;" >
 
                 {% if not dyct['show_proj'] -%}
                 <li class="nav-item"><a class="nav-link" style="border-color:  #ffffff ;" href="/projects" title="Research Experience and Projects"><span class="menu-title">Research Experience and Projects</span></a></li>
@@ -176,7 +187,7 @@
 <div class="resume-container">
   <div class="shadow-1-strong bg-white my-5" id="intro">
     <div class="bg-info text-white">
-      <div class="cover bg-image"><img src="images/bg-header.jpg" alt="My Professional Headshot Photo"/>
+      <div class="cover bg-image"><img src="images/bg-header.jpg" alt="My Headshot Photo"/>
         <div class="mask" style="background-color: rgba(0, 0, 0, 0.7);backdrop-filter: blur(2px);">
           <div class="text-center p-5">
             <div class="avatar p-1"><img class="img-thumbnail shadow-2-strong"  style="position: sticky; margin-block-start:1.8em ;"src="images/sdavari.jpg" width="160" height="160" alt="My Headshot Photo"/></div>
@@ -191,46 +202,51 @@
                 <li>
               {% if '3DILAB' in dyct  %}
               <li>
-                  <a class="nav-link" href="/3dilab" title="3DILAB">
+                  <a class="nav-link" href="/3dilab" title="3DILAB" target="_blank" >
                      <img src="https://wordpress.cs.vt.edu/3digroup/wp-content/uploads/sites/141/2020/09/logo1_py_solid.png" width="20" height="20" alt="link to my page on the 3D Interaction Lab's website"/>
                   </a>
               </li>
               {% endif  %}
               {% if 'LINKEDIN' in dyct  %}
               <li>
-                      <a class="nav-link" href="/linkedin" title="Linkedin">
-                      <i style="padding:10px;" class="fab fa-linkedin" title="LinkedIn link"></i>
+                      <a class="nav-link" href="/linkedin" title="Linkedin" target="_blank">
+                      <i class="fab fa-linkedin" title="LinkedIn link"></i>
                   </a>
               </li>
               {% endif  %}
                {% if 'SCHOLAR' in dyct  %}
               <li>
-                    <a class="nav-link" href="/scholar" title="Google Scholar">
-                      <i style="padding:10px;" class="ai ai-google-scholar-square" title="Google Scholar Link"></i>
+                    <a class="nav-link" href="/scholar" title="Google Scholar" target="_blank" >
+                      <i class="ai ai-google-scholar-square" title="Google Scholar Link"></i>
                   </a>
               </li>
               {% endif  %}
               {% if 'MENDELEY_USERNAME' in dyct  %}
               <li>
-                    <a class="nav-link" href="/mendeley" title="Mendeley">
-                      <i style="padding:10px;" class="ai ai-mendeley" title="Mendeley Account"></i>
+                    <a class="nav-link" href="/mendeley" title="Mendeley" target="_blank" >
+                      <i class="ai ai-mendeley" title="Mendeley Account"></i>
                   </a>
               </li>
               {% endif  %}
               {% if 'IEEE' in dyct  %}
               <li>
-                    <a class="nav-link" href="https://ieee-collabratec.ieee.org/app/p/{{ dyct['IEEE'] }}" title="Docker">
-                     <i style="padding:10px;" class="ai ai-ieee" title="IEEE Account"></i>
+                    <a class="nav-link" href="https://ieee-collabratec.ieee.org/app/p/{{ dyct['IEEE'] }}" title="Docker" target="_blank" >
+                     <i class="ai ai-ieee" title="IEEE Account"></i>
                   </a>
               </li>
               {% endif  %}
               {% if 'ORCID' in dyct  %}
               <li>
-                    <a class="nav-link" href="/orcid" title="ORCID">
-                      <i style="padding:10px;" class="fab fa-orcid" title="Orcid"></i>
+                    <a class="nav-link" href="/orcid" title="ORCID" target="_blank" >
+                      <i class="fab fa-orcid" title="Orcid"></i>
                   </a>
               </li>
               {% endif  %}
+              <li>
+                    <a class="nav-link" href="/email" title="Email" target="_blank">
+                      <i class="far fa-envelope pe-2 text-muted" title="Email"> </i> 
+                  </a>
+              </li>
                   </ul>
                 </nav>
               </div>
@@ -238,8 +254,8 @@
                 <!--<a class="nav-link" href="\resume" title="Resume">
                       <i style="padding:10px;" class="fab fa-resume" title="Resume Link"></i>
                   </a>-->
-                <a class="btn btn-outline-light btn-lg shadow-sm mt-1 me-3" href="/cv" data-aos="fade-right" data-aos-delay="700">CV</a>
-                <a class="btn btn-outline-light btn-lg shadow-sm mt-1 me-3" href="/resume" data-aos="fade-left" data-aos-delay="700">Resume</a>
+                <a class="btn btn-outline-light btn-lg shadow-sm mt-1 me-3" href="/cv" data-aos="fade-right" data-aos-delay="700" target="_blank" >CV</a>
+                <a class="btn btn-outline-light btn-lg shadow-sm mt-1 me-3" href="/resume" data-aos="fade-left" data-aos-delay="700" target="_blank" >Resume</a>
               </div>
             </div>
           </div>
@@ -251,91 +267,27 @@
   <div class="shadow-1-strong bg-white my-5 p-5" id="about">
     <div class="about-section">
       <div class="row">
-        <div class="col-md-6">
           <h2 class="h2 fw-light mb-4">About Me</h2>
-          I am a Ph.D. student with research focusing on creating code analysis tools to assist developers by identifying cryptographic misuse in software repositories.
-	
-        <br>
-        <br>
-        I enjoy working on side projects to help developers secure their code.
-        </div>
-        <div class="col-md-5 offset-lg-1">
-          <div class="row mt-2">
-            <h2 class="h2 fw-light mb-4">Bio</h2>
-            {#
-            <!--
-            <div class="col-sm-5">
-              <div class="pb-2 fw-bolder"><i class="far fa-calendar-alt pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Age</div>
-            </div>
-            <div class="col-sm-7">
-              <div class="pb-2">28</div>
-            </div>
-            -->
-            #}
-            <div class="col-sm-5">
-              <div class="pb-2 fw-bolder"><i class="far fa-envelope pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Email</div>
-            </div>
-            <div class="col-sm-7">
-              <div class="pb-2"><a href="mailto:{{dyct['EMAIL']}}">{{dyct['EMAIL']}}</a></div>
-            </div>
-            {#
-            <!--
-            <div class="col-sm-5">
-              <div class="pb-2 fw-bolder"><i class="fab fa-skype pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Skype</div>
-            </div>
-            <div class="col-sm-7">
-              <div class="pb-2">username@skype.com</div>
-            </div>
-            <div class="col-sm-5">
-              <div class="pb-2 fw-bolder"><i class="fas fa-phone pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Phone</div>
-            </div>
-            <div class="col-sm-7">
-              <div class="pb-2">+0718-111-0011</div>
-            </div>
-            <div class="col-sm-5">
-              <div class="pb-2 fw-bolder"><i class="fas fa-map-marker-alt pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Address</div>
-            </div>
-            -->
-            #}
-            <div class="col-sm-7">
-              <div class="pb-2">VA, U.S.A</div>
-            </div>
-
+          <p> Hi! 
             <br>
-            <div class="col-sm-5">
-              <div class="pb-2 fw-bolder">Areas of Interest</div>
-            </div><br>
-            <div class="col-sm-7">
-              <div class="pb-2"><ul>
-                <li>Static Code Analysis</li>
-                <li>Dynamic Code Analysis</li>
-                <li>Malware/Virus Analysis</li>
-                <li>Prompt Engineering</li>
-                <li>LLM</li>
-                <li>Machine Learning</li>
-                <li>Privacy Analysis</li>
-                <li>Quantum Computing</li>
-                <li>Data Analysis</li>
-                <li>Scripting</li>
-              </ul></div>
-            </div>
-
-          </div>
+            I'm Shakiba, a Computer Science Ph.D. student at the <a href="https://wordpress.cs.vt.edu/3digroup/" target="_blank"> 3D Interaction Group at Virginia Tech </a> under the supervision of  <a href="https://wordpress.cs.vt.edu/3digroup/author/dbowman/" target="_blank"> Doug Bowman.</a> 
+            My research interest lies in connecting my past research experience in applied machine learning (ML) and my current passion for AR interfaces. I am a 3D interaction and interface designer, focusing on intelligent AR interfaces. I concentrate on different aspects of detecting AR user's context and utilizing it to adapt their AR interface. Such context-aware interfaces mitigate the existing challenges of AR, such as real-world occlusion and social intrusiveness, while providing more reliable and efficient information access and interaction in AR.
+            <br>
+            <br>
+            In summer 2022, as a Research Scientist Intern at Adobe, I worked with Jane Hoffswell and Stefano Petrangeli to explore context-aware document consumption in AR.
+            <br>
+            <br>
+            I summer 2021, I joined Microsoft as a Research Intern. I enjoyed working with and learning from amazing researchers such as Andrew Begel, Ed Cutrell, Rich Stoakley, and Carmen Badea to explore the applications of Mixed Reality for Low-vision users.
+          </p>
         </div>
-      </div>
+
     </div>
   </div>
   {% endif  %}
-  {% if False %}
-  <div class="shadow-1-strong bg-white my-5 p-5" id="education">
-    <div class="educationCollapsed">
-      <h2 class="h2 fw-light mb-4">Education</h2>
-    </div>
-  </div>
-  {% endif%}
+
   {% if dyct['show_edu'] -%}
   <div class="shadow-1-strong bg-white my-5 p-5" id="education">
-    <div class="educationExpanded">
+    <div class="education-section">
       <h2 class="h2 fw-light mb-4">Education</h2>
       <div class="timeline">
         {{
@@ -826,6 +778,15 @@
   </div>
   {%- endif %}
 
+  {%  if dyct['show_about']%}
+  <div class="shadow-1-strong bg-white my-5 p-5" id="about">
+    <div class="personal">
+      <h2 class="h2 fw-light mb-4">More about me on a personal level</h2>
+    </div>
+  </div>
+  {% endif%}
+
+
   {% if dyct['show_skills'] -%}
   <div class="shadow-1-strong bg-white my-5 p-5" id="skills">
     <div class="skills-section">
@@ -904,11 +865,11 @@
     </div>
     <footer class="pt-4 pb-4 text-muted text-center d-print-none">
       <div class="container">
-                  <ul class="nav justify-content-center">
+            <ul class="nav justify-content-center">
                 <li>
               {% if '3DILAB' in dyct  %}
               <li>
-                  <a class="nav-link" href="/3dilab" title="3DILAB">
+                  <a class="nav-link"  href="/3dilab" title="3DILAB">
                      <img src="https://wordpress.cs.vt.edu/3digroup/wp-content/uploads/sites/141/2020/09/logo1_py_solid.png" width="20" height="20" alt="link to my page on the 3D Interaction Lab's website"/>
                   </a>
               </li>
@@ -916,39 +877,44 @@
               {% if 'LINKEDIN' in dyct  %}
               <li>
                       <a class="nav-link" href="/linkedin" title="Linkedin">
-                      <i style="padding:10px;" class="fab fa-linkedin" title="LinkedIn link"></i>
+                      <i class="fab fa-linkedin" title="LinkedIn link"></i>
                   </a>
               </li>
               {% endif  %}
                {% if 'SCHOLAR' in dyct  %}
               <li>
                     <a class="nav-link" href="/scholar" title="Google Scholar">
-                      <i style="padding:10px;" class="ai ai-google-scholar-square" title="Google Scholar Link"></i>
+                      <i class="ai ai-google-scholar-square" title="Google Scholar Link"></i>
                   </a>
               </li>
               {% endif  %}
               {% if 'MENDELEY_USERNAME' in dyct  %}
               <li>
                     <a class="nav-link" href="/mendeley" title="Mendeley">
-                      <i style="padding:10px;" class="ai ai-mendeley" title="Mendeley Account"></i>
+                      <i class="ai ai-mendeley" title="Mendeley Account"></i>
                   </a>
               </li>
               {% endif  %}
               {% if 'IEEE' in dyct  %}
               <li>
                     <a class="nav-link" href="https://ieee-collabratec.ieee.org/app/p/{{ dyct['IEEE'] }}" title="Docker">
-                     <i style="padding:10px;" class="ai ai-ieee" title="IEEE Account"></i>
+                     <i class="ai ai-ieee" title="IEEE Account"></i>
                   </a>
               </li>
               {% endif  %}
               {% if 'ORCID' in dyct  %}
               <li>
                     <a class="nav-link" href="/orcid" title="ORCID">
-                      <i style="padding:10px;" class="fab fa-orcid" title="Orcid"></i>
+                      <i class="fab fa-orcid" title="Orcid"></i>
                   </a>
               </li>
               {% endif  %}
-                  </ul>
+              <li>
+                  <a class="nav-link" href="/email" title="Email" target="_blank" >
+                      <i class="far fa-envelope pe-2 text-muted"title="Email"> </i> 
+                  </a>
+              </li>
+            </ul>
       </div>
     </footer>
     <script src="scripts/mdb.min.js?ver=1.2.1"></script>
