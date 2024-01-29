@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="context, context-aware, Augmented Reality, AR, adaptive AR, Intelligent interface, Doug Bowman, 3DI Lab, research, researcher, developer, scientist, engineer" />
+    <meta name="keywords" content="context, context-aware, augmented reality, virtual reality, VR, AR, adaptive AR, intelligent interface, mixed reality, mixed methods research, qualitative research, quantitative research, UX, User Experience, Doug Bowman, 3DI Lab, research, researcher, developer, scientist, engineer, data analysis, ML, machine learning, computer vision" />
     <meta name="description" content="I’m Shakiba, a Computer Science Ph.D. student at the 3D Interaction Group at Virginia Tech under the supervision of Doug Bowman. Intelligent Augmented Reality (AR) Interface Design: My research interest lies in connecting my past research experience in applied machine learning (ML) and my current passion for AR interface design. I am a 3D interaction/interface designer, focusing on intelligent AR interfaces. I concentrate on different aspects of detecting AR user’s context and utilizing it to adapt their AR interface. Such context-aware interfaces mitigate the existing challenges of AR, such as real-world occlusion and social intrusiveness, while providing more reliable and efficient information access and interaction in AR."/>
     <title>{{dyct['name']}}</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
@@ -42,16 +42,17 @@
         font-size: 18px;
         border: none;
         outline: none;
-        background-color: #39c0ed;
-        color: white;
         cursor: pointer;
         padding: 15px;
         border-radius: 4px;
         opacity: 0.45;
+        background-color: #e5c9d4;
+        color:#900C3F;
       }
       
       #myBtn:hover {
-        background-color: #555;
+        background-color: #900C3F;
+        color: #ccd9f8;
       }
       </style>
   </head>
@@ -88,65 +89,47 @@
       }
       */
     </script>
-  <body class="bg-light" id="top">
-    <button onclick="goto('/#top')" id="myBtn" title="Go to top" style="background-color:rgb(57, 100, 234);">Top</button>
+  <body class="bg-light" id="top" style="background-color: #ccd9f8 !important;">
+    <button onclick="goto('/#top')" id="myBtn" title="Go to top">Top</button>
     <header class="d-print-none">
       <div class="container text-center text-lg-left">
-        <div class="pt-4 clearfix">
-          <h1 class="site-title mb-0"><a href="/index.html" >{{dyct['name']}}</a> <br>
+        <div class="pt-4 clearfix" style="background-color: #ccd9f8; color:#900C3F; position: fixed; z-index: 99;" >
+          <!--<h1 class="site-title mb-0"><a href="/index.html" >{{dyct['name']}}</a> <br>
             {{ "Research"|get_main_url("Info")|safe }} {{ "Industry"|get_main_url("Info")|safe }} {{ "Full"|get_main_url("Info")|safe }}
-          </h1>
+          </h1> -->
           <div class="site-nav"> 
             <nav role="navigation">
               <ul class="nav justify-content-center">
-                <li class="nav-item"><a class="nav-link" href="#about" title="About"><span class="menu-title">About</span></a></li>
+                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; border-style: solid; border-color: #e5c9d4;" href="#about" title="About" ><span class="menu-title">About</span></a></li>
                 {% if dyct['show_edu'] -%}
-                <li class="nav-item"><a class="nav-link" href="#education" title="Education"><span class="menu-title">Education</span></a></li>
-                {%- endif%}
-                {% if dyct['show_sub'] -%}
-                <li class="nav-item"><a class="nav-link" href="#submissions" title="Submissions"><span class="menu-title">Submissions</span></a></li>
-                {%- endif%}
-                {% if dyct['show_talks'] -%}
-                <li class="nav-item"><a class="nav-link" href="#talks" title="Talks"><span class="menu-title">Talks</span></a></li>
+                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; border-style: solid; border-color: #e5c9d4;"  href="#education" title="Education"><span class="menu-title">Education</span></a></li>
                 {%- endif%}
                 {% if dyct['show_proj'] -%}
-                <li class="nav-item"><a class="nav-link" href="#projects" title="Projects"><span class="menu-title">Projects</span></a></li>
+                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; border-style: solid; border-color: #e5c9d4;" href="#projects" title="Research Experience and Projects"><span class="menu-title">Research Experience and Projects</span></a></li>
+                {%- endif%}
+                {% if dyct['show_sub'] -%}
+                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; border-style: solid; border-color: #e5c9d4;" href="#submissions" title="Publications"><span class="menu-title">Publications</span></a></li>
+                {%- endif%}
+                {% if dyct['show_talks'] -%}
+                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; border-style: solid; border-color: #e5c9d4;" href="#talks" title="Demos and Talks"><span class="menu-title">Demos and Talks</span></a></li>
                 {%- endif%}
                 {% if dyct['show_utils'] -%}
-                <li class="nav-item"><a class="nav-link" href="#utils" title="Utils"><span class="menu-title">Utils</span></a></li>
+                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; border-style: solid; border-color: #e5c9d4;" href="#utils" title="Teaching Experience"><span class="menu-title">Teaching Experience</span></a></li>
                 {%- endif%}
-                {% if dyct['show_skills'] -%}
-                <li class="nav-item"><a class="nav-link" href="#skills" title="Skills"><span class="menu-title">Skills</span></a></li>
-                {%- endif%}
-                {% if False and dyct['show_docker'] -%}
-                <li class="nav-item"><a class="nav-link" href="#my_dock" title="MyDocker"><span class="menu-title">My Docker</span></a></li>
-                {%- endif%}
-                {% if True -%}
-                <li class="nav-item"><a class="nav-link" href="https://rebrand.ly/frantzme_frac" title="FRAC"><span class="menu-title">FRAC</span></a></li>
+                {% if dyct['show_docker'] -%}
+                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; border-style: solid; border-color: #e5c9d4;" href="#my_dock" title="Service Activities"><span class="menu-title">Service Activities</span></a></li>
                 {%- endif%}
                 {% if dyct['show_exp'] -%}
-                <li class="nav-item"><a class="nav-link" href="#experience" title="Work Experience"><span class="menu-title">Work Experience</span></a></li>
+                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; border-style: solid; border-color: #e5c9d4;" href="#experience" title="Honors and Awards"><span class="menu-title">Honors and Awards</span></a></li>
                 {%- endif%}
-                {% if dyct['show_path'] -%}
-                <li class="nav-item"><a class="nav-link" href="#path" title="Path"><span class="menu-title">Career Path</span></a></li>
-                {%- endif%}
-                {% if dyct['show_grps'] -%}
-                <li class="nav-item"><a class="nav-link" href="#groups" title="Groups"><span class="menu-title">Groups</span></a></li>
-                {%- endif%}
-                {% if dyct['show_ment'] -%}
-                <li class="nav-item"><a class="nav-link" href="#mentees" title="Mentees"><span class="menu-title">Mentees</span></a></li>
-                {%- endif%}
-                {% if dyct['show_consult'] -%}
-                <li class="nav-item"><a class="nav-link" href="#consultations" title="Consultations"><span class="menu-title">Consultations</span></a></li>
-                {%- endif%}
-                <li class="nav-item"><a class="nav-link" href="#contact" title="Contact"><span class="menu-title">Contact</span></a></li>
+                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; border-style: solid; border-color: #e5c9d4;" href="#contact" title="Contact"><span class="menu-title">Contact</span></a></li>
               </ul>
             </nav>
           </div>
         </div>
       </div>
     </header>
-    <div class="page-content">
+    <div class="page-content" style="background-color: #ccd9f8;">
       <div class="container">
 <div class="resume-container">
   <div class="shadow-1-strong bg-white my-5" id="intro">

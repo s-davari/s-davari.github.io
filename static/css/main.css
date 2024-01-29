@@ -63,6 +63,7 @@ html, body {
   line-height: 2.5rem; }
 
 .nav-link {
+  z-index: 99;
   padding: 0;
   font-size: 1rem;
   line-height: 2.5rem;
@@ -74,8 +75,9 @@ html, body {
 
 .nav-link:hover,
 .nav-link:focus {
-  color: inherit;
-  opacity: 1; }
+  background-color: #900C3F;    
+  opacity: .45; 
+  color: #e5c9d4;}
 
 .nav-item + .nav-item {
   margin-left: 1rem; }

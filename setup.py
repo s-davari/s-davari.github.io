@@ -33,8 +33,8 @@ base_info = {
     'EMAIL':"sdavari@vt.edu",
     #'GITHUB':"",
     #'DOCKER':"sdavari",
-    'RESUME':'https://rebrand.ly/sdavari_resume',
-    'CV':'https://rebrand.ly/sdavari_cv',
+    'RESUME':'https://drive.google.com/drive/u/0/folders/1bgIyVS_CDl8F6Bj6ZXcy3VIi32C-e-tq',
+    'CV':'https://drive.google.com/drive/u/0/folders/1bgIyVS_CDl8F6Bj6ZXcy3VIi32C-e-tq',
     #'GITHUB_USERNAME': 'sdavari',
     'LINKEDIN_USERNAME': 'sdavari',
     'SCHOLAR_USERNAME': '0C3C2PEAAAAJ',
@@ -54,11 +54,11 @@ base_info = {
     "show_ment":True,
     "show_sub":True,
     "show_talks":True,
-    "show_skills":False,
-    "show_docker":False,
-    "show_consult":False,
-    "show_path":False,
-    "show_utils":False
+    "show_skills":True,
+    "show_docker":True,
+    "show_consult":True,
+    "show_path":True,
+    "show_utils":True
 }
 
 #https://stackoverflow.com/questions/20646822/how-to-serve-static-files-in-flask
@@ -411,6 +411,6 @@ setup(name='My Website',
             'pygments==2.10.0',
             'elsa==0.1.6',
             'feedgen==0.9.0',
-            'werkzeug==2.0.3' #https://stackoverflow.com/questions/71661851/typeerror-init-got-an-unexpected-keyword-argument-as-tuple#answer-71662972
+            'werkzeug==2.2.2' #https://stackoverflow.com/questions/71661851/typeerror-init-got-an-unexpected-keyword-argument-as-tuple#answer-71662972
         ]
 )
