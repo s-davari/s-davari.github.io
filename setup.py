@@ -31,6 +31,7 @@ base_info = {
     'title':"Ph.D. Candidate",
     'NAME':"Shakiba Davari",
     'EMAIL':"mailto://sdavari@vt.edu",
+    'MENDELEY':"",
     'LINKEDIN_USERNAME': 'sdavari',
     'SCHOLAR_USERNAME': '0C3C2PEAAAAJ',
     'ORCID_ID': '0000-0003-3128-1979',
@@ -212,14 +213,12 @@ def honors():
 @app.route('/serviceactivities')
 @app.route('/activities')
 @app.route('/leadership')
-def service():
+def serviceAct():
     for x in base_info.keys():
         if x.startswith('show_'):
             base_info[x] = False
     base_info['show_service'] = True
     return rendre('index.html')
-
-
 
 @app.route('/demos')
 @app.route('/talks')

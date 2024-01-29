@@ -327,7 +327,7 @@
     </div>
   </div>
   {%- endif %}
-  
+
   {% if dyct['show_pubs'] -%}
   <div class="shadow-1-strong bg-white my-5 p-5" id="publications">
     <div class="publications-section">
@@ -549,118 +549,167 @@
     </div>
   </div>
   {%- endif %}
-  {% if dyct['show_teachingExp'] -%}
-  <div class="shadow-1-strong bg-white my-5 p-5" id="teachingExp">
-    <div class="teachingExp-section">
-      <h2 class="h2 fw-light mb-4">Teaching Experience</h2>
+  {% if dyct['show_honors'] -%}
+  <div class="shadow-1-strong bg-white my-5 p-5" id="honors">
+    <div class="honors-section">
+      <h2 class="h2 fw-light mb-4"> Honors and Awards</h2>
       <div class="timeline">
         {{
-            "Mystring"|get_base(
-            "<a href='https://github.com/franceme/mystring'>GitHub Repo</a>: <a href='https://github.com/franceme/mystring/actions/workflows'><img src='https://github.com/franceme/mystring/actions/workflows/publish.yml/badge.svg' alt='Build Badge'/></a>",
-            "2020",
-            "Present",
-            "A Python project that started out as a simple Python string wrapper that provided extra utilities. This has expanded in scope to different object types, such as dataframes, but always providing useful utilities to each data object.", color="blue")|safe
+            "Invited Talk"|get_base(
+            "<a href='https://www.ismar.net/ISMAR/'> IEEE International Symposium on Mixed and Augmented Reality</a>",
+            "<a href='https://www.percxr.com/'>IEEE Workshop on Perceptual and Cognitive Issues in xR (PERCxR)</a> ",
+            "2022",
+            "Talk: Context Aware Inference and Adaptation in Intelligent AR Interfaces"
+            , color="blue")|safe
+        }}
+        {{
+            "Winning Team for Best 3D User Interface Design"|get_base(
+            "<a href='https://ieeevr.org/'>IEEE Conference on Virtual Reality and 3D User Interfaces </a> ",
+            "3D User Interface Contest",
+            "2020 and 2021",
+            " <b>2021:</b> Clean the Ocean: An Immersive VR Experience Proposing New Modifications to Go-Go and WiM Techniques <br>
+             <b> 2020:</b> Fantastic Voyage 2021: Using Interactive VR Storytelling to Explain Targeted COVID-19 Vaccine Delivery to Antigen-Presenting Cells"
+            , color="blue")|safe
         }}
        {{
-           "Hugg"|get_base(
-           "<a href='https://github.com/franceme/hugg'>GitHub Repo</a>: <a href='https://github.com/franceme/hugg/actions/workflows'><img src='https://github.com/franceme/hugg/actions/workflows/publish.yml/badge.svg' alt='Build Badge'/></a>",
-           "2020",
-           "Present",
-           "A Python project that provided a very simple common interface between different data storages. What seperates this interface is the low requirements for each interface and the focus on scripting the files.", color="blue")|safe
-       }}
-       {{
-           "Sdock"|get_base(
-           "<a href='https://github.com/franceme/sdock'>GitHub Repo</a>: <a href='https://github.com/franceme/sdock/actions/workflows'><img src='https://github.com/franceme/sdock/actions/workflows/publish.yml/badge.svg' alt='Build Badge'/></a>",
-           "2020",
-           "Present",
-           "A Python project that started out as a common way to interact with Docker commands through Python. There is the basis for additional capabilities within Virtual Box, Ansible, and others. This work has been currently delayed however.", color="blue")|safe
-       }}
-       {{
-           "Splunkr"|get_base(
-           "<a href='https://github.com/franceme/splunkr'>GitHub Repo</a>: <a href='https://github.com/franceme/splunkr/actions/workflows'><img src='https://github.com/franceme/splunkr/actions/workflows/publish.yml/badge.svg' alt='Build Badge'/></a>",
-           "2020",
-           "Present",
-           "A Python wrapper to expose the Splunk HTTP Event Collector provided from this <a href=\"https://github.com/georgestarcher/Splunk-Class-httpevent/\">post</a> to PyPi. No work has been done to the internal script and the original script remains the work of the original poster.", color="blue")|safe
-       }}
-       {{
-           "Xcyl"|get_base(
-           "<a href='https://github.com/franceme/xcyl'>GitHub Repo</a>: <a href='https://github.com/franceme/xcyl/actions/workflows'><img src='https://github.com/franceme/xcyl/actions/workflows/publish.yml/badge.svg' alt='Build Badge'/></a>",
-           "2020",
-           "Present",
-           "A very basic Python project that stands to be a simple interface between raw data files, such as sqlite and excel files. This is still in its infancy.", color="blue")|safe
-       }}
-       {{
-           "Ephfile"|get_base(
-           "<a href='https://github.com/franceme/ephfile'>GitHub Repo</a>: <a href='https://github.com/franceme/ephfile/actions/workflows'><img src='https://github.com/franceme/ephfile/actions/workflows/publish.yml/badge.svg' alt='Build Badge'/></a>",
-           "2020",
-           "Present",
-           "A Python project to extend the capabilities of temporary files. While the current tempfile module provides the capability to create temp files, this library allows users to automatically write to the files and automatically get the file path.", color="blue")|safe
-       }}
-       {{
-           "Gett"|get_base(
-           "<a href='https://github.com/franceme/gett'>GitHub Repo</a>: <a href='https://github.com/franceme/gett/actions/workflows'><img src='https://github.com/franceme/gett/actions/workflows/publish.yml/badge.svg' alt='Build Badge'/></a>",
-           "2020",
-           "Present",
-           "A Python wrapper to re-expose the wget source code provided from this <a href=\"https://pypi.org/project/wget/\">post</a> to PyPi. The only change I have done is to fix an issue with handling files that don't have a file extension.", color="blue")|safe
-       }}
-       {{
-          "Bal_Fileops"|get_base(
-          "<a href='https://github.com/franceme/bal_fileops'>GitHub Repo</a>: <a href='https://github.com/franceme/bal_fileops/actions/workflows'><img src='https://github.com/franceme/bal_fileops/actions/workflows/upload.yaml/badge.svg' alt='Build Badge'/></a>",
+          "Recipient of the Departmental Student Service Award"|get_base(
+          "<a href='https://vt.edu'>Virginia Tech </a> ",
+          "<a href='https://cs.vt.edu'>Depratment of Computer Science</a>",
           "2020",
-          "Present",
-          "A Ballerina Project that simply manages file operations, such as reading, writing, and overwriting files.", color="blue")|safe
+          " In Recognition of Community Services Within the CS Department", color="blue")|safe
         }}
         {{
-            "Bal_Generics"|get_base(
-            "<a href='https://github.com/franceme/bal_generics'>GitHub Repo</a>: <a href='https://github.com/franceme/bal_generics/actions/workflows'><img src='https://github.com/franceme/bal_generics/actions/workflows/upload.yaml/badge.svg' alt='Build Badge'/></a>",
-            "2020",
-            "Present",
-            "A Ballerina Project that provides a simple set of generics to the Ballerina log module. This also tries to have simple operators working alongside the generics.", color="blue")|safe
+          "Recipient of the Grace Hopper Scholarship"|get_base(
+          "<a href='https://cs.vt.edu'>Depratment of Computer Science</a>",
+          "<a href='https://ghc.anitab.org'>Grace Hopper Celebration of Women in Computing</a>",
+          "2021 and 2022",
+          "Awarded by Virginia Tech's Depratment of Computer Science.", color="blue")|safe
         }}
         {{
-            "Bal_Strings"|get_base(
-            "<a href='https://github.com/franceme/bal_strings'>GitHub Repo</a>: <a href='https://github.com/franceme/bal_strings/actions/workflows'><img src='https://github.com/franceme/bal_strings/actions/workflows/upload.yaml/badge.svg' alt='Build Badge'/></a>",
-            "2020",
-            "Present",
-            "A Ballerina Project that provides extra operators and helpers to the string module..", color="blue")|safe
+          "Recipient of the Divercity and Inclusion Scholarship "|get_base(
+            "<a href='https://ieeevr.org/'>IEEE Conference on Virtual Reality and 3D User Interfaces </a> ",
+            "",
+            "2021",
+            " ",
+            color="blue")|safe
         }}
         {{
-            "Logg"|get_base(
-            "<a href='https://github.com/franceme/logg'>GitHub Repo</a>: <a href='https://github.com/franceme/logg/actions/workflows'><img src='https://github.com/franceme/logg/actions/workflows/upload.yaml/badge.svg' alt='Build Badge'/></a>",
-            "2020",
-            "Present",
-            "A Ballerina Project that helps to create a general logging interface.", color="blue")|safe
+          "Recipient of ACM Capital Region Celebration of Women in Computing Scholarship"|get_base(
+          "<a href='https://cs.vt.edu'>Depratment of Computer Science at Virginia Tech</a>",
+          "",
+          "2020",
+          "", color="blue")|safe
         }}
         {{
-            "Repos"|get_base(
-            "<a href='https://github.com/franceme/repos'>GitHub Repo</a>: <a href='https://github.com/franceme/repos/actions/workflows'><img src='https://github.com/franceme/repos/actions/workflows/upload.yaml/badge.svg' alt='Build Badge'/></a>",
-            "2020",
-            "Present",
-            "A Ballerina Project that creates the ability to sift through GitHub repositories and retrieve their files.", color="blue")|safe
+          "Recipient of Tapia Celebration of Diversity in Computing Scholarship Scholarship"|get_base(
+          "",
+          "2017 - 2019",
+          "2020",
+          "<b> 2020: </b> Awarded by the Tapia Foundation <br>
+          <b> 2019: </b> Awarded by Depratment of Computer Science at Virginia Tech <br>
+          <b> 2017: </b> Awarded by georgia Institute of Technology", color="blue")|safe
         }}
         {{
-            "Splunk"|get_base(
-            "<a href='https://github.com/franceme/splunk'>GitHub Repo</a>: <a href='https://github.com/franceme/splunk/actions/workflows'><img src='https://github.com/franceme/splunk/actions/workflows/upload.yaml/badge.svg' alt='Build Badge'/></a>",
-            "2020",
-            "Present",
-            "Similar to <a href=\"https://github.com/franceme/splunkr/\">franceme/splunkr</a>, this Ballerina library aims to create the functionality to communicate with a Splunk Http event collector.", color="blue")|safe
+          "Selected Exceptionally Talented Student in the School of Engineering"|get_base(
+          "<a href='https://en.sbu.ac.ir/' target='_blank'>Shahid Beheshti University, Iran</a>",
+          "2010",
+          "2014",
+          "", color="blue")|safe
         }}
+        {{
+          "Fellowship in Support of Preparation for Iran’s National University Entrance Exam"|get_base(
+          "Ghalamchi Foundation, Iran",
+          "2008",
+          "2010",
+          " ", color="blue")|safe
+        }}
+        
+        {{
+          "Fellowship in Support of High School Education"|get_base(
+          "Sama Nation-wide Private High School, Iran",
+          "2006",
+          "2010",
+          " ", color="blue")|safe
+        }}
+        {{
+          "Ranked 1st in Nationwide Programming Exam"|get_base(
+          "Sama Nation-wide Private High School, Iran",
+          "2009",
+          "",
+          " ", color="blue")|safe
+        }}
+        {{
+          "Ranked 3rd in Nationwide Math Exam"|get_base(
+          "Sama Nation-wide Private High School, Iran",
+          "2008",
+          "",
+          " ", color="blue")|safe
+        }}
+
       </div>
     </div>
   </div>
   {%- endif %}
-  {% if dyct['show-service'] -%}
+  {% if dyct['show_service'] -%}
   <div class="shadow-1-strong bg-white my-5 p-5" id="service">
     <div class="service-section">
       <h2 class="h2 fw-light mb-4">Service Activities</h2>
-      
+        <div class="timeline">  
+        {{
+          "Poster Chair"|get_base(
+          "<a href='https://sui.acm.org/2024/'>ACM Spatial User Interaction (SUI)</a>",
+          "",
+          "2024",
+          "", color="blue")|safe
+        }} 
+        {{
+          "Reviewr"|get_base(
+          "<a href='https://chi2023.acm.org/'>ACM CHI Conference on Human Factors in Computing Systems</a>",
+          "2021",
+          "2023",
+          "", color="blue")|safe
+        }}
+        {{
+          "Reviewr"|get_base(
+          "<a href='https://ieeevr.org/'>IEEE Conference on Virtual Reality and 3D User Interfaces </a> ",
+          "2021",
+          "2022",
+          "", color="blue")|safe
+        }}
+        {{
+          "Reviewr"|get_base(
+          "<a href='https://www.ismar.net/ISMAR/'> IEEE International Symposium on Mixed and Augmented Reality</a>",
+          "2020 - 2021",
+          "2022",
+          "", color="blue")|safe
+        }}
+
+
+        {{
+          "Reviewr"|get_base(
+          "<a href='https://www.ismar.net/ISMAR/'> UISTy</a>",
+          "2020 - 2021",
+          "2022",
+          "", color="blue")|safe
+        }}
+
+
+        {{
+          "Reviewr"|get_base(
+          "<a href='https://www.ismar.net/ISMAR/'> AUTOMATI\VE UI</a>",
+          "2020 - 2021",
+          "2022",
+          "", color="blue")|safe
+        }}
+
+        </div>
     </div>
   </div>
   {% endif%}
-  {% if dyct['show_honors'] -%}
-  <div class="shadow-1-strong bg-white my-5 p-5" id="honors">
-    <div class="honors-section">
-      <h2 class="h2 fw-light mb-4">Honors and Awards</h2>
+  {% if dyct['show_teachingExp'] -%}
+  <div class="shadow-1-strong bg-white my-5 p-5" id="teaching">
+    <div class="teaching-section">
+      <h2 class="h2 fw-light mb-4">Teaching Experience</h2>
       <div class="timeline">
         {{
           "Graduate Teaching Assistant"|get_base(
