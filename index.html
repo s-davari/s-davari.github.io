@@ -904,43 +904,32 @@
     </div>
     <footer class="pt-4 pb-4 text-muted text-center d-print-none">
       <div class="container">
-        <div class="my-3">
-          <div class="h4">{{dyct['name']}}</div>
-          <div class="footer-nav">
-            <nav role="navigation">
-              <ul class="nav justify-content-center">
-                <li class="nav-item">
-                  <a class="nav-link" href="https://github.com/{{dyct['GITHUB']}}" title="Github">
-                    <i class="fab fa-github"></i>
-                    <span style="padding:10px;" class="menu-title sr-only">Github</span>
-                  </a>
-                </li>
+                  <ul class="nav justify-content-center">
                 <li>
-
-              {% if 'DOCKER' in dyct  %}
+              {% if '3DILAB' in dyct  %}
               <li>
-                  <a class="nav-link" href="https://hub.docker.com/u/{{ dyct['DOCKER'] }}" title="Docker">
-                      <i style="padding:10px;" class="fab fa-docker" title="Docker link"></i>
+                  <a class="nav-link" href="/3dilab" title="3DILAB">
+                     <img src="https://wordpress.cs.vt.edu/3digroup/wp-content/uploads/sites/141/2020/09/logo1_py_solid.png" width="20" height="20" alt="link to my page on the 3D Interaction Lab's website"/>
                   </a>
               </li>
               {% endif  %}
-              {% if 'LINKEDIN_USERNAME' in dyct  %}
+              {% if 'LINKEDIN' in dyct  %}
               <li>
-                      <a class="nav-link" href="https://www.linkedin.com/in/{{ dyct['LINKEDIN_USERNAME']|escape }}" title="Linkedin">
-                      <i style="padding:10px;" class="fab fa-linkedin" title="Linkedin link"></i>
+                      <a class="nav-link" href="/linkedin" title="Linkedin">
+                      <i style="padding:10px;" class="fab fa-linkedin" title="LinkedIn link"></i>
                   </a>
               </li>
               {% endif  %}
-               {% if 'SCHOLAR_USERNAME' in dyct  %}
+               {% if 'SCHOLAR' in dyct  %}
               <li>
-                    <a class="nav-link" href="https://scholar.google.com/citations?user={{ dyct['SCHOLAR_USERNAME'] }}" title="Linkedin">
-                      <i style="padding:10px;" class="ai ai-google-scholar-square" title="Google Scholar"></i>
+                    <a class="nav-link" href="/scholar" title="Google Scholar">
+                      <i style="padding:10px;" class="ai ai-google-scholar-square" title="Google Scholar Link"></i>
                   </a>
               </li>
               {% endif  %}
               {% if 'MENDELEY_USERNAME' in dyct  %}
               <li>
-                    <a class="nav-link" href="https://www.mendeley.com/profiles/{{ dyct['MENDELEY_USERNAME'] }}" title="Docker">
+                    <a class="nav-link" href="/mendeley" title="Mendeley">
                       <i style="padding:10px;" class="ai ai-mendeley" title="Mendeley Account"></i>
                   </a>
               </li>
@@ -952,43 +941,14 @@
                   </a>
               </li>
               {% endif  %}
-              {% if 'MEDIUM' in dyct  %}
-              <li>
-                    <a class="nav-link" href="https://medium.com/@{{ dyct['MEDIUM'] }}" title="Docker">
-                      <i style="padding:10px;" class="fab fa-medium" title="Medium Account"></i>
-                  </a>
-              </li>
-              {% endif  %}
               {% if 'ORCID' in dyct  %}
               <li>
-                    <a class="nav-link" href="https://orcid.org/{{ dyct['ORCID'] }}" title="Docker">
-                      <i style="padding:10px;" class="fab fa-orcid" title="Orcid Account"></i>
+                    <a class="nav-link" href="/orcid" title="ORCID">
+                      <i style="padding:10px;" class="fab fa-orcid" title="Orcid"></i>
                   </a>
               </li>
               {% endif  %}
-              {% if False and 'ZENODO' in dyct  %}
-              <li>
-                    <a class="nav-link" href="https://zenodo.org/search?page=1&size=20&q=owners:{{ dyct['ZENODO'] }}" title="Docker">
-                      <img class="custom-icon" style="padding-top:30%;" src="https://about.zenodo.org/static/img/logos/zenodo-white.svg" width="80%"/>
-                  </a>
-              </li>
-              {% endif  %}
-               <li>
-                    <a class="nav-link" href="https://oca.opensource.oracle.com/?ojr=contrib-list" title="Docker">
-                      <i style="padding:10px;" class="fab fa-java" title="Java Oracle Contributor Agreement"></i>
-                  </a>
-              </li>
-              <li>
-                    <a class="nav-link" href="/rss.html" title="RSS">
-                      <i style="padding:10px;" class="fa fa-rss" title="RSS Feed"></i>
-                  </a>
-              </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-        <div class="text-small" style="color:black">Made using &copy; Material Resume and Design - TemplateFlip
-        </div>
+                  </ul>
       </div>
     </footer>
     <script src="scripts/mdb.min.js?ver=1.2.1"></script>
