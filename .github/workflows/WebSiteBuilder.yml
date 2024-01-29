@@ -20,7 +20,7 @@ jobs:
           python-version: 3.8
 
       - name: Installing Bundle Packages
-        run: python3 -m pip install --upgrade elsa==0.1.6 flask==3.0.1 flask_flatpages==0.7.3 frozen_flask==1.0.1 pygments==2.10.0 werkzeug==2.2.2 pyvibe==0.0.3 mystring
+        run: python3 -m pip install --upgrade elsa==0.1.6 flask==3.0.1 flask_flatpages==0.7.3 frozen_flask==1.0.1 pygments==2.10.0 werkzeug==3.0.0 pyvibe==0.0.3 mystring
 
       - name: Compiling the Website
         run: python3 setup.py freeze
