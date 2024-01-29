@@ -194,7 +194,7 @@ def research_one():
     return research()
 
 @app.route('/research')
-def research_one():
+def research_two():
     return research()
 
 
