@@ -122,7 +122,7 @@ footer a:not(.nav-link) {
   .site-title {
     float: left; }
   .site-nav {
-    float: right; } }
+    float: left; } }
 
 @media (max-width: 767px) {
   /* disable animations on mobile */
