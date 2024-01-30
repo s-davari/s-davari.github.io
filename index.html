@@ -154,24 +154,18 @@
                 <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; outline-style: inset;" href="/teaching" title="Teaching Experience"><span class="menu-title">Teaching Experience</span></a></li>
                 {% endif -%}
 
-
-                {% if not dyct['show_pubs'] -%}
-                <li class="nav-item"><a class="nav-link" style="border-color:  #ffffff ;" href="/publications" title="Publications"><span class="menu-title">Publications</span></a></li>
-                {% else -%}
-                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; outline-style: inset;" href="/publications" title="Publications"><span class="menu-title">Publications</span></a></li>
-                {% endif -%}
-
-
                 {% if not dyct['show_talks'] -%}
                 <li class="nav-item"><a class="nav-link" style="border-color:  #ffffff ;" href="/talks" title="Demos and Talks"><span class="menu-title">Demos and Talks</span></a></li>
                 {% else -%}
                 <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; outline-style: inset;" href="/talks" title="Demos and Talks"><span class="menu-title">Demos and Talks</span></a></li>
                 {% endif -%}
 
+                {% if not dyct['show_pubs'] -%}
+                <li class="nav-item"><a class="nav-link" style="border-color:  #ffffff ;" href="/publications" title="Publications"><span class="menu-title">Publications</span></a></li>
+                {% else -%}
+                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; outline-style: inset;" href="/publications" title="Publications"><span class="menu-title">Publications</span></a></li>
+                {% endif -%}
                 </ul>
-
-
- 
                 <!--{% if dyct['show_skills'] -%}
                 <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; border-style: solid; border-color: #ffffff;" href="/skills" title="Skills"><span class="menu-title">Skills</span></a></li>
                 {%- endif%}
@@ -423,16 +417,16 @@
         {{
           "<b>[12] </b> <a href='https://ieeexplore.ieee.org/document/9757607'> Clean the Ocean: An Immersive VR Experience Proposing New Modifications to Go-Go and WiM Techniques </a>,"|get_base(
           "<a href='https://ieeevr.org/2022/'> IEEEVR</a>",
-          "2022",
-          "<u><i> 2 pages-[Winner of the Best 3DUI Award]</i></u>",
+          "2022 Winning Team at the 3DI-Contest",
+          "<u><i> 2 pages </i></u>",
           "L. Lisle, F. Lu, S. Davari, I. A. Tahmid, A. Giovannelli, C. Ilo, L. Pavanatto, L. Zhang, L. Schlueter, DA. Bowman")|safe
         }}
 
         {{
           "<b>[13] </b> <a href='https://ieeexplore.ieee.org/document/9419222'> Fantastic Voyage 2021: Using Interactive VR Storytelling to Explain Targeted COVID-19 Vaccine Delivery to Antigen-presenting Cells </a>,"|get_base(
           "<a href='https://ieeevr.org/2022/'> IEEEVR</a>",
-          "2021",
-          "<u><i> 2 pages-[Winner of the Best 3DUI Award]</i></u>",
+          "2021 Winning Team at the 3DI-Contest",
+          "<u><i> 2 pages</i></u>",
           "L. Zhang, F. Lu, I. A. Tahmid, S. Davari, L. Lisle, N. Gutkowski, L. Schlueter, DA. Bowman")|safe
         }}
 
@@ -440,8 +434,8 @@
         {{
           "<b>[14] </b> <a href='https://epo4vr.dfki.de/assets/papers/davari2021vrstorytelling.pdf'> Integrating Everyday Proxy Objects in Multi-Sensory Virtual Reality Storytelling </a>,"|get_base(
           "<a href=''> ACM CHI</a>",
-          "2021",
-          "<u><i> 4 pages- Workshop on Everyday Proxy Objects for Virtual Reality</i></u>",
+          "2021 Workshop on Everyday Proxy Objects for VR",
+          "<u><i> 4 pages</i></u>",
           "S. Davari, F. Lu, Y. Li, L. Zhang, L. Lisle, X. Feng, L. Blustein and DA. Bowman")|safe
         }}
 
@@ -449,22 +443,22 @@
         {{
           "<b>[15] </b> <a href='https://dx.doi.org/10.1109/VRW50115.2020.00072'> Occlusion Management Techniques for Everyday Glanceable AR Interfaces </a>,"|get_base(
           "<a href='https://ieeevr.org/2020/'> IEEEVR</a>",
-          "2020",
-          "<u><i> pp. 324-330 [Workshop on Everyday VR]</i></u>",
+          "2020 Workshop on Everyday VR",
+          "<u><i> pp. 324-330</i></u>",
           "S. Davari, F. Lu, and DA. Bowman")|safe
         }}
 
         {{
           "<b>[16] </b> <a href='https://ieeexplore.ieee.org/document/9090617'> Get the job! An Immersive Simulation of Sensory Overload </a>,"|get_base(
           "<a href='https://ieeevr.org/2020/'> IEEEVR</a>",
-          "2020",
+          "2020 3DI-Contest",
           "<u><i>pp. 509-510</i></u>",
           "L. Pavanatto, F. Lu, S. Davari, E. Harris, A. Folino, S. Imamov, S. Chekuri, L. Blustein, WS. Lages, DA. Bowman")|safe
         }}
         {{
           "<b>[17] </b> <a href='https://ieeexplore.ieee.org/document/8798051/citations?tabFilter=papers#citations'> Save the Space Elevator: An Escape Room Scenario Involving Passive Haptics in Mixed Reality </a>,"|get_base(
           "<a href='https://ieeevr.org/2019/'> IEEEVR</a>",
-          "2019",
+          "2019 3DI-Contest",
           "<u><i> pp. 1405-1406</i></u>",
           "S. Davari, Y. Li, L. Lisle, F. Lu, L. Zhang, L. Blustein, X. Feng, B. Gabaldon, M. Kwiatkowski, D. A. Bowman")|safe
         }}
@@ -479,34 +473,12 @@
       <h2 class="h2 fw-light mb-4">Demos and Talks</h2>
       <div class="timeline">
         {{
-          "<a href='https://esorics2021.athene-center.de/tutorial-09-08.php' >Esorics 2021 Demo</a>"|get_base(
-          "<a href='https://mybinder.org/v2/gh/franceme/Esorics_Conference/HEAD'>Jupyter Notebook</a>",
-          "September 2021",
+          ""|get_base(
           "",
-          "<blockquote cite='https://esorics2021.athene-center.de/tutorial-09-08.php'><q>Various software libraries and frameworks provide a variety of APIs to support secure coding. However, misusing these APIs can cost developers tremendous time and effort, introduce security vulnerabilities to software, and cause serious consequences like data leakage or Denial of Service (DoS) on servers. Our tutorial aims to educate people on the best practice of secure coding, the pitfalls that should be avoided, and the detection tools and fixing suggestions of insecure code.</q></blockquote>",color="red")|safe
+          "2020",
+          "Present",
+          "",color="blue")|safe
        }}
-       {{
-          "TA: Course SQL Injection Demo"|get_base(
-          "<a href='https://www.youtube.com/watch?v=rLY2skQTeJE'>YouTube</a>",
-          "November 2020",
-          "",
-          "",color="red")|safe
-       }}
-       {{
-          "TA: Course Project Demo"|get_base(
-            "<a href='https://www.youtube.com/watch?v=wU5VFDHc11s'>YouTube</a>",
-          "November 2019",
-          "",
-          "",color="red")|safe
-       }}
-       {{
-          "<a href='https://www.youtube.com/watch?v=42Qw06OrjwM' >SecDev 2020 Tutorial</a>"|get_base(
-          "<a href='https://mybinder.org/v2/gh/franceme/cryptoguard/2020_SecDev_Tutorial?filepath=SecDev_Tutorial.ipynb'>Jupyter Notebook</a>",
-          "September 2020",
-          "",
-          "",color="red")|safe
-       }}
-       
       </div>
     </div>
   </div>
@@ -559,11 +531,12 @@
           "", color="blue")|safe
         }}
         {{
-          "Recipient of the Grace Hopper Celebration of Women in Computing Scholarship"|get_base(
-          "<a href='https://cs.vt.edu'>Depratment of Computer Science</a>",
-          "",
-          "2021 and 2022",
-          "", color="blue")|safe
+          "Recipient of the Grace Hopper Celebration of Women in Computing Scholarship" |get_base(
+            "<a href='https://vt.edu'>Virginia Tech </a> ",
+            "<a href='https://cs.vt.edu'>Depratment of Computer Science</a>",
+            "2021 and 2022",
+            " ", 
+            color="blue")|safe
         }}
         {{
           "Recipient of the Divercity and Inclusion Scholarship "|get_base(
@@ -777,43 +750,8 @@
       <div class="row">
         <div class="col-md-6">
           {{'Python3'|get_skill(100)|safe}}
-          {{'Ballerina'|get_skill(70)|safe}}
-          {{'Bash Scripts'|get_skill(50)|safe}}
           {{'C#'|get_skill(25)|safe}}
-          {{'SQL'|get_skill(65)|safe}}
-          {{'GO'|get_skill(40)|safe}}
           {{'C++'|get_skill(1)|safe}}
-
-          {{'Maven'|get_skill(85)|safe}}
-          {{'Gradle'|get_skill(65)|safe}}
-          {{'Flask'|get_skill(25)|safe}}
-          {{'Mako'|get_skill(40)|safe}}
-
-          {{'Rest Webservices'|get_skill(65)|safe}}
-          {{'Docker'|get_skill(85)|safe}}
-
-          {{'Cuckoo'|get_skill(25)|safe}}
-          {{'VirtualBox'|get_skill(65)|safe}}
-        </div>
-        <div class="col-md-6">
-          {{'Java EE'|get_skill(90,False)|safe}}
-          {{'Rust'|get_skill(40,False)|safe}}
-          {{'Tasktop Integrations'|get_skill(85,False)|safe}}
-          {{'HTML'|get_skill(50,False)|safe}}
-          {{'.NET'|get_skill(25,False)|safe}}
-          {{'Scala'|get_skill(65,False)|safe}}
-          {{'JavaScript'|get_skill(15,False)|safe}}
-
-          {{'Spring'|get_skill(50,False)|safe}}
-          {{'Jenkins'|get_skill(50,False)|safe}}
-          {{'Tensorflow'|get_skill(30,False)|safe}}
-          {{'Prompt Engineering'|get_skill(45,False)|safe}}
-
-          {{'Soap Webservices'|get_skill(75,False)|safe}}
-          {{'Machine Learning'|get_skill(40,False)|safe}}
-
-          {{'Kubernetes'|get_skill(45,False)|safe}}
-          {{'Scripting'|get_skill(100,False)|safe}}
         </div>
       </div>
     </div>
