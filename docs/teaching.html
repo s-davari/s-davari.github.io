@@ -90,31 +90,48 @@
   <body class="bg-light" id="top" style="background-color: #eef1f8 !important; ">
     <button onclick="goto('/#top')" id="myBtn" title="Go to top">Top</button>
     <header class="d-print-none">
+      <!-- ------------------------------------------------This is the main Na-v-bad with position: fixed and z-index: 99 to keep the nav bar always on top (both z and y ) of the page  -->
       <div class="container text-center text-lg-left">
-        <div class="pt-4 clearfix" style="background-color: #eef1f8; color:#34495e; position: fixed; z-index: 99; padding-inline: inherit; max-width: 1140px;  width: 100%; padding-right: 8%;" >
+        <div class="pt-4 clearfix" style=" position: fixed; z-index: 99; background-color: #eef1f8; color:#34495e; padding-inline: inherit; max-width: 1140px;  width: 100%; padding-right: 8%;" >
           <!--<h1 class="site-title mb-0"><a href="/index.html" >Shakiba Davari</a> <br>
              <a href="/research.html">Research_Info</a>   <a href="/industry.html">Industry_Info</a>   <a href="/full.html">Full_Info</a> 
           </h1> -->
           <div class="site-nav "> 
             <nav role="navigation" style="line-height: .5rem;">
-              <ul class="nav" style="border:thin, border-width: 1.5px; outline-style: double; width: fit-content !important;"> 
+              <ul class="nav" style=" outline-style: double; width: fit-content !important;"> 
                 <li class="nav-item"><a class="nav-link" style="border-color:  #ffffff ;" href="/" title="About" ><span class="menu-title">About Me</span></a></li>
                 </ul>
               <br>
-              <ul class="nav" style="border:thin, border-width: 1.5px; outline-style: double; width:inherit !important;" >
+              <ul class="nav" style=" outline-style: double; width:inherit !important;" >
 
                 <li class="nav-item"><a class="nav-link" style="border-color:  #ffffff ;" href="/projects" title="Research Experience"><span class="menu-title">Research Experience</span></a></li>
                 <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; outline-style: inset;" href="/teaching" title="Teaching Experience"><span class="menu-title">Teaching Experience</span></a></li>
                 <li class="nav-item"><a class="nav-link" style="border-color:  #ffffff ;" href="/talks" title="Demos and Talks"><span class="menu-title">Demos and Talks</span></a></li>
                 <li class="nav-item"><a class="nav-link" style="border-color:  #ffffff ;" href="/publications" title="Publications"><span class="menu-title">Publications</span></a></li>
                 </ul>
-                <!--
-                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; border-style: solid; border-color: #ffffff;" href="#contactCollapsed" title="Contact"><span class="menu-title">Contact</span></a></li>-->
+              <!--
+              <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; border-style: solid; border-color: #ffffff;" href="#contactCollapsed" title="Contact"><span class="menu-title">Contact</span></a></li>-->
+            </nav>
+          </div>
+        </div>
+      </div>
+      <!-- ------------------------------------------------This is the end of the Main Nav-bar  -->
+
+      <!-- ------------------------------------------------This is a placeHolder Nav-bar [an exact copied replica of the Main Nav-bar] with position: fixed removed and z-index: 0 to make sure nothing is blocked by the main Nav-bar  -->
+      <div class="container text-center text-lg-left">
+        <div class="pt-4 clearfix" style="z-index: 0; background-color: #eef1f8; color:#34495e; padding-inline: inherit; max-width: 1140px;  width: 100%; padding-right: 8%;" >
+          <div class="site-nav "> 
+            <nav role="navigation" style="line-height: .5rem;">
+              <ul class="nav" style="outline-style: double; width: fit-content !important;"> 
+                <li class="nav-item"><a class="nav-link" style="border-color:  #ffffff ;" href="/" title="About" ><span class="menu-title">About Me</span></a></li>
+                </ul>
+              <br>
 
             </nav>
           </div>
         </div>
       </div>
+      <!-- ------------------------------------------------This is the end of copied placeHolder Nav-bar  -->
     </header>
     <div class="page-content" style="background-color: #eef1f8;">
       <div class="container">
@@ -172,10 +189,7 @@
                   </ul>
                 </nav>
               </div>
-              <div class="d-print-none">
-                <!--<a class="nav-link" href="\resume" title="Resume">
-                      <i style="padding:10px;" class="fab fa-resume" title="Resume Link"></i>
-                  </a>-->
+              <div class="d-print-none" >
                 <a class="btn btn-outline-light btn-lg shadow-sm mt-1 me-3" href="/cv" data-aos="fade-right" data-aos-delay="700" target="_blank" >CV</a>
                 <a class="btn btn-outline-light btn-lg shadow-sm mt-1 me-3" href="/resume" data-aos="fade-left" data-aos-delay="700" target="_blank" >Resume</a>
               </div>
