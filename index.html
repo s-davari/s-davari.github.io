@@ -467,40 +467,6 @@
     </div>
   </div>
   {%- endif %}
-  {% if dyct['show_talks'] -%}
-  <div class="shadow-1-strong bg-white my-5 p-5" id="talks">
-    <div class="talks-section">
-      <h2 class="h2 fw-light mb-4">Demos and Talks</h2>
-      <div class="timeline">
-        {{
-          ""|get_base(
-          "",
-          "2020",
-          "Present",
-          "",color="blue")|safe
-       }}
-      </div>
-    </div>
-  </div>
-  {%- endif %}
-  {% if dyct['show_proj'] -%}
-  <div class="shadow-1-strong bg-white my-5 p-5" id="projects">
-    <div class="projects-section">
-      <h2 class="h2 fw-light mb-4">Research Experience</h2>
-      <div class="timeline">
-       
-       {{
-          ""|get_base(
-          "",
-          "2020",
-          "Present",
-          "",color="blue")|safe
-       }}
-      </div>
-    </div>
-  </div>
-  {%- endif %}
-  
   {% if dyct['show_honors'] -%}
   <div class="shadow-1-strong bg-white my-5 p-5" id="honors">
     <div class="honors-section">
@@ -664,8 +630,84 @@
   </div>
   {% endif%}
 
+
+
+
+  {% if dyct['show_proj'] -%}
+  <div class="shadow-1-strong bg-white my-5 p-5" id="projects">
+    <div class="projects-section">
+      <h2 class="h2 fw-light mb-4">Research Experience</h2>
+      <div class="timeline">
+       
+        <!-- ################### For Each Position -->
+        <div class="shadow-1-strong bg-white my-5 p-5" id="projects">
+          <div class="projects-section">
+            <h4 class="h4 fw-light mb-4">Graduate Research Assistant </h4>
+              <a href='https://cs.vt.edu/'> Computer Science Department at Virginia Tech </a> - [2018-Present]
+            <div class="timeline">
+              {{
+                  "Conceptual Framework Research Towards Designing Intelligent AR Interfaces"|get_base(
+                    "",
+                    "","",
+                  "I applied a methodical approach based on a) consideration of end goals, features and challenges of AR,
+                  and b) in-depth review and analysis of existing AR interfaces, and context frameworks and taxonomies, and : ",color="blue")|safe
+              }}
+              <div class="timeline" style=" padding-left: 3rem !important;">
+                {{
+                  "proposed a a methodology for <a href='https://wordpress.cs.vt.edu/3digroup/2020/02/12/ar-interface-classification/' target = '_blank'> classification of AR interfaces </a> and introduce Glanceable AR interfaces according to this classification <a href='/publications' target = '_blank'> <b>[6].</b> </a>"|get_base(
+                  "",
+                  "",
+                  "",
+                  "",
+                  color="red")|safe
+                }}
+                {{
+                  "designed a <a href='https://wordpress.cs.vt.edu/3digroup/2023/11/07/context-aware-inference-and-adaptation-a-framework-for-designing-intelligent-ar-interfaces' target = '_blank'> framework and architecture </a> for context-aware inference and adaptation in intelligent AR interfaces."|get_base(
+                  "",
+                  "",
+                  "",
+                  "",
+                  color="red")|safe
+                }}
+                {{
+                  "proposed a <a href='https://wordpress.cs.vt.edu/3digroup/2023/11/07/taxonomy-of-context-for-ar-interfaces/' target = '_blank'> taxonomy of context </a> (i.e., the input to our framework) for AR interface adaptations."|get_base(
+                  "",
+                  "",
+                  "",
+                  "",
+                  color="red")|safe
+                }}
+                {{
+                  "proposed a <a href='https://wordpress.cs.vt.edu/3digroup/2023/11/07/taxonomy-of-ar-interface-design-dimensions/' target = '_blank'> taxonomy of visual adaptations and interface design dimensions</a> of AR interfaces (i.e., the output of our framework)"|get_base(
+                  "",
+                  "",
+                  "",
+                  "",
+                  color="red")|safe
+                }}
+                {{
+                  "proposed a framework for the evaluation and comparison of AR input modalities and am applying it in a review paper on natural AR input modalities that I am currently writing."|get_base(
+                  "",
+                  "",
+                  "",
+                  "",
+                  color="red")|safe
+                }}
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ################### End Position -->
+
+      </div>
+    </div>
+  </div>
+  {%- endif %}
+  
   {% if dyct['show_teachingExp'] -%}
-  <div class="shadow-1-strong bg-white my-5 p-5" id="teaching">
+  <div class="shadow-1-strong bg-white p-5" id="teaching">
     <div class="teaching-section">
       <h2 class="h2 fw-light mb-4">Teaching Experience</h2>
       <div class="timeline">
@@ -733,6 +775,28 @@
   </div>
   {%- endif %}
 
+
+  {% if dyct['show_talks'] -%}
+  <div class="shadow-1-strong bg-white my-5 p-5" id="talks">
+    <div class="talks-section">
+      <h2 class="h2 fw-light mb-4">Demos and Talks</h2>
+      <div class="timeline">
+        {{
+          ""|get_base(
+          "",
+          "2020",
+          "Present",
+          "",color="blue")|safe
+       }}
+      </div>
+    </div>
+  </div>
+  {%- endif %}
+
+
+
+  
+  
   {% if False %}
   <!--if dyct['show_about']-->
   <div class="shadow-1-strong bg-white my-5 p-5" id="about">
@@ -740,10 +804,8 @@
       <h2 class="h2 fw-light mb-4">More about me on a personal level</h2>
     </div>
   </div>
-  {% endif%}
 
-
-  {% if dyct['show_skills'] -%}
+  <!--if dyct['show_skills']-->
   <div class="shadow-1-strong bg-white my-5 p-5" id="skills">
     <div class="skills-section">
       <h2 class="h2 fw-light mb-4">Technical Skills</h2>
