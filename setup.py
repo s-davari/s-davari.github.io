@@ -191,7 +191,10 @@ def research():
 
 @app.route('/projects')
 def research_one():
-    return research()
+    
+    return rendre('index.html')
+    #<!------------------------------- @TODO: FIX TALKS AND TEACHING EXP AND UNCOMMENT this bellow:  ---------------------------------------------------------->
+    #return research()
 
 @app.route('/research')
 def research_two():
