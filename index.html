@@ -92,12 +92,12 @@
   <body class="bg-light" id="top" style="background-color: #eef1f8 !important; ">
     <button onclick="goto('/#top')" id="myBtn" title="Go to top">Top</button>
     <header class="d-print-none">
-      <!-- ------------------------------------------------This is the main Na-v-bad with position: fixed and z-index: 99 to keep the nav bar always on top (both z and y ) of the page  -->
+      <!-- ------------------------------------------------This is the main Nav-bar with position: fixed and z-index: 99 to keep the nav bar always on top (both z and y ) of the page  -->
       <div class="container text-center text-lg-left">
         <div class="pt-4 clearfix" style=" position: fixed; z-index: 99; background-color: #eef1f8; color:#34495e; padding-inline: inherit; max-width: 1140px;  width: 100%; padding-right: 8%;" >
            <!--style="max-height: 20vw;
          display: flex;flex-direction: column-reverse;align-content: space-between;justify-content: space-around;align-items: stretch;flex-wrap: wrap;" -->
-         
+
           <!--<h1 class="site-title mb-0"><a href="/index.html" >{{dyct['name']}}</a> <br>
             {{ "Research"|get_main_url("Info")|safe }} {{ "Industry"|get_main_url("Info")|safe }} {{ "Full"|get_main_url("Info")|safe }}
           </h1> -->
@@ -180,12 +180,18 @@
       </div>
       <!-- ------------------------------------------------This is the end of the Main Nav-bar  -->
 
-      <!-- ------------------------------------------------This is a placeHolder Nav-bar [an exact copied replica of the Main Nav-bar] with position: fixed removed and z-index: 0 to make sure nothing is blocked by the main Nav-bar  -->
+      <!-- ------------------------------------------------This is a placeHolder Nav-bar [an exact copied replica of the Main Nav-bar] without position: fixed to make sure nothing is blocked by the main Nav-bar  and with opacity: 0% and with z-index: 0;-->
       <div class="container text-center text-lg-left">
-        <div class="pt-4 clearfix" style="z-index: 0; background-color: #eef1f8; color:#34495e; padding-inline: inherit; max-width: 1140px;  width: 100%; padding-right: 8%;" >
+        <div class="pt-4 clearfix" style=" opacity:0% !important; z-index: 0; background-color: #eef1f8; color:#34495e; padding-inline: inherit; max-width: 1140px;  width: 100%; padding-right: 8%;" >
+           <!--style="max-height: 20vw;
+         display: flex;flex-direction: column-reverse;align-content: space-between;justify-content: space-around;align-items: stretch;flex-wrap: wrap;" -->
+
+          <!--<h1 class="site-title mb-0"><a href="/index.html" >{{dyct['name']}}</a> <br>
+            {{ "Research"|get_main_url("Info")|safe }} {{ "Industry"|get_main_url("Info")|safe }} {{ "Full"|get_main_url("Info")|safe }}
+          </h1> -->
           <div class="site-nav "> 
             <nav role="navigation" style="line-height: .5rem;">
-              <ul class="nav" style="outline-style: double; width: fit-content !important;"> 
+              <ul class="nav" style=" outline-style: double; width: fit-content !important;"> 
                 {% if not dyct['show_about'] -%}
                 <li class="nav-item"><a class="nav-link" style="border-color:  #ffffff ;" href="/" title="About" ><span class="menu-title">About Me</span></a></li>
                 {% else -%}
@@ -194,13 +200,13 @@
 
                 {% if dyct['show_about'] or dyct['show_edu'] or dyct['show_service'] or dyct['show_honors'] -%} 
                 <!--{% if not dyct['show_about'] and dyct['show_research'] -%} 
-                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; outline-style: inset;" href="/research" title="Research Interest"><span class="menu-title">Research Interest</span></a></li>
+                <li class="nav-item"><a class="nav-link" style="outline-style: inset;" href="/research" title="Research Interest"><span class="menu-title">Research Interest</span></a></li>
                 {% else -%}         
                 <li class="nav-item"><a class="nav-link" style="border-color:  #ffffff ;" href="/research" title="Research Interest"><span class="menu-title">Research Interest</span></a></li>
                 {% endif -%}-->
 
                 {% if not dyct['show_about'] and dyct['show_edu'] -%} 
-                <li class="nav-item"><a class="nav-link" style="outline-style: inset;" href="/education" title="Education"><span class="menu-title">Education</span></a></li>
+                <li class="nav-item"><a class="nav-link" style=" outline-style: inset;" href="/education" title="Education"><span class="menu-title">Education</span></a></li>
                 {% else -%}         
                 <li class="nav-item"><a class="nav-link" style="border-color:  #ffffff ;" href="/education" title="Education"><span class="menu-title">Education</span></a></li>
                 {% endif -%}
@@ -212,7 +218,7 @@
                 {% endif -%}
 
                 {% if not dyct['show_about'] and dyct['show_honors'] -%}
-                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; outline-style: inset;" href="/honors" title="Honors and Awards"><span class="menu-title">Honors and Awards</span></a></li>
+                <li class="nav-item"><a class="nav-link" style="outline-style: inset;" href="/honors" title="Honors and Awards"><span class="menu-title">Honors and Awards</span></a></li>
                 {% else -%}
                 <li class="nav-item"><a class="nav-link" style="border-color:  #ffffff ;" href="/honors" title="Honors and Awards"><span class="menu-title">Honors and Awards</span></a></li>
                 {% endif -%}
@@ -225,7 +231,37 @@
                 {% endif -%}            
               </ul>
               <br>
+              <ul class="nav" style=" outline-style: double; width:inherit !important;" >
 
+                {% if not dyct['show_proj'] -%}
+                <li class="nav-item"><a class="nav-link" style="border-color:  #ffffff ;" href="/projects" title="Research Experience"><span class="menu-title">Research Experience</span></a></li>
+                {% else -%}
+                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; outline-style: inset;" href="/projects" title="Research Experience"><span class="menu-title">Research Experience</span></a></li>
+                {% endif -%}
+
+
+                {% if not dyct['show_teachingExp'] -%}
+                <li class="nav-item"><a class="nav-link" style="border-color:  #ffffff ;" href="/teaching" title="Teaching Experience"><span class="menu-title">Teaching Experience</span></a></li>
+                {% else -%}
+                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; outline-style: inset;" href="/teaching" title="Teaching Experience"><span class="menu-title">Teaching Experience</span></a></li>
+                {% endif -%}
+
+                {% if not dyct['show_talks'] -%}
+                <li class="nav-item"><a class="nav-link" style="border-color:  #ffffff ;" href="/talks" title="Demos and Talks"><span class="menu-title">Demos and Talks</span></a></li>
+                {% else -%}
+                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; outline-style: inset;" href="/talks" title="Demos and Talks"><span class="menu-title">Demos and Talks</span></a></li>
+                {% endif -%}
+
+                {% if not dyct['show_pubs'] -%}
+                <li class="nav-item"><a class="nav-link" style="border-color:  #ffffff ;" href="/publications" title="Publications"><span class="menu-title">Publications</span></a></li>
+                {% else -%}
+                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; outline-style: inset;" href="/publications" title="Publications"><span class="menu-title">Publications</span></a></li>
+                {% endif -%}
+              </ul>
+              <!--{% if dyct['show_skills'] -%}
+              <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; border-style: solid; border-color: #ffffff;" href="/skills" title="Skills"><span class="menu-title">Skills</span></a></li>
+              {%- endif%}
+              <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; border-style: solid; border-color: #ffffff;" href="#contactCollapsed" title="Contact"><span class="menu-title">Contact</span></a></li>-->
             </nav>
           </div>
         </div>
