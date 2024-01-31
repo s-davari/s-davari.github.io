@@ -64,12 +64,11 @@ html, body {
 
 .nav-link {
   z-index: 99;
-  padding: 0;
+  padding: 10px;
   font-size: 1.3rem;
   line-height: 2.5rem;
   color: inherit;
   opacity: 0.8;
-  padding-right:10px;
    }
 
 .header-social .nav-link {
