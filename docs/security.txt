@@ -1,5 +1,5 @@
 
 # Shakiba Davari Website
-Contact: mailto:mailto://sdavari@vt.edu
+Contact: mailto:mailto:sdavari@vt.edu
 Preferred-Languages: en
 Expires: 2025-12-31T18:00:00.000Z

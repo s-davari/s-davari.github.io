@@ -31,7 +31,7 @@ base_info = {
     'name':"Shakiba Davari",
     'title':"Ph.D. Candidate",
     'NAME':"Shakiba Davari",
-    'EMAIL':"mailto://sdavari@vt.edu",
+    'EMAIL':"mailto:sdavari@vt.edu",
     'MENDELEY':"",
     'LINKEDIN_USERNAME': 'sdavari',
     'SCHOLAR_USERNAME': '0C3C2PEAAAAJ',
