@@ -111,11 +111,6 @@
                 {% endif -%}
 
                 {% if dyct['show_about'] or dyct['show_edu'] or dyct['show_service'] or dyct['show_honors'] -%} 
-                <!--{% if not dyct['show_about'] and dyct['show_research'] -%} 
-                <li class="nav-item"><a class="nav-link" style="outline-style: inset; border-radius: 0.25rem; " href="/research" title="Research Interest"><span class="menu-title">Research Interest</span></a></li>
-                {% else -%}         
-                <li class="nav-item"><a class="nav-link" style="border-color:  white;" href="/research" title="Research Interest"><span class="menu-title">Research Interest</span></a></li>
-                {% endif -%}-->
 
                 {% if not dyct['show_about'] and dyct['show_edu'] -%} 
                 <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important; outline-style: inset;" href="/education" title="Education"><span class="menu-title">Education</span></a></li>
@@ -141,20 +136,22 @@
                 <li class="nav-item"><a class="nav-link" style="border-color:  white;" href="/personal" title="Me on a Personal Level"><span class="menu-title">Me on a Personal Level</span></a></li>
                 {% endif -%}-->   
                 
-                <!------------------------------- @TODO: FIX TALKS AND TEACHING EXP AND COMMENT this  bellow:  ---------------------------------------------------------->
+
+                <!------------------------------- @TODO: Once you add the other ul below, this should move there  ----------------------------->
                 {% if not dyct['show_proj'] -%}
-                <li class="nav-item"><a class="nav-link" style="border-color: white; border-radius: 0.25rem; padding:0 !important;" href="/3dilab" title="Research Experience" target="_blank"><span class="menu-title">Research Experience</span></a></li>
+                <li class="nav-item"><a class="nav-link" style="border-color: white; border-radius: 0.25rem; padding:0 !important;" href="/3dilab" title="Research Experience" target="_blank"><span class="menu-title">Research Projects</span></a></li>
                 {% else -%}
-                <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important; outline-style: inset;" href="/projects" title="Research Experience"><span class="menu-title">Research Experience</span></a></li>
-                {% endif -%}
-                    <!------------------------------- END @TODO to be commented ---------------------------------------------------------->       
+                <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important; outline-style: inset;" href="/projects" title="Research Experience"><span class="menu-title">Research Projects</span></a></li>
+                {% endif -%}    
+                <!------------------------------- End of what needs to e moved in TODO ----------------------------->
+                
               {% endif -%}            
               </ul>  
                 <!------------------------------- @TODO: FIX TALKS AND TEACHING EXP AND UNCOMMENT:  -----------------------------
               <br>
               <ul class="nav" style=" outline-style: double; border-radius: 0.25rem; width:inherit !important;" >
 
-                {% if not dyct['show_proj'] -%}
+                {% if not dyct['show_research'] -%}
                 <li class="nav-item"><a class="nav-link" style="border-color: white; border-radius: 0.25rem; padding:0 !important;" href="/projects" title="Research Experience"><span class="menu-title">Research Experience</span></a></li>
                 {% else -%}
                 <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important; outline-style: inset;" href="/projects" title="Research Experience"><span class="menu-title">Research Experience</span></a></li>
@@ -212,11 +209,6 @@
                 {% endif -%}
 
                 {% if dyct['show_about'] or dyct['show_edu'] or dyct['show_service'] or dyct['show_honors'] -%} 
-                <!--{% if not dyct['show_about'] and dyct['show_research'] -%} 
-                <li class="nav-item"><a class="nav-link" style="outline-style: inset; border-radius: 0.25rem; " href="/research" title="Research Interest"><span class="menu-title">Research Interest</span></a></li>
-                {% else -%}         
-                <li class="nav-item"><a class="nav-link" style="border-color:  white;" href="/research" title="Research Interest"><span class="menu-title">Research Interest</span></a></li>
-                {% endif -%}-->
 
                 {% if not dyct['show_about'] and dyct['show_edu'] -%} 
                 <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important; outline-style: inset;" href="/education" title="Education"><span class="menu-title">Education</span></a></li>
@@ -246,7 +238,7 @@
               <br>
               <ul class="nav" style=" outline-style: double; border-radius: 0.25rem; width:inherit !important;" >
 
-                {% if not dyct['show_proj'] -%}
+                {% if not dyct['show_research'] -%}
                 <li class="nav-item"><a class="nav-link" style="border-color: white; border-radius: 0.25rem; padding:0 !important;" href="/projects" title="Research Experience"><span class="menu-title">Research Experience</span></a></li>
                 {% else -%}
                 <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important; outline-style: inset;" href="/projects" title="Research Experience"><span class="menu-title">Research Experience</span></a></li>
@@ -730,7 +722,7 @@
 
 
 
-  {% if dyct['show_proj'] -%}
+  {% if dyct['show_research'] -%}
   <div class="shadow-1-strong bg-white my-5 p-5" id="projects" style="margin-bottom: 0% !important;">
     <div class="projects-section">
       <h2 class="h2 fw-light mb-4">Research Experience</h2>
