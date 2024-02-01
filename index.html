@@ -113,27 +113,27 @@
                 {% if dyct['show_about'] or dyct['show_edu'] or dyct['show_service'] or dyct['show_honors'] -%} 
 
                 {% if not dyct['show_about'] and dyct['show_edu'] -%} 
-                <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important; outline-style: inset;" href="/education" title="Education"><span class="menu-title">Education</span></a></li>
+                <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important; outline-style: inset;" href="/#ducation" title="Education"><span class="menu-title">Education</span></a></li>
                 {% else -%}         
-                <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important;" href="/education" title="Education"><span class="menu-title">Education</span></a></li>
-                {% endif -%}
-
-                {% if not dyct['show_about'] and dyct['show_service'] -%}
-                <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important; outline-style: inset;" href="/service" title="Service Activities"><span class="menu-title">Service Activities</span></a></li>
-                {% else -%}
-                <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important; " href="/service" title="Service Activities"><span class="menu-title">Service Activities</span></a></li>                
+                <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important;" href="#education" title="Education"><span class="menu-title">Education</span></a></li>
                 {% endif -%}
 
                 {% if not dyct['show_about'] and dyct['show_honors'] -%}
-                <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important; outline-style: inset; " href="/honors" title="Honors and Awards"><span class="menu-title">Honors and Awards</span></a></li>
+                <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important; outline-style: inset; " href="#honors" title="Honors and Awards"><span class="menu-title">Honors and Awards</span></a></li>
                 {% else -%}
-                <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important;" href="/honors" title="Honors and Awards"><span class="menu-title">Honors and Awards</span></a></li>
+                <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important;" href="#honors" title="Honors and Awards"><span class="menu-title">Honors and Awards</span></a></li>
+                {% endif -%}
+
+                {% if not dyct['show_about'] and dyct['show_service'] -%}
+                <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important; outline-style: inset;" href="#service" title="Service Activities"><span class="menu-title">Service Activities</span></a></li>
+                {% else -%}
+                <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important; " href="#service" title="Service Activities"><span class="menu-title">Service Activities</span></a></li>                
                 {% endif -%}
 
                 <!--{% if not dyct['show_about'] and dyct['show_personal'] -%} 
-                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; outline-style: inset; border-radius: 0.25rem;" href="/personal" title="Me on a Personal Level"><span class="menu-title">Me on a Personal Level</span></a></li>
+                <li class="nav-item"><a class="nav-link" style="border:thin, border-width: 1px; outline-style: inset; border-radius: 0.25rem;" href="#personal" title="Me on a Personal Level"><span class="menu-title">Me on a Personal Level</span></a></li>
                 {% else -%}         
-                <li class="nav-item"><a class="nav-link" style="border-color:  white;" href="/personal" title="Me on a Personal Level"><span class="menu-title">Me on a Personal Level</span></a></li>
+                <li class="nav-item"><a class="nav-link" style="border-color:  white;" href="#personal" title="Me on a Personal Level"><span class="menu-title">Me on a Personal Level</span></a></li>
                 {% endif -%}-->   
                 
 
@@ -143,6 +143,11 @@
                 {% else -%}
                 <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important; outline-style: inset;" href="/projects" title="Research Projects"><span class="menu-title">Research Projects</span></a></li>
                 {% endif -%}    
+                {% if not dyct['show_contact'] -%}
+                <li class="nav-item"><a class="nav-link" style="border-color: white; border-radius: 0.25rem; padding:0 !important;" href="#intro" title="Contact" ><span class="menu-title">Contact Me</span></a></li>
+                {% else -%}
+                <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important; outline-style: inset;" href="#intro" title="Contact"><span class="menu-title">Contact Me</span></a></li>
+                {% endif -%} 
                 <!------------------------------- End of what needs to e moved in TODO ----------------------------->
                 
               {% endif -%}            
@@ -933,8 +938,9 @@
   </div>
 -->
 <!-- QR CODE Created with the website: https://www.qr-code-generator.com/solutions/vcard-qr-code/-->
-</div></div>
-    </div>
+</div>
+</div>
+    </div id="contact">
     <footer class="pt-4 pb-4 text-center d-print-none">
     </div>
       <nav role="navigation">
