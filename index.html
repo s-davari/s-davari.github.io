@@ -144,9 +144,9 @@
                 <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important; outline-style: inset;" href="/projects" title="Research Projects"><span class="menu-title">Research Projects</span></a></li>
                 {% endif -%}    
                 {% if not dyct['show_contact'] -%}
-                <li class="nav-item"><a class="nav-link" style="border-color: white; border-radius: 0.25rem; padding:0 !important; padding-right: 10px !important;" href="#intro" title="Contact" ><span class="menu-title">Contact Me</span></a></li>
+                <li class="nav-item"><a class="nav-link" style="border-color: white; border-radius: 0.25rem; padding:0 !important; " href="#intro" title="Contact" ><span class="menu-title">Contact Me</span></a></li>
                 {% else -%}
-                <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important; padding-right: 10px !important; outline-style: inset;" href="#intro" title="Contact"><span class="menu-title">Contact Me</span></a></li>
+                <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important;  outline-style: inset;" href="#intro" title="Contact"><span class="menu-title">Contact Me</span></a></li>
                 {% endif -%} 
                 <!------------------------------- End of what needs to e moved in TODO ----------------------------->
                 
@@ -208,29 +208,29 @@
             <nav role="navigation" style="line-height: .5rem;">
               <ul class="nav" style=" outline-style: double; border-radius: 0.25rem; width: fit-content !important;"> 
                 {% if not dyct['show_about'] -%}
-                <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important;" href="/" title="About" ><span class="menu-title">About Me</span></a></li>
+                <li class="nav-item"><a class="nav-link" style="padding:0 !important;  border-color:white; border-radius: 0.25rem;" href="/" title="About" ><span class="menu-title">About Me</span></a></li>
                 {% else -%}
-                <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important; outline-style: inset;" href="/" title="About" ><span class="menu-title">About Me</span></a></li>
+                <li class="nav-item"><a class="nav-link" style="padding:0 !important;  border-color:white; border-radius: 0.25rem; outline-style: inset;" href="/" title="About" ><span class="menu-title">About Me</span></a></li>
                 {% endif -%}
 
                 {% if dyct['show_about'] or dyct['show_edu'] or dyct['show_service'] or dyct['show_honors'] -%} 
 
                 {% if not dyct['show_about'] and dyct['show_edu'] -%} 
-                <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important; outline-style: inset;" href="/education" title="Education"><span class="menu-title">Education</span></a></li>
+                <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important;  outline-style: inset;" href="/education" title="Education"><span class="menu-title">Education</span></a></li>
                 {% else -%}         
-                <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important;" href="/education" title="Education"><span class="menu-title">Education</span></a></li>
+                <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important; " href="/education" title="Education"><span class="menu-title">Education</span></a></li>
                 {% endif -%}
 
                 {% if not dyct['show_about'] and dyct['show_service'] -%}
-                <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important; outline-style: inset;" href="/service" title="Service Activities"><span class="menu-title">Service Activities</span></a></li>
+                <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important;  outline-style: inset;" href="/service" title="Service Activities"><span class="menu-title">Service Activities</span></a></li>
                 {% else -%}
-                <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important; " href="/service" title="Service Activities"><span class="menu-title">Service Activities</span></a></li>                
+                <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important;  " href="/service" title="Service Activities"><span class="menu-title">Service Activities</span></a></li>                
                 {% endif -%}
 
                 {% if not dyct['show_about'] and dyct['show_honors'] -%}
-                <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important; outline-style: inset; " href="/honors" title="Honors and Awards"><span class="menu-title">Honors and Awards</span></a></li>
+                <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important;  outline-style: inset; " href="/honors" title="Honors and Awards"><span class="menu-title">Honors and Awards</span></a></li>
                 {% else -%}
-                <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important;" href="/honors" title="Honors and Awards"><span class="menu-title">Honors and Awards</span></a></li>
+                <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important; " href="/honors" title="Honors and Awards"><span class="menu-title">Honors and Awards</span></a></li>
                 {% endif -%}
 
                 <!--{% if not dyct['show_about'] and dyct['show_personal'] -%} 
@@ -244,34 +244,34 @@
               <ul class="nav" style=" outline-style: double; border-radius: 0.25rem; width:inherit !important;" >
 
                 {% if not dyct['show_research'] -%}
-                <li class="nav-item"><a class="nav-link" style="border-color: white; border-radius: 0.25rem; padding:0 !important;" href="/projects" title="Research Experience"><span class="menu-title">Research Experience</span></a></li>
+                <li class="nav-item"><a class="nav-link" style="border-color: white; border-radius: 0.25rem; padding:0 !important; " href="/projects" title="Research Experience"><span class="menu-title">Research Experience</span></a></li>
                 {% else -%}
-                <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important; outline-style: inset;" href="/projects" title="Research Experience"><span class="menu-title">Research Experience</span></a></li>
+                <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important;  outline-style: inset;" href="/projects" title="Research Experience"><span class="menu-title">Research Experience</span></a></li>
                 {% endif -%}
 
 
                 {% if not dyct['show_teachingExp'] -%}
-                <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important;" href="/teaching" title="Teaching Experience"><span class="menu-title">Teaching Experience</span></a></li>
+                <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important; " href="/teaching" title="Teaching Experience"><span class="menu-title">Teaching Experience</span></a></li>
                 {% else -%}
-                <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important; outline-style: inset;" href="/teaching" title="Teaching Experience"><span class="menu-title">Teaching Experience</span></a></li>
+                <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important;  outline-style: inset;" href="/teaching" title="Teaching Experience"><span class="menu-title">Teaching Experience</span></a></li>
                 {% endif -%}
 
                 {% if not dyct['show_talks'] -%}
-                <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important;" href="/talks" title="Demos and Talks"><span class="menu-title">Demos and Talks</span></a></li>
+                <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important; " href="/talks" title="Demos and Talks"><span class="menu-title">Demos and Talks</span></a></li>
                 {% else -%}
-                <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important; outline-style: inset;" href="/talks" title="Demos and Talks"><span class="menu-title">Demos and Talks</span></a></li>
+                <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important;  outline-style: inset;" href="/talks" title="Demos and Talks"><span class="menu-title">Demos and Talks</span></a></li>
                 {% endif -%}
 
                 {% if not dyct['show_pubs'] -%}
-                <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important;" href="/publications" title="Publications"><span class="menu-title">Publications</span></a></li>
+                <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important; " href="/publications" title="Publications"><span class="menu-title">Publications</span></a></li>
                 {% else -%}
-                <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important; outline-style: inset;" href="/publications" title="Publications"><span class="menu-title">Publications</span></a></li>
+                <li class="nav-item"><a class="nav-link" style="border-color:white; border-radius: 0.25rem; padding:0 !important;  outline-style: inset;" href="/publications" title="Publications"><span class="menu-title">Publications</span></a></li>
                 {% endif -%}
               </ul>
               <!--{% if dyct['show_skills'] -%}
-              <li class="nav-item"><a class="nav-link" style="border-radius: 0.25rem; padding:0 !important;" href="/skills" title="Skills"><span class="menu-title">Skills</span></a></li>
+              <li class="nav-item"><a class="nav-link" style="border-radius: 0.25rem; padding:0 !important; " href="/skills" title="Skills"><span class="menu-title">Skills</span></a></li>
               {%- endif%}
-              <li class="nav-item"><a class="nav-link" style="border-radius: 0.25rem; padding:0 !important;" href="#contactCollapsed" title="Contact"><span class="menu-title">Contact</span></a></li>-->
+              <li class="nav-item"><a class="nav-link" style="border-radius: 0.25rem; padding:0 !important; " href="#contactCollapsed" title="Contact"><span class="menu-title">Contact</span></a></li>-->
             </nav>
           </div>
         </div>
