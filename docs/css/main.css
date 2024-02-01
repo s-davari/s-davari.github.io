@@ -89,8 +89,8 @@ a:focus
   background-color: white;     
   color: black;}
 
-.nav-item + .nav-item {
-  margin-left: 1rem; }
+.nav-item {
+  margin-right: 1rem; }
 
 .cover {
   height: 500px; }
