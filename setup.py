@@ -47,8 +47,9 @@ base_info = {
     "show_edu":True,
     "show_service":True,
     "show_honors":True,
-    "show_personal":True,
     "show_proj":True,
+    "show_personal":True,
+    "show_research":True,
     "show_pubs":True,
     "show_talks":True,
     "show_teachingExp":True,
@@ -186,7 +187,7 @@ def research():
     for x in base_info.keys():
         if x.startswith('show_'):
             base_info[x] = False
-    base_info['show_proj'] = True
+    base_info['show_research'] = True
     return rendre('index.html')
 
 @app.route('/projects')
@@ -356,7 +357,7 @@ def paperRss():
         for article in content:
             fe = fg.add_entry()
             fe.title(article['Title'])
-            link = article['Link'].replace('https://sdavari.github.io/','').replace('<','').replace('>','')
+            link = article['Link'].replace('https://s-davari.github.io/','').replace('<','').replace('>','')
             fe.link(href=link)
             fe.description(article['Content'].replace('Twitter] ;LinkedIn] Facebook]','').replace('"',"'"))
             fe.guid(link, permalink=True)
