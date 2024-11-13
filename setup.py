@@ -293,7 +293,7 @@ def resume_grab():
 def email_grab():
     return page_redirect(base_info['EMAIL'])
 
-@app.route('/thesis')
+@app.route('/dissertation')
 def dissertation_grab():
     return page_redirect(base_info['DISSERTATION'])
 
