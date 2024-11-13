@@ -42,6 +42,7 @@ base_info = {
     '3DILAB': 'https://wordpress.cs.vt.edu/3digroup/author/sdavari/',
     'RESUME':'https://s-davari.github.io/Resume-ShakibaDavari.pdf',
     'CV':'https://s-davari.github.io/CV-ShakibaDavari.pdf',
+    'DISSERTATION':'https://vtechworks.lib.vt.edu/items/9c1f5ba4-fcb0-4825-b8d3-f4d32c98c576',
     'WEBSITE': 's-davari.github.io',
     "show_about":True,
     "show_edu":True,
@@ -292,6 +293,9 @@ def resume_grab():
 def email_grab():
     return page_redirect(base_info['EMAIL'])
 
+@app.route('/dissertation')
+def dissertation_grab():
+    return page_redirect(base_info['DISSERTATION'])
 
 @app.route('/cv')
 def cv_grab():
