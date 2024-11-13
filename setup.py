@@ -293,6 +293,9 @@ def resume_grab():
 def email_grab():
     return page_redirect(base_info['EMAIL'])
 
+@app.route('/thesis')
+def dissertation_grab():
+    return page_redirect(base_info['DISSERTATION'])
 
 @app.route('/cv')
 def cv_grab():
