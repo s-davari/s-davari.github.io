@@ -29,7 +29,7 @@ except:
 
 base_info = {
     'name':"Shakiba Davari",
-    'title':"Ph.D. Candidate",
+    'title':"Ph.D.",
     'NAME':"Shakiba Davari",
     'EMAIL':"mailto:sdavari@vt.edu",
     'MENDELEY':"",
