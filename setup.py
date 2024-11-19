@@ -43,6 +43,11 @@ base_info = {
     'RESUME':'https://s-davari.github.io/Resume-ShakibaDavari.pdf',
     'CV':'https://s-davari.github.io/CV-ShakibaDavari.pdf',
     'DISSERTATION':'https://vtechworks.lib.vt.edu/items/9c1f5ba4-fcb0-4825-b8d3-f4d32c98c576',
+    'iARPprArXivDOI': 'https://www.doi.org/10.48550/arXiv.2411.02684',
+    'designSpacePprArXivDOI': 'https://doi.org/10.48550/arXiv.2411.02607',
+    'iARPaperLnkdInPost': 'https://www.linkedin.com/posts/sdavari_towards-intelligent-augmented-reality-iar-activity-7264261102069280768-ve8X?utm_source=share&utm_medium=member_desktop',
+    'designSpacePaperLnkdInPost': 'https://www.linkedin.com/posts/sdavari_towards-context-aware-adaptation-in-extended-activity-7263702382553829376-BWzH?utm_source=share&utm_medium=member_desktop',
+    'DissertationLnkdInPost' : 'https://www.linkedin.com/posts/sdavari_intelligent-augmented-reality-iarcontext-aware-activity-7263320768984371201-szww?utm_source=share&utm_medium=member_desktop',
     'WEBSITE': 's-davari.github.io',
     "show_about":True,
     "show_edu":True,
@@ -293,10 +298,6 @@ def resume_grab():
 def email_grab():
     return page_redirect(base_info['EMAIL'])
 
-@app.route('/dissertation')
-def dissertation_grab():
-    return page_redirect(base_info['DISSERTATION'])
-
 @app.route('/cv')
 def cv_grab():
     return page_redirect(base_info['CV'])
@@ -373,13 +374,54 @@ def paperRss():
     response.headers.set('Content-Type', 'application/rss+xml')
     return response
 
+############### PAPERS Pub
+@app.route('/ppr_iARarxiv')
+@app.route('/ppr_iararxiv')
+@app.route('/iARPprArXiv')
+@app.route('/PPRiARArXiv')
+@app.route('/ppriAR')
+def iARPprArXiv_grab():
+    return page_redirect(base_info['iARPprArXivDOI'])
+
+@app.route('/ppr_designspace')
+@app.route('/designSpacePprArXiv')
+@app.route('/PPRdesignSpaceArXiv')
+@app.route('/pprDesignSpace')
+def designSpacePprArXiv_grab():
+    return page_redirect(base_info['designSpacePprArXivDOI'])
+
+@app.route('/dissertation')
+def dissertation_grab():
+    return page_redirect(base_info['DISSERTATION'])
+
+
+############### LinkedIn Posts
+@app.route('/lnkdin_iARppr')
+@app.route('/lnkdin_iar')
+@app.route('/lnkdin_iarppr')
+@app.route('/lnkdiniAR')
+def iARpprLnkdIn_grab():
+    return page_redirect(base_info['iARPaperLnkdInPost'])
+
+@app.route('/lnkdin_designspaceppr')
+@app.route('/lnkdin_designspace')
+@app.route('/lnkdinDesignSpace')
+def designSpacePprLnkdIn_grab():
+    return page_redirect(base_info['designSpacePaperLnkdInPost'])
+
+@app.route('/lnkdin_dissertation')
+@app.route('/lnkdin_dissertation')
+@app.route('/lnkdinDissertation')
+def dissertationLnkdIn_grab():
+    return page_redirect(base_info['DissertationLnkdInPost'])
+
 @app.route('/security.txt')
 def security():
     return f"""
 # Shakiba Davari Website
 Contact: mailto:{base_info['EMAIL']}
 Preferred-Languages: en
-Expires: 2025-12-31T18:00:00.000Z
+Expires: 2028-12-31T18:00:00.000Z
 """, 200, {'Content-Type':'text/plain'}
 
 @app.route('/robots.txt')
