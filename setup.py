@@ -43,6 +43,7 @@ base_info = {
     'RESUME':'https://s-davari.github.io/Resume-ShakibaDavari.pdf',
     'CV':'https://s-davari.github.io/CV-ShakibaDavari.pdf',
     'DISSERTATION':'https://vtechworks.lib.vt.edu/items/9c1f5ba4-fcb0-4825-b8d3-f4d32c98c576',
+    'IARPPRARXIVDOI': 'https://www.doi.org/10.48550/arXiv.2411.02684',
     'WEBSITE': 's-davari.github.io',
     "show_about":True,
     "show_edu":True,
@@ -312,6 +313,10 @@ def labpage_grab_one():
 @app.route('/linkedin')
 def linkedin_grab():
     return page_redirect(base_info['LINKEDIN'])
+
+@app.route('/iARPprArXiv')
+def linkedin_grab():
+    return page_redirect(base_info['IARPPRARXIVDOI'])
 
 
 @app.route('/gscholar')
