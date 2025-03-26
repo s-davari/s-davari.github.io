@@ -29,7 +29,7 @@ except:
 
 base_info = {
     'name':"Shakiba Davari",
-    'title':"Ph.D.",
+    'title':"Postdoctoral Researcher",
     'NAME':"Shakiba Davari",
     'EMAIL':"mailto:sdavari@vt.edu",
     'MENDELEY':"",
@@ -39,6 +39,7 @@ base_info = {
     'ORCID': 'https://orcid.org/0000-0003-3128-1979',
     'SCHOLAR': 'https://scholar.google.com/citations?user=0C3C2PEAAAAJ',
     'LINKEDIN': 'https://www.linkedin.com/in/sdavari/',
+    'SAIL':'https://sail.coe.gatech.edu/',
     '3DILAB': 'https://wordpress.cs.vt.edu/3digroup/author/sdavari/',
     'RESUME':'https://s-davari.github.io/Resume-ShakibaDavari.pdf',
     'CV':'https://s-davari.github.io/CV-ShakibaDavari.pdf',
@@ -309,6 +310,13 @@ def labpage_grab():
 @app.route('/3dilab')
 def labpage_grab_one():
     return labpage_grab()
+
+@app.route('/SAIL')
+def sail_grab():
+    return page_redirect(base_info['SAIL'])
+@app.route('/sail')
+def sail_grab_one():
+    return sail_grab()
 
 @app.route('/linkedin')
 def linkedin_grab():
