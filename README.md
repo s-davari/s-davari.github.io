@@ -1,4 +1,6 @@
 # Base Website
+Run:
+python setup.py serve
 
 Helpful Items
 
